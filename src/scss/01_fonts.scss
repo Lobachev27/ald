@@ -1,0 +1,44 @@
+@import "partials/params";
+@import "partials/mixins";
+
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url('../fonts/SourceSansPro-Regular.eot');
+  src: local('SourceSansPro-Regular'),
+  url('../fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/SourceSansPro-Regular.woff') format('woff'),
+  url('../fonts/SourceSansPro-Regular.ttf') format('truetype'),
+  url('../fonts/SourceSansPro-Regular.woff2') format('woff2'),
+  url('../fonts/SourceSansPro-Regular.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  /*font-display: swap;*/
+}
+
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url('../fonts/SourceSansPro-SemiBold.eot');
+  src: local('SourceSansPro-Semibold'),
+  url('../fonts/SourceSansPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/SourceSansPro-SemiBold.woff') format('woff'),
+  url('../fonts/SourceSansPro-SemiBold.ttf') format('truetype'),
+  url('../fonts/SourceSansPro-SemiBold.woff2') format('woff2'),
+  url('../fonts/SourceSansPro-SemiBold.svg') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  /*font-display: swap;*/
+}
+
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url('../fonts/SourceSansPro-Bold.eot');
+  src: local('SourceSansPro-Bold'),
+  url('../fonts/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/SourceSansPro-Bold.woff') format('woff'),
+  url('../fonts/SourceSansPro-Bold.ttf') format('truetype'),
+  url('../fonts/SourceSansPro-Bold.woff2') format('woff2'),
+  url('../fonts/SourceSansPro-Bold.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  /*font-display: swap;*/
+}
