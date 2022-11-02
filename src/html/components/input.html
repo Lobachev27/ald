@@ -1,0 +1,9 @@
+<div class="input-wrapper @@context.classesList">
+  <div class="input-box">
+    <input class="input @@if(context.datepicker){input-datepicker}" type="@@context.type" placeholder="@@context.placeholder" autocomplete="off" @@if(context.required){required} @@if(context.readonly){readonly="readonly"} @@if(context.disabled){disabled} value="@@context.value">
+    @@if(context.icon){
+    <span class="icon"><i>@@context.icon</i></span>
+    }
+  </div>
+  <span class="message-text">@@context.message</span>
+</div>

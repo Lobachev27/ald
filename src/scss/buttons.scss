@@ -1,0 +1,58 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  text-align: center;
+  width: auto;
+  min-height: 38px;
+  border-radius: 6px;
+  padding: 0 8px;
+  box-shadow: 0px 0px 10px rgba(72, 72, 72, 0.05);
+  outline: none;
+  cursor: pointer;
+  transition: background-color $transition-time, color $transition-time, border $transition-time;
+
+  &.btn-blue {
+    background-color: $blue-3;
+    border: 1px solid $blue-3;
+    color: $white;
+
+    &:hover {
+      background-color: $blue-3;
+      border: 1px solid $blue-3;
+      color: $white;
+    }
+  }
+
+  &.btn-tr-bl {
+    background-color: transparent;
+    border: 1px solid $blue-3;
+    color: $blue-3;
+
+    &:hover {
+      background-color: $blue-3;
+      border: 1px solid $blue-3;
+      color: $white;
+    }
+  }
+
+  &.btn-tr-bk {
+    background-color: transparent;
+    border: 1px solid $black;
+    color: $black;
+
+    &:hover {
+      background-color: $blue-3;
+      border: 1px solid $blue-3;
+      color: $white;
+    }
+  }
+
+}

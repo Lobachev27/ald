@@ -1,0 +1,286 @@
+<div class="login-tabs">
+  <div class="login-tabs__tabs">
+    <a class="login-tabs__tab" href="#authorization">Вход</a>
+    <a class="login-tabs__tab" href="#registration">Регистрация</a>
+  </div>
+  <div id="authorization" class="login-tabs__container">
+    <div class="login-tabs__buttons">
+      <button id="auth-tel" class="btn btn-tr-bl" type="button"><span>Вход по номеру телефона</span></button>
+      <button id="auth-contr" class="btn btn-tr-bl" type="button"><span>Вход по номеру контракта</span></button>
+    </div>
+    <form class="login-form login-form-tel login-form-hidden">
+      <div class="form-box form-col-1">
+
+        @@include("./input.html", {
+          context: {
+            classesList: "is-error",
+            required: true,
+            disabled: false,
+            readonly: false,
+            datepicker: false,
+            type: "text",
+            placeholder: "Моб. телефон",
+            icon: "",
+            value: "",
+            message: "Сообщение об ошибке",
+          }
+        })
+
+        @@include("./input.html", {
+          context: {
+            classesList: "is-password",
+            required: true,
+            disabled: false,
+            readonly: false,
+            datepicker: false,
+            type: "password",
+            placeholder: "Пароль ",
+            icon: '<svg id="eye-open" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.3866 8.00001C10.3866 9.32001 9.31995 10.3867 7.99995 10.3867C6.67995 10.3867 5.61328 9.32001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C9.31995 5.61334 10.3866 6.68001 10.3866 8.00001Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.9999 13.5133C10.3532 13.5133 12.5466 12.1266 14.0732 9.72665C14.6732 8.78665 14.6732 7.20665 14.0732 6.26665C12.5466 3.86665 10.3532 2.47998 7.9999 2.47998C5.64656 2.47998 3.45323 3.86665 1.92656 6.26665C1.32656 7.20665 1.32656 8.78665 1.92656 9.72665C3.45323 12.1266 5.64656 13.5133 7.9999 13.5133Z" stroke-linecap="round" stroke-linejoin="round"/></svg><svg id="eye-close" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.68661 6.31334L6.31328 9.68668C5.87995 9.25334 5.61328 8.66001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C8.65995 5.61334 9.25328 5.88001 9.68661 6.31334Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.8799 3.84669C10.7132 2.96669 9.3799 2.48669 7.9999 2.48669C5.64656 2.48669 3.45323 3.87336 1.92656 6.27336C1.32656 7.21336 1.32656 8.79336 1.92656 9.73336C2.45323 10.56 3.06656 11.2734 3.73323 11.8467" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.61328 13.02C6.37328 13.34 7.17995 13.5133 7.99995 13.5133C10.3533 13.5133 12.5466 12.1267 14.0733 9.72668C14.6733 8.78668 14.6733 7.20668 14.0733 6.26668C13.8533 5.92002 13.6133 5.59335 13.3666 5.28668" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.3409 8.46667C10.1676 9.40667 9.40094 10.1733 8.46094 10.3467" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.31398 9.68665L1.33398 14.6666" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.6675 1.33331L9.6875 6.31331" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+            value: "",
+            message: "",
+          }
+        })
+
+        <div class="row">
+
+          @@include("./checkbox.html", {
+            context: {
+              classesList: "",
+              required: false,
+              disabled: false,
+              readonly: false,
+              message: "",
+              arr: [
+                {"text": "Запомнить меня", "name": "", "checked": "",},
+              ],
+            }
+          })
+
+          <a class="login-link" href="javascript:void(0);">Забыли пароль?</a>
+        </div>
+      </div>
+      <button class="btn btn-blue" type="submit">Войти</button>
+    </form>
+    <form class="login-form login-form-contr login-form-hidden">
+      <div class="form-box form-col-1">
+
+        @@include("./input.html", {
+          context: {
+            classesList: "is-error",
+            required: true,
+            disabled: false,
+            readonly: false,
+            datepicker: false,
+            type: "text",
+            placeholder: "Номер контракта",
+            icon: "",
+            value: "",
+            message: "Сообщение об ошибке",
+          }
+        })
+
+        @@include("./input.html", {
+          context: {
+            classesList: "is-password",
+            required: true,
+            disabled: false,
+            readonly: false,
+            datepicker: false,
+            type: "password",
+            placeholder: "Пароль ",
+            icon: '<svg id="eye-open" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.3866 8.00001C10.3866 9.32001 9.31995 10.3867 7.99995 10.3867C6.67995 10.3867 5.61328 9.32001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C9.31995 5.61334 10.3866 6.68001 10.3866 8.00001Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.9999 13.5133C10.3532 13.5133 12.5466 12.1266 14.0732 9.72665C14.6732 8.78665 14.6732 7.20665 14.0732 6.26665C12.5466 3.86665 10.3532 2.47998 7.9999 2.47998C5.64656 2.47998 3.45323 3.86665 1.92656 6.26665C1.32656 7.20665 1.32656 8.78665 1.92656 9.72665C3.45323 12.1266 5.64656 13.5133 7.9999 13.5133Z" stroke-linecap="round" stroke-linejoin="round"/></svg><svg id="eye-close" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.68661 6.31334L6.31328 9.68668C5.87995 9.25334 5.61328 8.66001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C8.65995 5.61334 9.25328 5.88001 9.68661 6.31334Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.8799 3.84669C10.7132 2.96669 9.3799 2.48669 7.9999 2.48669C5.64656 2.48669 3.45323 3.87336 1.92656 6.27336C1.32656 7.21336 1.32656 8.79336 1.92656 9.73336C2.45323 10.56 3.06656 11.2734 3.73323 11.8467" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.61328 13.02C6.37328 13.34 7.17995 13.5133 7.99995 13.5133C10.3533 13.5133 12.5466 12.1267 14.0733 9.72668C14.6733 8.78668 14.6733 7.20668 14.0733 6.26668C13.8533 5.92002 13.6133 5.59335 13.3666 5.28668" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.3409 8.46667C10.1676 9.40667 9.40094 10.1733 8.46094 10.3467" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.31398 9.68665L1.33398 14.6666" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.6675 1.33331L9.6875 6.31331" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+            value: "",
+            message: "",
+          }
+        })
+
+        <div class="row">
+
+          @@include("./checkbox.html", {
+            context: {
+              classesList: "",
+              required: false,
+              disabled: false,
+              readonly: false,
+              message: "",
+              arr: [
+                {"text": "Запомнить меня", "name": "", "checked": "",},
+              ],
+            }
+          })
+
+          <a class="login-link" href="javascript:void(0);">Забыли пароль?</a>
+        </div>
+      </div>
+      <button class="btn btn-blue" type="submit">Войти</button>
+    </form>
+    <div class="login__bottom">
+      <a href="./login-2.html">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.0273 8.16659H2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.07617 6.22253L10.0282 8.16653L8.07617 10.1105" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M5.1543 5.078V4.456C5.1543 3.09933 6.25363 2 7.61096 2H10.867C12.2203 2 13.317 3.09667 13.317 4.45V11.8767C13.317 13.2333 12.217 14.3333 10.8603 14.3333H7.60363C6.25096 14.3333 5.1543 13.236 5.1543 11.8833V11.2553" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Войти как управляющий парком</span>
+      </a>
+      <a href="./login-2.html">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.0273 8.16659H2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.07617 6.22253L10.0282 8.16653L8.07617 10.1105" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M5.1543 5.078V4.456C5.1543 3.09933 6.25363 2 7.61096 2H10.867C12.2203 2 13.317 3.09667 13.317 4.45V11.8767C13.317 13.2333 12.217 14.3333 10.8603 14.3333H7.60363C6.25096 14.3333 5.1543 13.236 5.1543 11.8833V11.2553" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Войти как поставщик</span>
+      </a>
+      <!--<a href="./login-2.html">
+        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.99925 11.28L1.65258 6.9333C1.13924 6.41997 1.13924 5.57997 1.65258 5.06664L5.99925 0.719971" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Назад</span>
+      </a>-->
+    </div>
+  </div>
+  <div id="registration" class="login-tabs__container">
+    <form class="login-form">
+      <div class="form-box form-col-1">
+        <div class="input-group">
+          <label class="label-text">Данные пользователя</label>
+
+          @@include("./input.html", {
+            context: {
+              classesList: "is-error",
+              required: true,
+              disabled: false,
+              readonly: false,
+              datepicker: false,
+              type: "text",
+              placeholder: "Имя",
+              icon: "",
+              value: "",
+              message: "Сообщение об ошибке",
+            }
+          })
+
+          @@include("./input.html", {
+            context: {
+              classesList: "",
+              required: true,
+              disabled: false,
+              readonly: false,
+              datepicker: false,
+              type: "text",
+              placeholder: "Моб. телефон",
+              icon: "",
+              value: "",
+              message: "",
+            }
+          })
+
+          @@include("./input.html", {
+            context: {
+              classesList: "",
+              required: true,
+              disabled: false,
+              readonly: false,
+              datepicker: false,
+              type: "email",
+              placeholder: "E-mail",
+              icon: "",
+              value: "",
+              message: "",
+            }
+          })
+
+        </div>
+      </div>
+      <div class="form-box form-col-1">
+        <div class="input-group">
+          <label class="label-text">Данные автомобиля</label>
+
+          @@include("./input.html", {
+            context: {
+              classesList: "",
+              required: true,
+              disabled: false,
+              readonly: false,
+              datepicker: false,
+              type: "text",
+              placeholder: "Номер контракта",
+              icon: "",
+              value: "",
+              message: "",
+            }
+          })
+
+          @@include("./input.html", {
+            context: {
+              classesList: "",
+              required: true,
+              disabled: false,
+              readonly: false,
+              datepicker: false,
+              type: "text",
+              placeholder: "Гос. номер",
+              icon: "",
+              value: "",
+              message: "",
+            }
+          })
+
+        </div>
+      </div>
+      <div class="form-box form-col-1">
+        <div class="input-group">
+          <label class="label-text">Пароль</label>
+
+          @@include("./input.html", {
+            context: {
+              classesList: "is-password",
+              required: true,
+              disabled: false,
+              readonly: false,
+              datepicker: false,
+              type: "password",
+              placeholder: "Пароль ",
+              icon: '<svg id="eye-open" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.3866 8.00001C10.3866 9.32001 9.31995 10.3867 7.99995 10.3867C6.67995 10.3867 5.61328 9.32001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C9.31995 5.61334 10.3866 6.68001 10.3866 8.00001Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.9999 13.5133C10.3532 13.5133 12.5466 12.1266 14.0732 9.72665C14.6732 8.78665 14.6732 7.20665 14.0732 6.26665C12.5466 3.86665 10.3532 2.47998 7.9999 2.47998C5.64656 2.47998 3.45323 3.86665 1.92656 6.26665C1.32656 7.20665 1.32656 8.78665 1.92656 9.72665C3.45323 12.1266 5.64656 13.5133 7.9999 13.5133Z" stroke-linecap="round" stroke-linejoin="round"/></svg><svg id="eye-close" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.68661 6.31334L6.31328 9.68668C5.87995 9.25334 5.61328 8.66001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C8.65995 5.61334 9.25328 5.88001 9.68661 6.31334Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.8799 3.84669C10.7132 2.96669 9.3799 2.48669 7.9999 2.48669C5.64656 2.48669 3.45323 3.87336 1.92656 6.27336C1.32656 7.21336 1.32656 8.79336 1.92656 9.73336C2.45323 10.56 3.06656 11.2734 3.73323 11.8467" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.61328 13.02C6.37328 13.34 7.17995 13.5133 7.99995 13.5133C10.3533 13.5133 12.5466 12.1267 14.0733 9.72668C14.6733 8.78668 14.6733 7.20668 14.0733 6.26668C13.8533 5.92002 13.6133 5.59335 13.3666 5.28668" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.3409 8.46667C10.1676 9.40667 9.40094 10.1733 8.46094 10.3467" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.31398 9.68665L1.33398 14.6666" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.6675 1.33331L9.6875 6.31331" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+              value: "",
+              message: "",
+            }
+          })
+
+          @@include("./input.html", {
+            context: {
+              classesList: "is-password",
+              required: true,
+              disabled: false,
+              readonly: false,
+              datepicker: false,
+              type: "password",
+              placeholder: "Пароль ",
+              icon: '<svg id="eye-open" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.3866 8.00001C10.3866 9.32001 9.31995 10.3867 7.99995 10.3867C6.67995 10.3867 5.61328 9.32001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C9.31995 5.61334 10.3866 6.68001 10.3866 8.00001Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.9999 13.5133C10.3532 13.5133 12.5466 12.1266 14.0732 9.72665C14.6732 8.78665 14.6732 7.20665 14.0732 6.26665C12.5466 3.86665 10.3532 2.47998 7.9999 2.47998C5.64656 2.47998 3.45323 3.86665 1.92656 6.26665C1.32656 7.20665 1.32656 8.78665 1.92656 9.72665C3.45323 12.1266 5.64656 13.5133 7.9999 13.5133Z" stroke-linecap="round" stroke-linejoin="round"/></svg><svg id="eye-close" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.68661 6.31334L6.31328 9.68668C5.87995 9.25334 5.61328 8.66001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C8.65995 5.61334 9.25328 5.88001 9.68661 6.31334Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.8799 3.84669C10.7132 2.96669 9.3799 2.48669 7.9999 2.48669C5.64656 2.48669 3.45323 3.87336 1.92656 6.27336C1.32656 7.21336 1.32656 8.79336 1.92656 9.73336C2.45323 10.56 3.06656 11.2734 3.73323 11.8467" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.61328 13.02C6.37328 13.34 7.17995 13.5133 7.99995 13.5133C10.3533 13.5133 12.5466 12.1267 14.0733 9.72668C14.6733 8.78668 14.6733 7.20668 14.0733 6.26668C13.8533 5.92002 13.6133 5.59335 13.3666 5.28668" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.3409 8.46667C10.1676 9.40667 9.40094 10.1733 8.46094 10.3467" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.31398 9.68665L1.33398 14.6666" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.6675 1.33331L9.6875 6.31331" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+              value: "",
+              message: "",
+            }
+          })
+
+        </div>
+        <div class="row">
+
+          @@include("./checkbox.html", {
+            context: {
+              classesList: "",
+              required: false,
+              disabled: false,
+              readonly: false,
+              message: "",
+              arr: [
+                {"text": "Я даю согласие на обработку моих персональных данных", "name": "", "checked": "",},
+              ],
+            }
+          })
+
+        </div>
+      </div>
+      <button class="btn btn-blue" type="submit">Зарегистрироваться</button>
+    </form>
+  </div>
+</div>

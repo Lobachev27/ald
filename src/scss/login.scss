@@ -44,6 +44,10 @@
       border-radius: 8px;
     }
 
+    &.login__wrapper-white {
+      background-color: $white;
+    }
+
     &::-webkit-scrollbar {
       -webkit-appearance: none;
       height: 3px;
@@ -120,6 +124,7 @@
       margin-bottom: 8px;
       filter: drop-shadow(0px 0px 10px rgba(72, 72, 72, 0.05));
       padding: 14px 24px 14px 16px;
+      transition: background-color $transition-time;
 
       &:last-child {
         margin-bottom: 0;
@@ -136,6 +141,19 @@
         background: url("../img/icon-chevron.svg") no-repeat;
         background-position: center;
         background-size: contain;
+        transition: filter $transition-time;
+      }
+
+      &:hover {
+        background-color: $blue-3;
+
+        &:after {
+          filter: grayscale(1) brightness(1000%);
+        }
+
+        & .login-role__name {
+          color: $white;
+        }
       }
     }
 
@@ -161,6 +179,7 @@
       color: $black;
       padding-left: 14px;
       border-left: 1px solid $gray-2;
+      transition: color $transition-time;
     }
 
     & a {
@@ -170,6 +189,148 @@
       width: 100%;
       height: 100%;
       z-index: 5;
+    }
+  }
+
+  &-tabs {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 24px;
+
+    &__tabs {
+      display: flex;
+      align-items: center;
+    }
+
+    &__tab {
+      position: relative;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 120%;
+      color: #BCBCC7;
+      transition: color $transition-time;
+
+      &.active {
+        color: $black;
+      }
+
+      &:first-child {
+        padding-right: 13px;
+      }
+
+      &:last-child {
+        padding-left: 13px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          background-color: $gray-4;
+          width: 1px;
+          height: 9px;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+        }
+      }
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      margin-top: 14px;
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 28px;
+
+      &.login-tabs__buttons-hidden {
+        display: none;
+      }
+    }
+  }
+
+  & .btn {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__bottom {
+    margin-top: auto;
+
+    & a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 120%;
+      color: $black;
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      & svg {
+        stroke: $black;
+        width: 16px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+
+    &.login-form-hidden {
+      display: none;
+    }
+  }
+
+  &-link {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 120%;
+    color: $blue-3;
+    white-space: nowrap;
+    transition: color $transition-time;
+  }
+
+  &-tel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 24px;
+
+    &__description {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      text-align: center;
+      width: 100%;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 120%;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    & .login-form {
+      margin-top: 24px;
     }
   }
 }

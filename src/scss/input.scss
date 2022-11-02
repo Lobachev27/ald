@@ -1,0 +1,207 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.label-text {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  margin-bottom: 14px;
+  transition: color $transition-time;
+}
+
+.message-text {
+  display: inline-flex;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 120%;
+  margin: 4px 0;
+}
+
+.input {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  width: 100%;
+  height: 100%;
+  padding: 0 40px 0 14px;
+  color: $black;
+  background-color: $gray-1;
+  border-radius: 6px;
+  border: 1px solid $gray-1;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: border $transition-time;
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px transparent !important;
+  }
+
+  &::selection {
+    background-color: transparent;
+  }
+
+  &::placeholder{
+    color: $gray-4;
+  }
+
+  &-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 2;
+
+    &.active {
+      z-index: 3;
+    }
+
+    & .icon {
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      top: 50%;
+      right: 2px;
+      border-radius: 6px;
+      transform: translateY(-50%);
+
+      & i {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      & svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        stroke: $gray-4;
+        width: 100%;
+        height: 100%;
+
+        &#eye-open {
+          opacity: 1;
+          pointer-events: auto;
+          transition: opacity $transition-time;
+        }
+
+        &#eye-close {
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity $transition-time;
+        }
+      }
+    }
+
+    &.is-password {
+      & .icon {
+        cursor: pointer;
+      }
+
+      &.show-password {
+        & .icon {
+          & svg {
+            &#eye-open {
+              opacity: 0;
+              pointer-events: none;
+              transition: opacity $transition-time;
+            }
+
+            &#eye-close {
+              opacity: 1;
+              pointer-events: auto;
+              transition: opacity $transition-time;
+            }
+          }
+        }
+      }
+    }
+
+    &.is-codeSMS {
+      & .input {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        text-align: center;
+        border-radius: 4px;
+        margin-right: 8px;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &-box {
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: auto;
+        }
+      }
+
+      & .message-text {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    &.is-disabled {
+      & .input {
+        background-color: $gray-2;
+        border: 1px solid $gray-2;
+
+        &:hover {
+          background-color: $gray-2;
+          border: 1px solid $gray-2;
+        }
+      }
+    }
+
+    &.is-readonly {
+      & .input {
+        border: 1px solid $gray-1;
+        cursor: default;
+
+        &:hover {
+          border: 1px solid $gray-1;
+        }
+      }
+    }
+
+    &.is-error {
+      & .input {
+        border: 1px solid $red;
+
+        &:focus {
+          border: 1px solid $gray-1;
+        }
+      }
+
+      & .message-text {
+        color: $red;
+      }
+    }
+  }
+
+  &-box {
+    position: relative;
+    width: 100%;
+    height: 38px;
+  }
+}
