@@ -1,0 +1,236 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.dashboard {
+  position: relative;
+  margin: 24px 0;
+  @media screen and ($tablet1) {
+    margin: 0;
+  }
+
+  &.dashboard-driver {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 14px;
+    width: 100%;
+    @media screen and ($tablet2) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and ($desktop2) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media screen and ($desktop3) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    & .dashboard {
+      &__double {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 14px;
+        width: 100%;
+      }
+
+      &__item {
+        &.dashboard__item-small {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          @media screen and ($desktop3) {
+            min-height: 95px;
+          }
+
+          & .dashboard {
+            &__item {
+              &-text {
+                padding-left: 38px;
+                margin-top: 8px;
+              }
+            }
+          }
+        }
+
+        &.dashboard__item-big {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          @media screen and ($tablet2) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          @media screen and ($desktop3) {
+            min-height: 203px;
+          }
+
+          &.mobile-r {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            @media screen and ($tablet2) {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+
+            & .dashboard {
+              &__item {
+                &-text {
+                  &:last-child {
+                    margin-bottom: 0;
+                    @media screen and ($tablet2) {
+                      margin-bottom: 14px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          & .dashboard {
+            &__item {
+              &-text {
+                margin-top: 14px;
+                margin-bottom: 14px;
+              }
+
+              &-buttons {
+                @media screen and ($tablet2) {
+                  margin-top: auto !important;
+                }
+              }
+            }
+          }
+        }
+
+        &-marker {
+          position: absolute;
+          right: 14px;
+          top: 21px;
+          display: block;
+          width: 16px;
+          height: 16px;
+
+          & svg {
+            width: 100%;
+            height: 100%;
+            stroke: $red;
+          }
+        }
+
+        &-text {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 120%;
+
+          &-value {
+            display: inline-block;
+            border-radius: 4px;
+            padding: 2px 4px;
+            margin-left: 12px;
+
+            &.blue {
+              background-color: #CBF0F9;
+            }
+
+            &.gray {
+              background-color: $gray-1;
+            }
+
+            &.red {
+              background-color: #FFE8E8;;
+            }
+          }
+        }
+
+        &-buttons {
+          display: flex;
+          align-items: center;
+          z-index: 10;
+
+          & > * {
+            margin-right: 8px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+
+          & .btn {
+            &.btn-more,
+            &.btn-call,
+            &.btn-download {
+              display: none;
+              @media screen and ($tablet2) {
+                display: flex;
+                margin-right: 0;
+              }
+            }
+          }
+
+          & .i-action {
+            display: block;
+            width: 16px;
+            height: 16px;
+            @media screen and ($tablet2) {
+              display: none;
+            }
+
+            & svg {
+              width: 100%;
+              height: 100%;
+              stroke: $blue-3;
+            }
+          }
+        }
+
+        &-link {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 5;
+          /*@media screen and ($tablet2) {
+            display: none;
+          }*/
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    background-color: $white;
+    box-shadow: 0px 0px 10px rgba(72, 72, 72, 0.05);
+    border-radius: 8px;
+    padding: 14px;
+    width: 100%;
+
+    &-title {
+      display: flex;
+      align-items: center;
+
+      &-icon {
+        position: relative;
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-right: 14px;
+
+        & svg {
+          width: 100%;
+          height: 100%;
+          stroke: $black;
+        }
+      }
+
+      &-text {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+}

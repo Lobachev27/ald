@@ -1,0 +1,22 @@
+<div class="dashboard__item @@context.class">
+  <div class="dashboard__item-info">
+    <div class="dashboard__item-title">
+      <span class="dashboard__item-title-icon">
+        @@context.icon
+      </span>
+      <span class="dashboard__item-title-text">@@context.title</span>
+    </div>
+    @@if(context.content){@@context.content}
+  </div>
+  <div class="dashboard__item-buttons">
+    @@context.buttons
+  </div>
+  @@if(context.marker){
+  <span class="dashboard__item-marker">
+    @@context.marker
+  </span>
+  }
+  @@if(context.link){
+  <a class="dashboard__item-link" href="@@context.link"></a>
+  }
+</div>

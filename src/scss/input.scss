@@ -6,7 +6,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 120%;
-  margin-bottom: 14px;
+  margin-bottom: 6px;
   transition: color $transition-time;
 }
 
@@ -15,7 +15,7 @@
   font-weight: 400;
   font-size: 10px;
   line-height: 120%;
-  margin: 4px 0;
+  margin-top: 4px;
 }
 
 .input {
@@ -43,6 +43,12 @@
 
   &::placeholder{
     color: $gray-4;
+  }
+
+  &-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 8px;
   }
 
   &-wrapper {

@@ -1,0 +1,16 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.section-default {
+  margin: 24px 0;
+}
+
+.layout-1 {
+  position: relative;
+  width: 100%;
+  @media screen and ($tablet1) {
+    display: grid;
+    grid-template-columns: 162px auto;
+    grid-column-gap: 34px;
+  }
+}

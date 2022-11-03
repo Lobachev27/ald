@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Мой ALD"
+})
+
+<body>
+
+@@include("./components/header-driver.html", {
+  context: {
+    "classList": "header-driver",
+    "content": '<h1 class="title title-h1">Мой ALD</h1>',
+    "userImage": "",
+    "userName": "Vladimir K.",
+    "link": "javascript:void(0);",
+  }
+})
+
+<main class="main main-driver">
+
+  <section class="driver-image">
+    <img src="./img/bg.jpg" alt="">
+  </section>
+
+  <section class="section-default">
+    <div class="container">
+      <div class="layout-1">
+        <div class="car">
+          <div class="car__info">
+            <div class="car__name">Volkswagen Polo </div>
+            <div class="car__model">A752BИ</div>
+          </div>
+          <div class="car__status">
+            <span class="car__status-text">Статус:</span>
+            <span class="car__status-value green">На хранении</span>
+          </div>
+        </div>
+
+        @@include("./components/dashboard-driver.html")
+
+        <div class="car__img">
+          <img src="./img/car-img.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./shared/script.html")
+
+</body>
+</html>
