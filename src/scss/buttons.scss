@@ -60,4 +60,9 @@
     min-height: 30px;
     font-size: 10px;
   }
+
+  &.w-auto {
+    width: min-content;
+    padding: 0 24px;
+  }
 }

@@ -1,0 +1,288 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.modal-driver {
+  position: fixed;
+  top: 58px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 58px);
+  background: $white;
+  z-index: 100;
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition: transform $transition-time;
+  @media screen and ($tablet1) {
+    top: 0;
+    width: 602px;
+    height: 100vh;
+    box-shadow: 0 4px 22px rgba(0,0,0, 0.07);
+  }
+
+  &.active {
+    transform: translateX(0%);
+    overflow: visible;
+  }
+
+  &__close {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: $black;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  &__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    height: 58px;
+    background-color: $white;
+    z-index: 100;
+    @media screen and ($tablet1) {
+      padding: 0 24px;
+      background-color: transparent;
+    }
+
+    & .header__logo {
+      display: none;
+      @media screen and ($tablet1) {
+        display: flex;
+      }
+    }
+
+    & .header__box {
+      @media screen and ($tablet1) {
+        margin-left: 86px;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 58px 10px 14px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    @media screen and ($tablet1) {
+      display: grid;
+      grid-template-columns: 198px auto;
+      padding: 0;
+      overflow-y: visible;
+    }
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      height: 3px;
+      width: 3px;
+      cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 3px $gray-2;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray-3;
+      border-radius: 3px;
+      outline: none;
+      background-clip: border-box;
+      cursor: pointer;
+    }
+
+    &-left {
+      margin-bottom: 14px;
+      @media screen and ($tablet1) {
+        padding: 68px 24px 24px
+      }
+    }
+
+    &-right {
+      flex-grow: 1;
+      @media screen and ($tablet1) {
+        position: relative;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        height: 3px;
+        width: 3px;
+        cursor: pointer;
+      }
+
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 3px $gray-2;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $gray-3;
+        border-radius: 3px;
+        outline: none;
+        background-clip: border-box;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__tabs {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 14px;
+  }
+
+  &__tab {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    color: $black;
+    margin-bottom: 14px;
+    transition: color $transition-time;
+
+    &.active {
+      color: $blue-3;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    @media screen and ($tablet1) {
+      padding: 68px 24px 24px;
+    }
+
+    &:after {
+      @media screen and ($tablet1) {
+        content: '';
+        position: fixed;
+        width: 401px;
+        height: 58px;
+        background-color: $white;
+        top: 0;
+        left: 198px;
+      }
+    }
+
+    &.modal-driver__container-gray {
+      background-color: $gray-1;
+      width: calc(100% + 20px);
+      padding: 14px 10px  14px;
+      margin: 0 -10px;
+      bottom: -14px;
+      z-index: 10;
+      @media screen and ($tablet1) {
+        padding: 68px 24px 24px;
+        width: 100%;
+        margin: 0;
+        bottom: 0;
+      }
+
+      &:after {
+        @media screen and ($tablet1) {
+          background-color: $gray-1;
+        }
+      }
+    }
+
+    & .login__bottom {
+      & a {
+        @media screen and ($tablet1) {
+          display: none;
+        }
+      }
+
+      & .car__img {
+        position: relative;
+        margin-top: auto;
+        @media screen and ($tablet1) {
+          left: -24px;
+          bottom: -24px;
+        }
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+
+    &.modal-driver__form-hidden {
+      display: none;
+    }
+  }
+
+  &__cars {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+
+    &-item {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      background-color: $white;
+      border-radius: 8px;
+      padding: 14px;
+      margin-top: 14px;
+      box-shadow: 0px 0px 10px rgba(72, 72, 72, 0.05);
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &-name {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 120%;
+      color: $black;
+    }
+
+    &-info {
+      margin: 3px 0;
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 120%;
+      color: $black;
+      text-align: right;
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__login {
+    display: block;
+
+    &.modal-driver__login-hidden {
+      display: none;
+    }
+  }
+}

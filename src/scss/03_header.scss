@@ -7,22 +7,29 @@
   top: 0;
   left: 0;
   background: $white;
+  box-shadow: 0 4px 22px rgba(0,0,0, 0.07);
   z-index: 50;
 
   & .container {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    height: 58px;
+    height: 116px;
+    @media screen and ($tablet1) {
+      height: 58px;
+    }
   }
 
   &.header-driver {
     & .header {
       &__box {
-        display: none;
+        display: block;
+        width: 100%;
+        order: 2;
         @media screen and ($tablet1) {
-          display: block;
           margin-left: 86px;
+          width: auto;
+          order: 0;
         }
       }
 

@@ -190,6 +190,26 @@
       }
     }
 
+    &.is-success {
+      & .input {
+        padding-right: 90px;
+      }
+
+      & .input-status {
+        color: $green;
+      }
+    }
+
+    &.is-not-success {
+      & .input {
+        padding-right: 135px;
+      }
+
+      & .input-status {
+        color: $black;
+      }
+    }
+
     &.is-error {
       & .input {
         border: 1px solid $red;
@@ -209,5 +229,16 @@
     position: relative;
     width: 100%;
     height: 38px;
+  }
+
+  &-status {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 120%;
+    transform: translateY(-50%);
+    cursor: default;
   }
 }

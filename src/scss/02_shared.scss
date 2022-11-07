@@ -33,11 +33,15 @@ main {
   flex-grow: 1;
   width: 100%;
   max-width: 100%;
-  padding-top: 58px;
   overflow: hidden;
   z-index: 2;
 
-  &.main-driver {}
+  &.main-driver {
+    padding-top: 116px;
+    @media screen and ($tablet1) {
+      padding-top: 58px;
+    }
+  }
 }
 
 h1,
@@ -97,6 +101,21 @@ a {
 
     & .row {
       margin-top: 4px;
+    }
+
+    &-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 120%;
+      color: $blue-3;
+      width: min-content;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      cursor: pointer;
     }
   }
 

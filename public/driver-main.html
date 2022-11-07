@@ -855,6 +855,946 @@
       </section>
     </main>
 
+    <div class="modal-driver">
+      <div class="modal-driver__header">
+        <a class="header__logo" href="./">
+          <img src="./img/logo-black.svg" alt="" />
+        </a>
+        <div class="header__box">
+          <div class="title title-h1">Мой ALD</div>
+        </div>
+        <div class="modal-driver__close">Закрыть</div>
+      </div>
+      <div class="modal-driver__content">
+        <div class="modal-driver__content-left">
+          <div class="modal-driver__tabs">
+            <a class="modal-driver__tab" href="#profile">Данные профиля</a>
+            <a class="modal-driver__tab" href="#cars">Мои автомобили</a>
+            <a class="modal-driver__tab" href="#notification">Уведомления</a>
+            <a class="modal-driver__tab" href="#login">*** Авторизация</a>
+          </div>
+        </div>
+        <div class="modal-driver__content-right">
+          <div id="profile" class="modal-driver__container">
+            <form class="modal-driver__form">
+              <div class="form-box form-col-1">
+                <div class="input-group">
+                  <label class="label-text">Данные пользователя</label>
+
+                  <div class="input-wrapper">
+                    <div class="input-box">
+                      <input
+                        class="input"
+                        type="text"
+                        placeholder="Имя"
+                        autocomplete="off"
+                        required
+                        value="Vladimir "
+                      />
+                    </div>
+                  </div>
+
+                  <div class="input-wrapper is-not-success">
+                    <div class="input-box">
+                      <input
+                        class="input"
+                        type="text"
+                        placeholder="Моб. телефон"
+                        autocomplete="off"
+                        required
+                        value="8-960-538-10-11"
+                      />
+
+                      <span class="input-status">Требует подтверждения</span>
+                    </div>
+
+                    <span class="message-text"
+                      >Подтвердите номер мобильного телефона</span
+                    >
+                  </div>
+
+                  <button class="form-box-btn" type="button">
+                    Подтвердить
+                  </button>
+
+                  <div class="input-wrapper is-not-success">
+                    <div class="input-box">
+                      <input
+                        class="input"
+                        type="email"
+                        placeholder="E-mail"
+                        autocomplete="off"
+                        required
+                        value="Vlad233@gmail.com"
+                      />
+
+                      <span class="input-status">Требует подтверждения</span>
+                    </div>
+
+                    <span class="message-text"
+                      >На Вашу почту было отправлено письмо со ссылкой для
+                      подтверждения электронного адреса</span
+                    >
+                  </div>
+
+                  <button class="form-box-btn" type="button">
+                    Подтвердить
+                  </button>
+                </div>
+              </div>
+              <div class="form-box form-col-1">
+                <div class="input-group">
+                  <label class="label-text">Данные пользователя</label>
+
+                  <div class="input-wrapper">
+                    <div class="input-box">
+                      <input
+                        class="input"
+                        type="text"
+                        placeholder="Имя"
+                        autocomplete="off"
+                        required
+                        value="Vladimir "
+                      />
+                    </div>
+                  </div>
+
+                  <div class="input-wrapper is-success">
+                    <div class="input-box">
+                      <input
+                        class="input"
+                        type="text"
+                        placeholder="Моб. телефон"
+                        autocomplete="off"
+                        required
+                        value="8-960-538-10-11"
+                      />
+
+                      <span class="input-status">Подтвержден</span>
+                    </div>
+                  </div>
+
+                  <div class="input-wrapper is-success">
+                    <div class="input-box">
+                      <input
+                        class="input"
+                        type="email"
+                        placeholder="E-mail"
+                        autocomplete="off"
+                        required
+                        value="Vlad233@gmail.com"
+                      />
+
+                      <span class="input-status">Подтвержден</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-box form-col-1">
+                <div class="input-group">
+                  <label class="label-text">Отправить повторно</label>
+
+                  <div class="input-wrapper is-password">
+                    <div class="input-box">
+                      <input
+                        class="input"
+                        type="password"
+                        placeholder="Старый пароль"
+                        autocomplete="off"
+                        required
+                        value=""
+                      />
+
+                      <span class="icon"
+                        ><i
+                          ><svg
+                            id="eye-open"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10.3866 8.00001C10.3866 9.32001 9.31995 10.3867 7.99995 10.3867C6.67995 10.3867 5.61328 9.32001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C9.31995 5.61334 10.3866 6.68001 10.3866 8.00001Z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M7.9999 13.5133C10.3532 13.5133 12.5466 12.1266 14.0732 9.72665C14.6732 8.78665 14.6732 7.20665 14.0732 6.26665C12.5466 3.86665 10.3532 2.47998 7.9999 2.47998C5.64656 2.47998 3.45323 3.86665 1.92656 6.26665C1.32656 7.20665 1.32656 8.78665 1.92656 9.72665C3.45323 12.1266 5.64656 13.5133 7.9999 13.5133Z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            /></svg
+                          ><svg
+                            id="eye-close"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9.68661 6.31334L6.31328 9.68668C5.87995 9.25334 5.61328 8.66001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C8.65995 5.61334 9.25328 5.88001 9.68661 6.31334Z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M11.8799 3.84669C10.7132 2.96669 9.3799 2.48669 7.9999 2.48669C5.64656 2.48669 3.45323 3.87336 1.92656 6.27336C1.32656 7.21336 1.32656 8.79336 1.92656 9.73336C2.45323 10.56 3.06656 11.2734 3.73323 11.8467"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M5.61328 13.02C6.37328 13.34 7.17995 13.5133 7.99995 13.5133C10.3533 13.5133 12.5466 12.1267 14.0733 9.72668C14.6733 8.78668 14.6733 7.20668 14.0733 6.26668C13.8533 5.92002 13.6133 5.59335 13.3666 5.28668"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M10.3409 8.46667C10.1676 9.40667 9.40094 10.1733 8.46094 10.3467"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M6.31398 9.68665L1.33398 14.6666"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M14.6675 1.33331L9.6875 6.31331"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            /></svg></i
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="input-wrapper is-password">
+                    <div class="input-box">
+                      <input
+                        class="input"
+                        type="password"
+                        placeholder="Новый пароль"
+                        autocomplete="off"
+                        required
+                        value=""
+                      />
+
+                      <span class="icon"
+                        ><i
+                          ><svg
+                            id="eye-open"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10.3866 8.00001C10.3866 9.32001 9.31995 10.3867 7.99995 10.3867C6.67995 10.3867 5.61328 9.32001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C9.31995 5.61334 10.3866 6.68001 10.3866 8.00001Z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M7.9999 13.5133C10.3532 13.5133 12.5466 12.1266 14.0732 9.72665C14.6732 8.78665 14.6732 7.20665 14.0732 6.26665C12.5466 3.86665 10.3532 2.47998 7.9999 2.47998C5.64656 2.47998 3.45323 3.86665 1.92656 6.26665C1.32656 7.20665 1.32656 8.78665 1.92656 9.72665C3.45323 12.1266 5.64656 13.5133 7.9999 13.5133Z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            /></svg
+                          ><svg
+                            id="eye-close"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9.68661 6.31334L6.31328 9.68668C5.87995 9.25334 5.61328 8.66001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C8.65995 5.61334 9.25328 5.88001 9.68661 6.31334Z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M11.8799 3.84669C10.7132 2.96669 9.3799 2.48669 7.9999 2.48669C5.64656 2.48669 3.45323 3.87336 1.92656 6.27336C1.32656 7.21336 1.32656 8.79336 1.92656 9.73336C2.45323 10.56 3.06656 11.2734 3.73323 11.8467"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M5.61328 13.02C6.37328 13.34 7.17995 13.5133 7.99995 13.5133C10.3533 13.5133 12.5466 12.1267 14.0733 9.72668C14.6733 8.78668 14.6733 7.20668 14.0733 6.26668C13.8533 5.92002 13.6133 5.59335 13.3666 5.28668"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M10.3409 8.46667C10.1676 9.40667 9.40094 10.1733 8.46094 10.3467"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M6.31398 9.68665L1.33398 14.6666"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M14.6675 1.33331L9.6875 6.31331"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            /></svg></i
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="input-wrapper is-password">
+                    <div class="input-box">
+                      <input
+                        class="input"
+                        type="password"
+                        placeholder="Повторите пароль"
+                        autocomplete="off"
+                        required
+                        value=""
+                      />
+
+                      <span class="icon"
+                        ><i
+                          ><svg
+                            id="eye-open"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10.3866 8.00001C10.3866 9.32001 9.31995 10.3867 7.99995 10.3867C6.67995 10.3867 5.61328 9.32001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C9.31995 5.61334 10.3866 6.68001 10.3866 8.00001Z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M7.9999 13.5133C10.3532 13.5133 12.5466 12.1266 14.0732 9.72665C14.6732 8.78665 14.6732 7.20665 14.0732 6.26665C12.5466 3.86665 10.3532 2.47998 7.9999 2.47998C5.64656 2.47998 3.45323 3.86665 1.92656 6.26665C1.32656 7.20665 1.32656 8.78665 1.92656 9.72665C3.45323 12.1266 5.64656 13.5133 7.9999 13.5133Z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            /></svg
+                          ><svg
+                            id="eye-close"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9.68661 6.31334L6.31328 9.68668C5.87995 9.25334 5.61328 8.66001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C8.65995 5.61334 9.25328 5.88001 9.68661 6.31334Z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M11.8799 3.84669C10.7132 2.96669 9.3799 2.48669 7.9999 2.48669C5.64656 2.48669 3.45323 3.87336 1.92656 6.27336C1.32656 7.21336 1.32656 8.79336 1.92656 9.73336C2.45323 10.56 3.06656 11.2734 3.73323 11.8467"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M5.61328 13.02C6.37328 13.34 7.17995 13.5133 7.99995 13.5133C10.3533 13.5133 12.5466 12.1267 14.0733 9.72668C14.6733 8.78668 14.6733 7.20668 14.0733 6.26668C13.8533 5.92002 13.6133 5.59335 13.3666 5.28668"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M10.3409 8.46667C10.1676 9.40667 9.40094 10.1733 8.46094 10.3467"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M6.31398 9.68665L1.33398 14.6666"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M14.6675 1.33331L9.6875 6.31331"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            /></svg></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-blue w-auto" type="submit">
+                Сохранить
+              </button>
+            </form>
+            <div class="login__bottom">
+              <a href="javascript:void(0);">
+                <svg
+                  width="7"
+                  height="12"
+                  viewBox="0 0 7 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.99925 11.28L1.65258 6.9333C1.13924 6.41997 1.13924 5.57997 1.65258 5.06664L5.99925 0.719971"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>На главный</span>
+              </a>
+            </div>
+          </div>
+          <div
+            id="cars"
+            class="modal-driver__container modal-driver__container-gray"
+          >
+            <div class="modal-driver__cars">
+              <div class="modal-driver__cars-item">
+                <div class="modal-driver__cars-name">Volkswagen Polo</div>
+                <div class="modal-driver__cars-info">
+                  <div class="modal-driver__cars-text">
+                    Номер контракта: 124321
+                  </div>
+                  <div class="modal-driver__cars-text">
+                    Гос. номер: A726BO191
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="login__bottom">
+              <div class="car__img">
+                <img src="./img/car-img.png" alt="" />
+              </div>
+              <a href="javascript:void(0);">
+                <svg
+                  width="7"
+                  height="12"
+                  viewBox="0 0 7 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.99925 11.28L1.65258 6.9333C1.13924 6.41997 1.13924 5.57997 1.65258 5.06664L5.99925 0.719971"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>На главный</span>
+              </a>
+            </div>
+          </div>
+          <div id="notification" class="modal-driver__container">
+            <form class="modal-driver__form">
+              <div class="form-box form-col-1">
+                <div class="input-group">
+                  <label class="label-text"
+                    >Выберите разделы для отправки уведомлений</label
+                  >
+
+                  <div class="input-wrapper">
+                    <ul class="switch-list">
+                      <li class="switch-item">
+                        <label class="switch">
+                          <input
+                            class="switch-input"
+                            type="checkbox"
+                            name=""
+                            checked
+                          />
+                          <div class="switch-text">Штрафы</div>
+                        </label>
+                      </li>
+
+                      <li class="switch-item">
+                        <label class="switch">
+                          <input
+                            class="switch-input"
+                            type="checkbox"
+                            name=""
+                            checked
+                          />
+                          <div class="switch-text">Сервис</div>
+                        </label>
+                      </li>
+
+                      <li class="switch-item">
+                        <label class="switch">
+                          <input
+                            class="switch-input"
+                            type="checkbox"
+                            name=""
+                            checked
+                          />
+                          <div class="switch-text">ОСАГО</div>
+                        </label>
+                      </li>
+
+                      <li class="switch-item">
+                        <label class="switch">
+                          <input
+                            class="switch-input"
+                            type="checkbox"
+                            name=""
+                            checked
+                          />
+                          <div class="switch-text">Хранение</div>
+                        </label>
+                      </li>
+
+                      <li class="switch-item">
+                        <label class="switch">
+                          <input
+                            class="switch-input"
+                            type="checkbox"
+                            name=""
+                            checked
+                          />
+                          <div class="switch-text">ГТО</div>
+                        </label>
+                      </li>
+
+                      <li class="switch-item">
+                        <label class="switch">
+                          <input
+                            class="switch-input"
+                            type="checkbox"
+                            name=""
+                            checked
+                          />
+                          <div class="switch-text">Шины</div>
+                        </label>
+                      </li>
+                    </ul>
+                    <span class="message-text"></span>
+                  </div>
+
+                  <div class="input-wrapper">
+                    <ul class="checkbox-list">
+                      <li class="checkbox-item">
+                        <label class="checkbox">
+                          <input
+                            class="checkbox-input"
+                            type="checkbox"
+                            name=""
+                            checked
+                          />
+                          <div class="checkbox-text">
+                            Получать уведомления на e-mail
+                          </div>
+                        </label>
+                      </li>
+                    </ul>
+                    <span class="message-text"></span>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="login__bottom">
+              <a href="javascript:void(0);">
+                <svg
+                  width="7"
+                  height="12"
+                  viewBox="0 0 7 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.99925 11.28L1.65258 6.9333C1.13924 6.41997 1.13924 5.57997 1.65258 5.06664L5.99925 0.719971"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>На главный</span>
+              </a>
+            </div>
+          </div>
+          <div id="login" class="modal-driver__container">
+            <div class="login-tabs">
+              <div class="login-tabs__buttons">
+                <a class="btn btn-tr-bl js-md-tab" href="#authorization"
+                  ><span>Вход по номеру телефона</span></a
+                >
+                <a class="btn btn-blue js-md-tab" href="#registration"
+                  ><span>Регистрация</span></a
+                >
+              </div>
+              <div class="modal-driver__login modal-driver__login-hidden">
+                <div class="login-tabs__tabs">
+                  <a class="login-tabs__tab" href="#authorization">Вход</a>
+                  <a class="login-tabs__tab" href="#registration"
+                    >Регистрация</a
+                  >
+                </div>
+                <div id="authorization" class="login-tabs__container">
+                  <form class="login-form">
+                    <div class="form-box form-col-1">
+                      <div class="input-wrapper">
+                        <div class="input-box">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Моб. телефон"
+                            autocomplete="off"
+                            required
+                            value=""
+                          />
+                        </div>
+                      </div>
+
+                      <div class="input-wrapper is-password">
+                        <div class="input-box">
+                          <input
+                            class="input"
+                            type="password"
+                            placeholder="Пароль "
+                            autocomplete="off"
+                            required
+                            value=""
+                          />
+
+                          <span class="icon"
+                            ><i
+                              ><svg
+                                id="eye-open"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M10.3866 8.00001C10.3866 9.32001 9.31995 10.3867 7.99995 10.3867C6.67995 10.3867 5.61328 9.32001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C9.31995 5.61334 10.3866 6.68001 10.3866 8.00001Z"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M7.9999 13.5133C10.3532 13.5133 12.5466 12.1266 14.0732 9.72665C14.6732 8.78665 14.6732 7.20665 14.0732 6.26665C12.5466 3.86665 10.3532 2.47998 7.9999 2.47998C5.64656 2.47998 3.45323 3.86665 1.92656 6.26665C1.32656 7.20665 1.32656 8.78665 1.92656 9.72665C3.45323 12.1266 5.64656 13.5133 7.9999 13.5133Z"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                /></svg
+                              ><svg
+                                id="eye-close"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M9.68661 6.31334L6.31328 9.68668C5.87995 9.25334 5.61328 8.66001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C8.65995 5.61334 9.25328 5.88001 9.68661 6.31334Z"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M11.8799 3.84669C10.7132 2.96669 9.3799 2.48669 7.9999 2.48669C5.64656 2.48669 3.45323 3.87336 1.92656 6.27336C1.32656 7.21336 1.32656 8.79336 1.92656 9.73336C2.45323 10.56 3.06656 11.2734 3.73323 11.8467"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M5.61328 13.02C6.37328 13.34 7.17995 13.5133 7.99995 13.5133C10.3533 13.5133 12.5466 12.1267 14.0733 9.72668C14.6733 8.78668 14.6733 7.20668 14.0733 6.26668C13.8533 5.92002 13.6133 5.59335 13.3666 5.28668"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M10.3409 8.46667C10.1676 9.40667 9.40094 10.1733 8.46094 10.3467"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M6.31398 9.68665L1.33398 14.6666"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M14.6675 1.33331L9.6875 6.31331"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                /></svg></i
+                          ></span>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="input-wrapper">
+                          <ul class="checkbox-list">
+                            <li class="checkbox-item">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox-input"
+                                  type="checkbox"
+                                  name=""
+                                />
+                                <div class="checkbox-text">Запомнить меня</div>
+                              </label>
+                            </li>
+                          </ul>
+                          <span class="message-text"></span>
+                        </div>
+
+                        <a class="login-link" href="javascript:void(0);"
+                          >Забыли пароль?</a
+                        >
+                      </div>
+                    </div>
+                    <button class="btn btn-blue" type="submit">Войти</button>
+                  </form>
+                </div>
+                <div id="registration" class="login-tabs__container">
+                  <form class="login-form">
+                    <div class="form-box form-col-1">
+                      <div class="input-group">
+                        <label class="label-text">Данные пользователя</label>
+
+                        <div class="input-wrapper">
+                          <div class="input-box">
+                            <input
+                              class="input"
+                              type="text"
+                              placeholder="Имя"
+                              autocomplete="off"
+                              required
+                              value=""
+                            />
+                          </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                          <div class="input-box">
+                            <input
+                              class="input"
+                              type="text"
+                              placeholder="Моб. телефон"
+                              autocomplete="off"
+                              required
+                              value=""
+                            />
+                          </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                          <div class="input-box">
+                            <input
+                              class="input"
+                              type="email"
+                              placeholder="E-mail"
+                              autocomplete="off"
+                              required
+                              value=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-box form-col-1">
+                      <div class="input-group">
+                        <label class="label-text">Данные автомобиля</label>
+
+                        <div class="input-wrapper">
+                          <div class="input-box">
+                            <input
+                              class="input"
+                              type="text"
+                              placeholder="Номер контракта"
+                              autocomplete="off"
+                              required
+                              value=""
+                            />
+                          </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                          <div class="input-box">
+                            <input
+                              class="input"
+                              type="text"
+                              placeholder="Гос. номер"
+                              autocomplete="off"
+                              required
+                              value=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-box form-col-1">
+                      <div class="input-group">
+                        <label class="label-text">Пароль</label>
+
+                        <div class="input-wrapper is-password">
+                          <div class="input-box">
+                            <input
+                              class="input"
+                              type="password"
+                              placeholder="Пароль "
+                              autocomplete="off"
+                              required
+                              value=""
+                            />
+
+                            <span class="icon"
+                              ><i
+                                ><svg
+                                  id="eye-open"
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M10.3866 8.00001C10.3866 9.32001 9.31995 10.3867 7.99995 10.3867C6.67995 10.3867 5.61328 9.32001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C9.31995 5.61334 10.3866 6.68001 10.3866 8.00001Z"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                  <path
+                                    d="M7.9999 13.5133C10.3532 13.5133 12.5466 12.1266 14.0732 9.72665C14.6732 8.78665 14.6732 7.20665 14.0732 6.26665C12.5466 3.86665 10.3532 2.47998 7.9999 2.47998C5.64656 2.47998 3.45323 3.86665 1.92656 6.26665C1.32656 7.20665 1.32656 8.78665 1.92656 9.72665C3.45323 12.1266 5.64656 13.5133 7.9999 13.5133Z"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  /></svg
+                                ><svg
+                                  id="eye-close"
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M9.68661 6.31334L6.31328 9.68668C5.87995 9.25334 5.61328 8.66001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C8.65995 5.61334 9.25328 5.88001 9.68661 6.31334Z"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                  <path
+                                    d="M11.8799 3.84669C10.7132 2.96669 9.3799 2.48669 7.9999 2.48669C5.64656 2.48669 3.45323 3.87336 1.92656 6.27336C1.32656 7.21336 1.32656 8.79336 1.92656 9.73336C2.45323 10.56 3.06656 11.2734 3.73323 11.8467"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                  <path
+                                    d="M5.61328 13.02C6.37328 13.34 7.17995 13.5133 7.99995 13.5133C10.3533 13.5133 12.5466 12.1267 14.0733 9.72668C14.6733 8.78668 14.6733 7.20668 14.0733 6.26668C13.8533 5.92002 13.6133 5.59335 13.3666 5.28668"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                  <path
+                                    d="M10.3409 8.46667C10.1676 9.40667 9.40094 10.1733 8.46094 10.3467"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                  <path
+                                    d="M6.31398 9.68665L1.33398 14.6666"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                  <path
+                                    d="M14.6675 1.33331L9.6875 6.31331"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  /></svg></i
+                            ></span>
+                          </div>
+                        </div>
+
+                        <div class="input-wrapper is-password">
+                          <div class="input-box">
+                            <input
+                              class="input"
+                              type="password"
+                              placeholder="Пароль "
+                              autocomplete="off"
+                              required
+                              value=""
+                            />
+
+                            <span class="icon"
+                              ><i
+                                ><svg
+                                  id="eye-open"
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M10.3866 8.00001C10.3866 9.32001 9.31995 10.3867 7.99995 10.3867C6.67995 10.3867 5.61328 9.32001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C9.31995 5.61334 10.3866 6.68001 10.3866 8.00001Z"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                  <path
+                                    d="M7.9999 13.5133C10.3532 13.5133 12.5466 12.1266 14.0732 9.72665C14.6732 8.78665 14.6732 7.20665 14.0732 6.26665C12.5466 3.86665 10.3532 2.47998 7.9999 2.47998C5.64656 2.47998 3.45323 3.86665 1.92656 6.26665C1.32656 7.20665 1.32656 8.78665 1.92656 9.72665C3.45323 12.1266 5.64656 13.5133 7.9999 13.5133Z"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  /></svg
+                                ><svg
+                                  id="eye-close"
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M9.68661 6.31334L6.31328 9.68668C5.87995 9.25334 5.61328 8.66001 5.61328 8.00001C5.61328 6.68001 6.67995 5.61334 7.99995 5.61334C8.65995 5.61334 9.25328 5.88001 9.68661 6.31334Z"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                  <path
+                                    d="M11.8799 3.84669C10.7132 2.96669 9.3799 2.48669 7.9999 2.48669C5.64656 2.48669 3.45323 3.87336 1.92656 6.27336C1.32656 7.21336 1.32656 8.79336 1.92656 9.73336C2.45323 10.56 3.06656 11.2734 3.73323 11.8467"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                  <path
+                                    d="M5.61328 13.02C6.37328 13.34 7.17995 13.5133 7.99995 13.5133C10.3533 13.5133 12.5466 12.1267 14.0733 9.72668C14.6733 8.78668 14.6733 7.20668 14.0733 6.26668C13.8533 5.92002 13.6133 5.59335 13.3666 5.28668"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                  <path
+                                    d="M10.3409 8.46667C10.1676 9.40667 9.40094 10.1733 8.46094 10.3467"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                  <path
+                                    d="M6.31398 9.68665L1.33398 14.6666"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                  <path
+                                    d="M14.6675 1.33331L9.6875 6.31331"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  /></svg></i
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-wrapper">
+                          <ul class="checkbox-list">
+                            <li class="checkbox-item">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox-input"
+                                  type="checkbox"
+                                  name=""
+                                />
+                                <div class="checkbox-text">
+                                  Я даю согласие на обработку моих персональных
+                                  данных
+                                </div>
+                              </label>
+                            </li>
+                          </ul>
+                          <span class="message-text"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-blue" type="submit">
+                      Зарегистрироваться
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/script.js"></script>
   </body>

@@ -243,21 +243,14 @@
     }
 
     &__buttons {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 8px;
       margin-bottom: 28px;
 
       &.login-tabs__buttons-hidden {
         display: none;
       }
-    }
-  }
-
-  & .btn {
-    margin-bottom: 8px;
-
-    &:last-child {
-      margin-bottom: 0;
     }
   }
 

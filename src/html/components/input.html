@@ -4,6 +4,9 @@
     @@if(context.icon){
     <span class="icon"><i>@@context.icon</i></span>
     }
+    @@if(context.status){
+    <span class="input-status">@@context.status</span>
+    }
   </div>
   @@if(context.message){
   <span class="message-text">@@context.message</span>
