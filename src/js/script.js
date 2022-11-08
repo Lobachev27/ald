@@ -11,12 +11,6 @@ $(document).ready(function() {
       $(this).addClass('active');
       return false;
     }).filter(':first').click();
-
-    var url_string = window.location.href;
-    var id = url_string.split('id=')[1];
-    if (id === "events") {
-      $('.login-tabs__tab').filter(':last').click();
-    }
   });
 });
 
@@ -59,12 +53,6 @@ $(document).ready(function() {
       $(this).addClass('active');
       return false;
     });
-
-    var url_string = window.location.href;
-    var id = url_string.split('id=')[1];
-    if (id === "events") {
-      $('.js-md-tab').filter(':last').click();
-    }
   });
 
   $(".js-md-tab").click(function () {
@@ -78,20 +66,21 @@ $(document).ready(function() {
 $(document).ready(function() {
   $(function () {
     var tabContainers = $('.modal-driver__container');
-    tabContainers.hide().filter(':first').show();
+    tabContainers.hide();
     $('.modal-driver__tab').click(function () {
       tabContainers.hide();
       tabContainers.filter(this.hash).show();
       $('.modal-driver__tab').removeClass('active');
       $(this).addClass('active');
+      $('.modal-driver__tabs').addClass('hide');
       return false;
-    }).filter(':first').click();
+    });
 
-    var url_string = window.location.href;
-    var id = url_string.split('id=')[1];
-    if (id === "events") {
-      $('.modal-driver__tab').filter(':last').click();
-    }
+    $('.js-back').click(function () {
+      tabContainers.hide();
+      $('.modal-driver__tabs').removeClass('hide');
+      $('.modal-driver__tab').removeClass('active');
+    });
   });
 });
 
