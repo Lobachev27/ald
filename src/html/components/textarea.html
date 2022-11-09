@@ -1,0 +1,8 @@
+<div class="input-wrapper @@context.classesList">
+  <div class="textarea-box">
+    <textarea class="textarea" placeholder="@@context.placeholder" @@if(context.required){required} @@if(context.readonly){readonly="readonly"} @@if(context.disabled){disabled}>@@context.value</textarea>
+  </div>
+  @@if(context.message){
+  <span class="message-text">@@context.message</span>
+  }
+</div>

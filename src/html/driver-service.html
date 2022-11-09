@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Заявки на сервис"
+})
+
+<body>
+
+@@include("./components/header-driver.html", {
+  context: {
+    "classList": "header-driver",
+    "content": '<a class="header-back" href="./driver-main.html"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.99925 11.28L1.65258 6.9333C1.13924 6.41997 1.13924 5.57997 1.65258 5.06664L5.99925 0.719971" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Назад</span></a>',
+    "userImage": "",
+    "userName": "Vladimir K.",
+    "link": "javascript:void(0);",
+  }
+})
+
+<main class="main main-driver">
+
+  <section class="section-default hidden-car">
+    <div class="container">
+      <div class="layout-1">
+        <div class="car">
+          <div class="car__info">
+            <div class="car__name">Volkswagen Polo </div>
+            <div class="car__model">A752BИ</div>
+          </div>
+          <div class="car__status">
+            <span class="car__status-text">Статус:</span>
+            <span class="car__status-value green">На хранении</span>
+          </div>
+        </div>
+
+        <div class="driver-default">
+          <h1 class="title title-h1">Заявки на сервис</h1>
+          <div class="wrapper-default wrapper-50">
+            <div class="default__tabs">
+              <a class="default__tab js-tab" href="#all">Все заявки</a>
+              <a class="default__tab js-tab" href="#date">Даты плановыx ТО</a>
+              <a class="default__tab default__tab-request js-tab" href="#request">Создать заявку</a>
+            </div>
+            <div id="all" class="default__container">
+              <div class="box-request">
+                <div class="box-request__main">
+                  <div class="box-request__text">
+                    <span class="box-request__text-name">№ Заявки:</span>
+                    <span class="box-request__text-value">TO-057362-24082022-8200</span>
+                  </div>
+                  <div class="box-request__text">
+                    <span class="box-request__text-name">Статус:</span>
+                    <span class="box-request__text-value">
+                      <span class="status status-work">В работе</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="box-request__extra">
+                  <div class="box-request__data">
+                    <div class="box-request__col">
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Создана:</span>
+                        <span class="box-request__text-value">23. 09. 2022</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">ФИО:</span>
+                        <span class="box-request__text-value">Иванов Иван Иванович</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Тел:</span>
+                        <span class="box-request__text-value">79123972791</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">E-mail:</span>
+                        <span class="box-request__text-value">Ivan@gmail.com</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Дата:</span>
+                        <span class="box-request__text-value">30.10.2022</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Время:</span>
+                        <span class="box-request__text-value">09:00</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Тип работ:</span>
+                        <span class="box-request__text-value">Регламентное ТО</span>
+                      </div>
+                    </div>
+                    <div class="box-request__col">
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Марка автомобиля:</span>
+                        <span class="box-request__text-value">Volkswagen Polo</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Гос.номер:</span>
+                        <span class="box-request__text-value">T386XY777</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">VIN:</span>
+                        <span class="box-request__text-value">XW8AC4NE0JH012101</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Текущий пробег:</span>
+                        <span class="box-request__text-value">97 897</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Город экспл./ремонта:</span>
+                        <span class="box-request__text-value">Москва</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-request__description">
+                    <div class="box-request__text">
+                      <span class="box-request__text-name">Описание:</span>
+                      <span class="box-request__text-value">ТО, Диагностика: кпп, при переключении передач вперед-назад притормаживает, замена щетки стеклоочистителя.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-request">
+                <div class="box-request__main">
+                  <div class="box-request__text">
+                    <span class="box-request__text-name">№ Заявки:</span>
+                    <span class="box-request__text-value">TO-057362-24082022-8200</span>
+                  </div>
+                  <div class="box-request__text">
+                    <span class="box-request__text-name">Статус:</span>
+                    <span class="box-request__text-value">
+                      <span class="status status-finish">Завершен</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="box-request__extra">
+                  <div class="box-request__data">
+                    <div class="box-request__col">
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Создана:</span>
+                        <span class="box-request__text-value">23. 09. 2022</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">ФИО:</span>
+                        <span class="box-request__text-value">Иванов Иван Иванович</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Тел:</span>
+                        <span class="box-request__text-value">79123972791</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">E-mail:</span>
+                        <span class="box-request__text-value">Ivan@gmail.com</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Дата:</span>
+                        <span class="box-request__text-value">30.10.2022</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Время:</span>
+                        <span class="box-request__text-value">09:00</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Тип работ:</span>
+                        <span class="box-request__text-value">Регламентное ТО</span>
+                      </div>
+                    </div>
+                    <div class="box-request__col">
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Марка автомобиля:</span>
+                        <span class="box-request__text-value">Volkswagen Polo</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Гос.номер:</span>
+                        <span class="box-request__text-value">T386XY777</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">VIN:</span>
+                        <span class="box-request__text-value">XW8AC4NE0JH012101</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Текущий пробег:</span>
+                        <span class="box-request__text-value">97 897</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Город экспл./ремонта:</span>
+                        <span class="box-request__text-value">Москва</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-request__description">
+                    <div class="box-request__text">
+                      <span class="box-request__text-name">Описание:</span>
+                      <span class="box-request__text-value">ТО, Диагностика: кпп, при переключении передач вперед-назад притормаживает, замена щетки стеклоочистителя.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-request">
+                <div class="box-request__main">
+                  <div class="box-request__text">
+                    <span class="box-request__text-name">№ Заявки:</span>
+                    <span class="box-request__text-value">TO-057362-24082022-8200</span>
+                  </div>
+                  <div class="box-request__text">
+                    <span class="box-request__text-name">Статус:</span>
+                    <span class="box-request__text-value">
+                      <span class="status status-finish">Завершен</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="box-request__extra">
+                  <div class="box-request__data">
+                    <div class="box-request__col">
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Создана:</span>
+                        <span class="box-request__text-value">23. 09. 2022</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">ФИО:</span>
+                        <span class="box-request__text-value">Иванов Иван Иванович</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Тел:</span>
+                        <span class="box-request__text-value">79123972791</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">E-mail:</span>
+                        <span class="box-request__text-value">Ivan@gmail.com</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Дата:</span>
+                        <span class="box-request__text-value">30.10.2022</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Время:</span>
+                        <span class="box-request__text-value">09:00</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Тип работ:</span>
+                        <span class="box-request__text-value">Регламентное ТО</span>
+                      </div>
+                    </div>
+                    <div class="box-request__col">
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Марка автомобиля:</span>
+                        <span class="box-request__text-value">Volkswagen Polo</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Гос.номер:</span>
+                        <span class="box-request__text-value">T386XY777</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">VIN:</span>
+                        <span class="box-request__text-value">XW8AC4NE0JH012101</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Текущий пробег:</span>
+                        <span class="box-request__text-value">97 897</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Город экспл./ремонта:</span>
+                        <span class="box-request__text-value">Москва</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-request__description">
+                    <div class="box-request__text">
+                      <span class="box-request__text-name">Описание:</span>
+                      <span class="box-request__text-value">ТО, Диагностика: кпп, при переключении передач вперед-назад притормаживает, замена щетки стеклоочистителя.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="date" class="default__container">???</div>
+            <div id="request" class="default__container">
+              <div class="form-request">
+                <div class="form-request__steps">Шаг 1/5</div>
+                <div class="title title-h1 form-request__title">Введите данные водителя и автомобиля</div>
+                <form class="form-request__form">
+                  <div class="form-box form-col-2">
+                    <div class="input-group">
+                      <label class="label-text">Данные автомобиля</label>
+
+                      @@include("./components/input.html", {
+                        context: {
+                          classesList: "",
+                          required: true,
+                          disabled: false,
+                          readonly: false,
+                          datepicker: false,
+                          type: "text",
+                          placeholder: "Марка автомобиля",
+                          icon: "",
+                          value: "Volkswagen Polo",
+                          status: "",
+                          message: "",
+                        }
+                      })
+
+                      @@include("./components/input.html", {
+                        context: {
+                          classesList: "",
+                          required: true,
+                          disabled: false,
+                          readonly: false,
+                          datepicker: false,
+                          type: "text",
+                          placeholder: "Автомобильный номер",
+                          icon: "",
+                          value: "T386XY777",
+                          status: "",
+                          message: "",
+                        }
+                      })
+
+                      @@include("./components/input.html", {
+                        context: {
+                          classesList: "",
+                          required: true,
+                          disabled: false,
+                          readonly: false,
+                          datepicker: false,
+                          type: "text",
+                          placeholder: "VIN автомобиля",
+                          icon: "",
+                          value: "XW8AC4NE0JH012101",
+                          status: "",
+                          message: "",
+                        }
+                      })
+
+                    </div>
+                    <div class="input-group">
+                      <label class="label-text">Данные водителя</label>
+
+                      @@include("./components/input.html", {
+                        context: {
+                          classesList: "",
+                          required: true,
+                          disabled: false,
+                          readonly: false,
+                          datepicker: false,
+                          type: "text",
+                          placeholder: "ФИО",
+                          icon: "",
+                          value: "",
+                          status: "",
+                          message: "",
+                        }
+                      })
+
+                      @@include("./components/input.html", {
+                        context: {
+                          classesList: "",
+                          required: true,
+                          disabled: false,
+                          readonly: false,
+                          datepicker: false,
+                          type: "text",
+                          placeholder: "Моб. телефон",
+                          icon: "",
+                          value: "",
+                          status: "",
+                          message: "",
+                        }
+                      })
+
+                      @@include("./components/input.html", {
+                        context: {
+                          classesList: "",
+                          required: true,
+                          disabled: false,
+                          readonly: false,
+                          datepicker: false,
+                          type: "email",
+                          placeholder: "E-mail",
+                          icon: "",
+                          value: "",
+                          status: "",
+                          message: "",
+                        }
+                      })
+
+                    </div>
+                  </div>
+                  <div class="form-box form-col-2">
+                    <div class="input-group">
+                      <label class="label-text">Город экпл./ремонта</label>
+
+                      @@include("./components/select.html", {
+                        context: {
+                          classesList: "",
+                          search: true,
+                          placeholder: "Выберите город",
+                          value: "",
+                          message: "",
+                          arr: ["Москва", "Санкт-Петербург", "Новосибирск", "Самара", "Краснодар", "Нижний Новгород", "Екатеринбург", "Волгоград",],
+                        }
+                      })
+
+                    </div>
+                  </div>
+                  <div class="form-box form-col-2">
+                    <div class="input-group">
+                      <label class="label-text">Текущий пробег</label>
+
+                      @@include("./components/input.html", {
+                        context: {
+                          classesList: "",
+                          required: true,
+                          disabled: false,
+                          readonly: false,
+                          datepicker: false,
+                          type: "text",
+                          placeholder: "Введите пробег автомобиля",
+                          icon: "",
+                          value: "",
+                          status: "",
+                          message: "",
+                        }
+                      })
+
+                    </div>
+                  </div>
+                  <div class="form-request__btn">
+                    <button class="btn btn-tr-bl" type="button">Далее</button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="form-request">
+                <div class="form-request__steps">Шаг 2/5</div>
+                <div class="title title-h1 form-request__title">Выберите дату и время работ</div>
+                <form class="form-request__form">
+                  <div class="form-box form-col-2">
+
+                    @@include("./components/input.html", {
+                      context: {
+                        classesList: "is-datepicker",
+                        required: true,
+                        disabled: false,
+                        readonly: false,
+                        datepicker: true,
+                        type: "text",
+                        placeholder: "Выберите дату ремонта",
+                        icon: '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.33398 1.3335V3.3335" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.666 1.3335V3.3335" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.1333 14.2667C13.3115 14.2667 14.2667 13.3115 14.2667 12.1333C14.2667 10.9551 13.3115 10 12.1333 10C10.9551 10 10 10.9551 10 12.1333C10 13.3115 10.9551 14.2667 12.1333 14.2667Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.6667 14.6667L14 14" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.33398 6.06006H13.6673" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.91333 14.6666H5.33333C3 14.6666 2 13.3333 2 11.3333V5.66659C2 3.66659 3 2.33325 5.33333 2.33325H10.6667C13 2.33325 14 3.66659 14 5.66659V8.66658" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.99764 9.13338H8.00363" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.52889 9.13338H5.53488" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.52889 11.1334H5.53488" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                        value: "",
+                        status: "",
+                        message: "",
+                      }
+                    })
+
+                    @@include("./components/select.html", {
+                      context: {
+                        classesList: "",
+                        search: false,
+                        placeholder: "Выберите время",
+                        value: "",
+                        message: "",
+                        arr: ["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00",],
+                      }
+                    })
+
+                  </div>
+                  <div class="form-request__btn">
+                    <button class="btn btn-tr-bk" type="button">Назад</button>
+                    <button class="btn btn-tr-bl" type="button">Далее</button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="form-request">
+                <div class="form-request__steps">Шаг 3/5</div>
+                <div class="title title-h1 form-request__title">Укажите тип работ</div>
+                <form class="form-request__form">
+                  <div class="form-box form-col-2">
+
+                    @@include("./components/select.html", {
+                      context: {
+                        classesList: "",
+                        search: false,
+                        placeholder: "Выберите время",
+                        value: "",
+                        message: "",
+                        arr: ["Тип работ 1", "Тип работ 2", "Тип работ 3", "Тип работ 4", "Тип работ 5", "Тип работ 6", "Тип работ 7", "Тип работ 8",],
+                      }
+                    })
+
+                  </div>
+                  <div class="form-box form-col-1">
+
+                    @@include("./components/textarea.html", {
+                      context: {
+                        classesList: "",
+                        required: false,
+                        disabled: false,
+                        readonly: false,
+                        placeholder: "Описание работ",
+                        value: "",
+                        message: "",
+                      }
+                    })
+
+                  </div>
+                  <div class="form-request__btn">
+                    <button class="btn btn-tr-bk" type="button">Назад</button>
+                    <button class="btn btn-tr-bl" type="button">Далее</button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="form-request">
+                <div class="form-request__steps">Шаг 4/5</div>
+                <div class="title title-h1 form-request__title">Выберите сервисный центр</div>
+                <form class="form-request__form">
+                  <div class="form-box form-col-2">
+
+                    @@include("./components/select.html", {
+                      context: {
+                        classesList: "",
+                        search: true,
+                        placeholder: "Выберите сервисный центр",
+                        value: "",
+                        message: "",
+                        arr: ["Сервисный центр 1", "Сервисный центр 2", "Сервисный центр 3", "Сервисный центр 4", "Сервисный центр 5", "Сервисный центр 6", "Сервисный центр 7", "Сервисный центр 8",],
+                      }
+                    })
+
+                  </div>
+                  <div class="form-box form-col-1">
+                    <div class="form-request__map">
+
+                    </div>
+                  </div>
+                  <div class="form-request__btn">
+                    <button class="btn btn-tr-bk" type="button">Назад</button>
+                    <button class="btn btn-tr-bl" type="button">Далее</button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="form-request">
+                <div class="form-request__steps">Шаг 5/5</div>
+                <div class="title title-h1 form-request__title">Подтвердите введеные данные</div>
+                <form class="form-request__form">
+                  <div class="form-box form-col-1">
+                    <div class="box-request__data">
+                      <div class="box-request__col">
+                        <div class="box-request__text">
+                          <span class="box-request__text-name">Создана:</span>
+                          <span class="box-request__text-value">23. 09. 2022</span>
+                        </div>
+                        <div class="box-request__text">
+                          <span class="box-request__text-name">ФИО:</span>
+                          <span class="box-request__text-value">Иванов Иван Иванович</span>
+                        </div>
+                        <div class="box-request__text">
+                          <span class="box-request__text-name">Тел:</span>
+                          <span class="box-request__text-value">79123972791</span>
+                        </div>
+                        <div class="box-request__text">
+                          <span class="box-request__text-name">E-mail:</span>
+                          <span class="box-request__text-value">Ivan@gmail.com</span>
+                        </div>
+                        <div class="box-request__text">
+                          <span class="box-request__text-name">Дата:</span>
+                          <span class="box-request__text-value">30.10.2022</span>
+                        </div>
+                        <div class="box-request__text">
+                          <span class="box-request__text-name">Время:</span>
+                          <span class="box-request__text-value">09:00</span>
+                        </div>
+                        <div class="box-request__text">
+                          <span class="box-request__text-name">Тип работ:</span>
+                          <span class="box-request__text-value">Регламентное ТО</span>
+                        </div>
+                      </div>
+                      <div class="box-request__col">
+                        <div class="box-request__text">
+                          <span class="box-request__text-name">Марка автомобиля:</span>
+                          <span class="box-request__text-value">Volkswagen Polo</span>
+                        </div>
+                        <div class="box-request__text">
+                          <span class="box-request__text-name">Гос.номер:</span>
+                          <span class="box-request__text-value">T386XY777</span>
+                        </div>
+                        <div class="box-request__text">
+                          <span class="box-request__text-name">VIN:</span>
+                          <span class="box-request__text-value">XW8AC4NE0JH012101</span>
+                        </div>
+                        <div class="box-request__text">
+                          <span class="box-request__text-name">Текущий пробег:</span>
+                          <span class="box-request__text-value">97 897</span>
+                        </div>
+                        <div class="box-request__text">
+                          <span class="box-request__text-name">Город экспл./ремонта:</span>
+                          <span class="box-request__text-value">Москва</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="box-request__description">
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Описание:</span>
+                        <span class="box-request__text-value">ТО, Диагностика: кпп, при переключении передач вперед-назад притормаживает, замена щетки стеклоочистителя.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-request__btn">
+                    <button class="btn btn-tr-bk" type="button">Назад</button>
+                    <button class="btn btn-blue" type="submit">Подтвердить</button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="car__img">
+          <img src="./img/car-img.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/modal-driver.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

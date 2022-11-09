@@ -1,0 +1,50 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.status {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 120%;
+  color: $black;
+  border-radius: 4px;
+  width: 120px;
+  height: 22px;
+
+  &.status-work {
+    background-color: #CBF0F9;
+    border: 1px solid #CBF0F9;
+  }
+
+  &.status-finish {
+    background-color: #E0F7EC;
+    border: 1px solid #E0F7EC;
+  }
+
+  &.status-disconnect {
+    background-color: #FDF5E8;
+    border: 1px solid #FDF5E8;
+  }
+
+  &.status-refusal {
+    background-color: #FFE8E8;
+    border: 1px solid #FFE8E8;
+  }
+
+  &.status-agreement {
+    background-color: #E4E1F7;
+    border: 1px solid #E4E1F7;
+  }
+
+  &.status-canceled {
+    background-color: $gray-2;
+    border: 1px solid $gray-2;
+  }
+
+  &.status-new {
+    background-color: $white;
+    border: 1px solid $black;
+  }
+}

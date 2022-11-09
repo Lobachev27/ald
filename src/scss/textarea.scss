@@ -1,0 +1,79 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.textarea {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  width: 100%;
+  height: 114px;
+  padding: 12px 14px;
+  color: $black;
+  background-color: $gray-1;
+  border-radius: 6px;
+  border: 1px solid $gray-1;
+  outline: none;
+  resize: vertical;
+  transition: border $transition-time;
+
+  &:hover {
+    border: 1px solid $blue-1;
+  }
+
+  &:focus {
+    border: 1px solid $blue-1;
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px transparent !important;
+  }
+
+  &::placeholder{
+    color: $gray-4;
+  }
+
+  &-box {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.input-wrapper {
+  &.is-disabled {
+    & .textarea {
+      background-color: $gray-2;
+      border: 1px solid $gray-2;
+      color: $gray-4;
+
+      &:hover {
+        background-color: $gray-2;
+        border: 1px solid $gray-2;
+      }
+    }
+  }
+
+  &.is-readonly {
+    & .textarea {
+      border: 1px solid $gray-1;
+      cursor: default;
+
+      &:hover {
+        border: 1px solid $gray-1;
+      }
+    }
+  }
+
+  &.is-error {
+    & .textarea {
+      border: 1px solid $red;
+
+      &:focus {
+        border: 1px solid $blue-1;
+      }
+    }
+
+    & .message-text {
+      color: $red;
+    }
+  }
+}

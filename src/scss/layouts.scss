@@ -3,6 +3,22 @@
 
 .section-default {
   margin: 24px 0;
+
+  &.hidden-car {
+    & .car {
+      display: none;
+      @media screen and ($tablet1) {
+        display: block;
+      }
+    }
+
+    & .car__img {
+      display: none;
+      @media screen and ($tablet1) {
+        display: block;
+      }
+    }
+  }
 }
 
 .layout-1 {
@@ -12,5 +28,293 @@
     display: grid;
     grid-template-columns: 162px auto;
     grid-column-gap: 34px;
+  }
+}
+
+.wrapper-default {
+  position: relative;
+  width: 100%;
+
+  &.wrapper-50 {
+    @media screen and ($tablet2) {
+      width: 50%;
+      min-width: 670px;
+    }
+  }
+}
+
+.default {
+  &__tabs {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 14px;
+    align-items: center;
+    margin: 14px 0;
+    @media screen and ($tablet1) {
+      display: flex;
+      flex-wrap: wrap;
+      grid-template-columns: initial;
+      grid-gap: initial;
+    }
+  }
+
+  &__tab {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    width: 100%;
+    height: 30px;
+    background-color: $white;
+    color: $blue-3;
+    border: 1px solid $white;
+    box-shadow: 0px 0px 10px rgba(72, 72, 72, 0.05);
+    border-radius: 6px;
+    transition: background-color $transition-time, color $transition-time, border $transition-time;
+    @media screen and ($tablet1) {
+      width: 157px;
+      margin-right: 14px;
+      margin-bottom: 14px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: $blue-3;
+      color: $white;
+      border: 1px solid $blue-3;
+    }
+
+    &.active {
+      background-color: $blue-3;
+      color: $white;
+      border: 1px solid $blue-3;
+    }
+
+    &.default__tab-request {
+      background-color: transparent;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 120%;
+      color: $blue-3;
+      border: 1px solid $blue-3;
+      order: -1;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      @media screen and ($tablet1) {
+        order: initial;
+        width: 110px;
+      }
+      @media screen and ($tablet2) {
+        margin-left: auto;
+      }
+
+      &:hover {
+        background-color: $blue-3;
+        color: $white;
+        border: 1px solid $blue-3;
+      }
+
+      &.active {
+        display: none;
+      }
+    }
+  }
+}
+
+.box-request {
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.active {
+    & .box-request {
+      &__main {
+        &:after {
+          transform: rotate(270deg);
+        }
+      }
+
+      &__extra {
+        max-height: 1000vh;
+        overflow: visible;
+        padding: 14px;
+        transition: max-height $transition-time ease-in, padding $transition-time ease-in;
+        @media screen and ($tablet2) {
+          padding: 14px 24px;
+        }
+      }
+    }
+  }
+
+  &__main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 14px;
+    background-color: $white;
+    box-shadow: 0px 0px 10px rgba(72, 72, 72, 0.05);
+    border-radius: 4px;
+    padding: 14px 30px 14px 14px;
+    cursor: pointer;
+    @media screen and ($tablet2) {
+      padding: 14px 30px 14px 24px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 17px;
+      right: 14px;
+      width: 16px;
+      height: 16px;
+      background: url("../img/icon-chevron.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: rotate(90deg);
+      transition: transform $transition-time;
+    }
+  }
+
+  &__text {
+    display: block;
+
+    &-name {
+      display: inline;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      color: $black;
+    }
+
+    &-value {
+      display: inline;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: $black;
+      margin-left: 8px;
+    }
+  }
+
+  &__extra {
+    padding: 0 14px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $transition-time ease-out, padding $transition-time ease-out;
+    @media screen and ($tablet2) {
+      padding: 0 24px;
+    }
+  }
+
+  &__data {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    @media screen and ($tablet2) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 14px;
+    }
+
+    & .box-request{
+      &__text {
+        display: block;
+        margin-bottom: 20px;
+        @media screen and ($tablet2) {
+          border-bottom: 1px solid #E6E7EB;;
+          padding-bottom: 5px;
+          margin-bottom: 14px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__description {
+    & .box-request{
+      &__text {
+        display: block;
+        margin-top: 20px;
+
+        &-name {
+          display: block;
+        }
+
+        &-value {
+          display: block;
+          margin-left: 0;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
+
+.form-request {
+  position: relative;
+  background-color: $white;
+  padding: 14px 10px;
+  margin: 0 -10px 14px;
+  @media screen and ($tablet1) {
+    margin: 0 0 14px;
+  }
+  @media screen and ($tablet2) {
+    padding: 24px;
+  }
+
+  &__steps {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    color: $black;
+  }
+
+  &__title {
+    margin: 14px 0;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+
+    & .btn {
+      width: 110px;
+      margin-right: 14px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__map {
+    position: relative;
+    width: 100%;
+    height: 305px;
+    background-color: $gray-1;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  & .box-request__data {
+    margin-top: 14px;
   }
 }
