@@ -288,6 +288,10 @@
     &.login-form-hidden {
       display: none;
     }
+
+    & .btn {
+      margin-bottom: 8px;
+    }
   }
 
   &-link {

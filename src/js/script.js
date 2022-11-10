@@ -156,3 +156,66 @@ $(document).mouseup(function(e){
     el.closest('.input-wrapper').removeClass('is-active');
   };
 });
+
+/*Модальные окна*/
+
+$(document).ready(function() {
+  $('.js-popup').click(function(e){
+    /*e.preventDefault();*/
+    $('.popup').removeClass('show');
+    var id = $(this).attr('href');
+    $(id).addClass('show');
+    $('body').addClass('ov-hid');
+  });
+
+  $('.popup__close').click(function(){
+    $(this).closest('.popup').removeClass('show');
+    $('body').removeClass('ov-hid');
+  });
+
+  $(document).mouseup(function (e){
+    var el = $(".popup__wrapper");
+    if (!el.is(e.target) && el.has(e.target).length === 0) {
+      el.closest('.popup').removeClass('show');
+      $('body').removeClass('ov-hid');
+    }
+  });
+});
+
+/*Select*/
+
+$(document).ready(function() {
+  $('.time__item:not(.type-no-service, .type-busy)').click(function(){
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+    } else {
+      $(this).addClass("active");
+      $(this).siblings().removeClass("active");
+    }
+  });
+});
+
+
+/*Раскрытие списка центров*/
+
+$(document).ready(function() {
+  $('.centers__item-col.col-name').click(function(){
+    if ($(this).closest('.centers__item').hasClass("active")) {
+      $(this).closest('.centers__item').removeClass("active");
+    } else {
+      $(this).closest('.centers__item').addClass("active");
+    }
+  });
+
+  $('.centers__more').click(function(){
+    if ($(this).closest('.centers').hasClass("active")) {
+      $(this).text("Показать еще");
+      $(this).removeClass("active");
+      $(this).closest('.centers').removeClass("active");
+    } else {
+      $(this).text("Свернуть");
+      $(this).addClass("active");
+      $(this).closest('.centers').addClass("active");
+    }
+  });
+});

@@ -1,0 +1,61 @@
+<div class="centers">
+  <div class="centers__topic">
+    <div class="centers__topic-col col-name">Наименование</div>
+    <div class="centers__topic-col col-address">Адрес</div>
+    <div class="centers__topic-col col-phone">Телефон</div>
+    <div class="centers__topic-col col-site">Сайт</div>
+  </div>
+  <div class="centers__list">
+    @@for (var i = 0; i < 3; i++) {
+    <div class="centers__item">
+      <div class="centers__item-col col-name">
+        <span class="centers__item-value">`+context.arr[i].name+`</span>
+      </div>
+      <div class="centers__item-extra">
+        <div class="centers__item-col col-address">
+          <span class="centers__item-text">Адрес</span>
+          <span class="centers__item-value">`+context.arr[i].address+`</span>
+        </div>
+        <div class="centers__item-col col-phone">
+          <span class="centers__item-text">Телефон</span>
+          <span class="centers__item-value">`+context.arr[i].phone+`</span>
+        </div>
+        <div class="centers__item-col col-site">
+          <span class="centers__item-text">Сайт</span>
+          <span class="centers__item-value">
+            <a href="`+context.arr[i].site+`" target="_blank">Перейти</a>
+          </span>
+        </div>
+      </div>
+    </div>
+    }
+    <div class="centers__list-extra">
+      @@for (var i = 3; i < context.arr.length; i++) {
+      <div class="centers__item">
+        <div class="centers__item-col col-name">
+          <span class="centers__item-value">`+context.arr[i].name+`</span>
+        </div>
+        <div class="centers__item-extra">
+          <div class="centers__item-col col-address">
+            <span class="centers__item-text">Адрес</span>
+            <span class="centers__item-value">`+context.arr[i].address+`</span>
+          </div>
+          <div class="centers__item-col col-phone">
+            <span class="centers__item-text">Телефон</span>
+            <span class="centers__item-value">`+context.arr[i].phone+`</span>
+          </div>
+          <div class="centers__item-col col-site">
+            <span class="centers__item-text">Сайт</span>
+            <span class="centers__item-value">
+            <a href="`+context.arr[i].site+`" target="_blank">Перейти</a>
+          </span>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  @@if(context.arr.length > 3){
+  <button class="centers__more" type="button">Показать еще</button>
+  }
+</div>

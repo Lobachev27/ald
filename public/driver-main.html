@@ -348,7 +348,10 @@
                   >
                 </div>
 
-                <a class="dashboard__item-link" href="javascript:void(0);"></a>
+                <a
+                  class="dashboard__item-link js-popup"
+                  href="javascript:void(0);"
+                ></a>
               </div>
 
               <div class="dashboard__item dashboard__item-big mobile-r">
@@ -455,13 +458,16 @@
                 </div>
                 <div class="dashboard__item-buttons">
                   <a
-                    class="btn btn-tr-bk btn-small btn-more"
-                    href="javascript:void(0);"
+                    class="btn btn-tr-bk btn-small btn-more js-popup"
+                    href="#tireCenters"
                     >Подробнее</a
                   >
                 </div>
 
-                <a class="dashboard__item-link" href="javascript:void(0);"></a>
+                <a
+                  class="dashboard__item-link js-popup"
+                  href="#tireCenters"
+                ></a>
               </div>
 
               <div class="dashboard__item dashboard__item-big mobile-r">
@@ -509,7 +515,10 @@
                   >
                 </div>
 
-                <a class="dashboard__item-link" href="javascript:void(0);"></a>
+                <a
+                  class="dashboard__item-link js-popup"
+                  href="javascript:void(0);"
+                ></a>
               </div>
 
               <div class="dashboard__item dashboard__item-big">
@@ -543,8 +552,8 @@
                 </div>
                 <div class="dashboard__item-buttons">
                   <a
-                    class="btn btn-tr-bl btn-small btn-request js-popup"
-                    href="javascript:void(0);"
+                    class="btn btn-tr-bl btn-small btn-request"
+                    href="./driver-service.html"
                     >Заявка</a
                   ><a
                     class="btn btn-tr-bk btn-small btn-more"
@@ -554,7 +563,7 @@
                 </div>
 
                 <a
-                  class="dashboard__item-link"
+                  class="dashboard__item-link js-popup"
                   href="./driver-service.html"
                 ></a>
               </div>
@@ -673,10 +682,15 @@
                   <div class="dashboard__item-buttons">
                     <a
                       class="btn btn-tr-bl btn-small btn-request js-popup"
-                      href="javascript:void(0);"
+                      href="#requestRansom"
                       >Заявка</a
                     >
                   </div>
+
+                  <a
+                    class="dashboard__item-link js-popup"
+                    href="#requestRansom"
+                  ></a>
                 </div>
               </div>
 
@@ -764,6 +778,58 @@
                       /></svg
                   ></a>
                 </div>
+              </div>
+
+              <div class="dashboard__item dashboard__item-big">
+                <div class="dashboard__item-info">
+                  <div class="dashboard__item-title">
+                    <span class="dashboard__item-title-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.33 7.51025C10.83 7.36025 11.38 7.26025 12 7.26025C14.76 7.26025 17 9.50025 17 12.2603C17 15.0203 14.76 17.2603 12 17.2603C9.24 17.2603 7 15.0203 7 12.2603C7 11.2303 7.31 10.2803 7.84 9.48026"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M9.61914 7.65024L11.2791 5.74023"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M9.61914 7.65039L11.5591 9.07039"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span class="dashboard__item-title-text"
+                      >Заявка на возврат ТС</span
+                    >
+                  </div>
+                </div>
+                <div class="dashboard__item-buttons">
+                  <a
+                    class="btn btn-tr-bl btn-small btn-request js-popup"
+                    href="#requestReturn"
+                    >Заявка</a
+                  >
+                </div>
+
+                <a
+                  class="dashboard__item-link js-popup"
+                  href="#requestReturn"
+                ></a>
               </div>
             </div>
 
@@ -1407,7 +1473,6 @@ is-error
                         </label>
                       </li>
                     </ul>
-                    <span class="message-text"></span>
                   </div>
                 </div>
               </div>
@@ -1576,7 +1641,6 @@ is-error
                               </label>
                             </li>
                           </ul>
-                          <span class="message-text"></span>
                         </div>
 
                         <a class="login-link" href="javascript:void(0);"
@@ -1915,7 +1979,6 @@ is-error
                               </label>
                             </li>
                           </ul>
-                          <span class="message-text"></span>
                         </div>
                       </div>
                     </div>
@@ -1927,6 +1990,1261 @@ is-error
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="auth" class="popup">
+      <div class="popup__wrapper popup__wrapper-min">
+        <div class="popup__close">Закрыть</div>
+        <div class="popup-auth__description">
+          По истечении 6 месяцев доступ к полному функционалу личного кабинета
+          будет доступен только для пользователей прошедших регистрацию и
+          авторизовавшихся с помощью моб. телефона
+        </div>
+        <div class="popup__content">
+          <form class="login-form">
+            <button class="btn btn-blue" type="button">
+              Отправить SMS-код
+            </button>
+            <button class="btn btn-tr-bk" type="button">
+              Подтвердить позже
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="codeSMS" class="popup">
+      <div class="popup__wrapper popup__wrapper-min">
+        <div class="popup__close">Закрыть</div>
+        <div class="title title-h1 popup__title">
+          Подтвердите номер мобильного телефона
+        </div>
+        <div class="popup__content">
+          <div class="login-tel__description">
+            На указанный номер телефона будет отправлен<br />
+            SMS-код для подтверждения
+          </div>
+          <form class="login-form">
+            <div class="form-box form-col-1">
+              <div class="login-tel__text">Введите код из SMS</div>
+              <div class="input-wrapper is-codeSMS">
+                <div class="input-box">
+                  <input
+                    class="input"
+                    type="number"
+                    placeholder=""
+                    autocomplete="off"
+                  />
+                  <input
+                    class="input"
+                    type="number"
+                    placeholder=""
+                    autocomplete="off"
+                  />
+                  <input
+                    class="input"
+                    type="number"
+                    placeholder=""
+                    autocomplete="off"
+                  />
+                  <input
+                    class="input"
+                    type="number"
+                    placeholder=""
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-blue" type="button">
+              Отправить SMS-код
+            </button>
+            <button class="btn btn-tr-bk" type="button">
+              Подтвердить позже
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="requestRansom" class="popup">
+      <div class="popup__wrapper popup__wrapper-max">
+        <div class="popup__close">Закрыть</div>
+        <div class="title title-h1 popup__title">
+          Создать заявку на выкуп ТС
+        </div>
+        <div class="popup__content">
+          <form class="modal-driver__form">
+            <div class="form-box form-col-2">
+              <div class="input-group">
+                <label class="label-text">Данные автомобиля</label>
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Марка автомобиля"
+                      autocomplete="off"
+                      required
+                      value="Volkswagen Polo"
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Автомобильный номер"
+                      autocomplete="off"
+                      required
+                      value="T386XY777"
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Дата возврата"
+                      autocomplete="off"
+                      required
+                      value="Дата возврата: 23. 09. 2022"
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+              </div>
+              <div class="input-group">
+                <label class="label-text">Данные водителя</label>
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="ФИО"
+                      autocomplete="off"
+                      required
+                      value=""
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Моб. телефон"
+                      autocomplete="off"
+                      required
+                      value=""
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="email"
+                      placeholder="E-mail"
+                      autocomplete="off"
+                      required
+                      value=""
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+              </div>
+            </div>
+            <div class="form-box form-col-2">
+              <div class="input-group">
+                <label class="label-text">Текущий пробег</label>
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Введите пробег автомобиля"
+                      autocomplete="off"
+                      required
+                      value=""
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+              </div>
+            </div>
+            <div class="form-box form-col-1">
+              <div class="input-wrapper">
+                <ul class="checkbox-list">
+                  <li class="checkbox-item">
+                    <label class="checkbox">
+                      <input
+                        class="checkbox-input"
+                        type="checkbox"
+                        name=""
+                        checked
+                      />
+                      <div class="checkbox-text">
+                        Я согласен / согласна с условиями обработки запроса
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="form-request__text">
+                СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ. Я даю согласие ООО
+                «АЛД Автомотив» на обработку моих персональных данных в
+                указанных ниже порядке и объеме. Порядок обработки персональных
+                данных: Цели обработки персональных данных: Подготовка ответа /
+                предложения по запросу посетителя сайта, Продвижение услуг ООО
+                «АЛД Автомотив», Проведения электронных опросов, Осуществления
+                клиентской поддержки. Перечень персональных данных, на обработку
+                которых дается согласие: ФИО, сведения о месте работы,
+                контактная информация. Перечень действий с персональными
+                данными, на совершение которых дается согласие, общее описание
+                используемых оператором способов обработки персональных данных:
+                сбор, трансграничная передача, хранение, накопление,
+                систематизация, уточнение (обновление, изменение),
+                обезличивание, блокирование, уничтожение. Обработка персональных
+                данных допускается в электронном виде и на бумажных носителях.
+              </div>
+            </div>
+            <button class="btn btn-blue w-auto" type="submit">Создать</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="requestReturn" class="popup">
+      <div class="popup__wrapper popup__wrapper-max">
+        <div class="popup__close">Закрыть</div>
+        <div class="title title-h1 popup__title">
+          Создать заявку на возврат ТС
+        </div>
+        <div class="popup__content">
+          <form class="modal-driver__form">
+            <div class="form-box form-col-2">
+              <div class="input-group">
+                <label class="label-text">Гос. номер</label>
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Автомобильный номер"
+                      autocomplete="off"
+                      required
+                      value="T386XY777"
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+              </div>
+              <div class="input-group">
+                <label class="label-text">Компания</label>
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Название компании"
+                      autocomplete="off"
+                      required
+                      value="ALD Россия"
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+              </div>
+            </div>
+            <div class="form-box form-col-1">
+              <div class="input-group">
+                <label class="label-text">Данные водителя</label>
+                <div class="form-box form-col-2">
+                  <div class="input-group">
+                    <div class="input-wrapper">
+                      <div class="input-box">
+                        <input
+                          class="input"
+                          type="text"
+                          placeholder="ФИО"
+                          autocomplete="off"
+                          required
+                          value=""
+                        />
+                      </div>
+                    </div>
+
+                    <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+
+                    <div class="input-wrapper">
+                      <div class="input-box">
+                        <input
+                          class="input"
+                          type="text"
+                          placeholder="Моб. телефон"
+                          autocomplete="off"
+                          required
+                          value=""
+                        />
+                      </div>
+                    </div>
+
+                    <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+                  </div>
+                  <div class="input-group">
+                    <div class="input-wrapper">
+                      <div class="input-box">
+                        <input
+                          class="input"
+                          type="email"
+                          placeholder="E-mail"
+                          autocomplete="off"
+                          required
+                          value=""
+                        />
+                      </div>
+                    </div>
+
+                    <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-box form-col-2">
+              <div class="input-wrapper">
+                <ul class="radio-list">
+                  <li class="radio-item">
+                    <label class="radio">
+                      <input
+                        class="radio-input"
+                        type="radio"
+                        name="radio-1"
+                        required
+                        checked
+                      />
+                      <div class="radio-text">
+                        Хочу вернуть/получить а/м на площадке ALD
+                      </div>
+                    </label>
+                  </li>
+
+                  <li class="radio-item">
+                    <label class="radio">
+                      <input
+                        class="radio-input"
+                        type="radio"
+                        name="radio-1"
+                        required
+                      />
+                      <div class="radio-text">
+                        Хочу вернуть/получить а/м не на площадке ALD
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="form-box form-col-2">
+              <div class="input-group">
+                <label class="label-text">Адрес площадки:</label>
+
+                <div class="input-wrapper">
+                  <div class="select">
+                    <div class="select-selected">
+                      <span class="select-placeholder">Выберите город</span>
+                      <span class="select-text"></span>
+                    </div>
+                    <div class="select-wrap">
+                      <div class="select-search">
+                        <div class="input-box">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Поиск"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+
+                      <ul class="select-list">
+                        <li class="select-item">Адрес площадки 1</li>
+
+                        <li class="select-item">Адрес площадки 2</li>
+
+                        <li class="select-item">Адрес площадки 3</li>
+
+                        <li class="select-item">Адрес площадки 4</li>
+
+                        <li class="select-item">Адрес площадки 5</li>
+
+                        <li class="select-item">Адрес площадки 6</li>
+
+                        <li class="select-item">Адрес площадки 7</li>
+
+                        <li class="select-item">Адрес площадки 8</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-box form-col-2">
+              <div class="input-group">
+                <label class="label-text">Адрес для возврата:</label>
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Введите адрес"
+                      autocomplete="off"
+                      required
+                      value=""
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+              </div>
+              <div class="input-group">
+                <label class="label-text">Варианты оплаты:</label>
+
+                <div class="input-wrapper">
+                  <div class="select">
+                    <div class="select-selected">
+                      <span class="select-placeholder"
+                        >Выберите вариант оплаты</span
+                      >
+                      <span class="select-text"></span>
+                    </div>
+                    <div class="select-wrap">
+                      <div class="select-search">
+                        <div class="input-box">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Поиск"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+
+                      <ul class="select-list">
+                        <li class="select-item">Адрес для возврата 1</li>
+
+                        <li class="select-item">Адрес для возврата 2</li>
+
+                        <li class="select-item">Адрес для возврата 3</li>
+
+                        <li class="select-item">Адрес для возврата 4</li>
+
+                        <li class="select-item">Адрес для возврата 5</li>
+
+                        <li class="select-item">Адрес для возврата 6</li>
+
+                        <li class="select-item">Адрес для возврата 7</li>
+
+                        <li class="select-item">Адрес для возврата 8</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-box form-col-1">
+              <div class="form-request__text">
+                Пожалуйста, предоставьте в ближайший офис гарантийное письмо для
+                оплаты данной услуги. Для получения гарантийного письма
+                обратитесь в транспортный отдел вашей компании.
+              </div>
+            </div>
+            <div class="form-box form-col-1">
+              <label class="label-text">Выберите время</label>
+
+              <div class="time">
+                <div class="time__wrapper">
+                  <ul class="time__list">
+                    <li class="time__item type-no-service">10:00</li>
+                    <li class="time__item">11:00</li>
+                    <li class="time__item type-busy">12:00</li>
+                    <li class="time__item">13:00</li>
+                    <li class="time__item">14:00</li>
+                    <li class="time__item">15:00</li>
+                    <li class="time__item">16:00</li>
+                  </ul>
+                </div>
+                <div class="time__type">
+                  <div class="time__type-item type-no-service">
+                    без обслуживания
+                  </div>
+                  <div class="time__type-item type-busy">занято</div>
+                  <div class="time__type-item type-free">свободно</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-box form-col-2">
+              <div class="input-group">
+                <label class="label-text">Выберите дату возврата</label>
+
+                <div class="input-wrapper is-datepicker">
+                  <div class="input-box">
+                    <input
+                      class="input input-datepicker"
+                      type="text"
+                      placeholder="Выберите дату возврата"
+                      autocomplete="off"
+                      required
+                      value=""
+                    />
+
+                    <span class="icon"
+                      ><i
+                        ><svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.33398 1.3335V3.3335"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M10.666 1.3335V3.3335"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M12.1333 14.2667C13.3115 14.2667 14.2667 13.3115 14.2667 12.1333C14.2667 10.9551 13.3115 10 12.1333 10C10.9551 10 10 10.9551 10 12.1333C10 13.3115 10.9551 14.2667 12.1333 14.2667Z"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M14.6667 14.6667L14 14"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M2.33398 6.06006H13.6673"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M8.91333 14.6666H5.33333C3 14.6666 2 13.3333 2 11.3333V5.66659C2 3.66659 3 2.33325 5.33333 2.33325H10.6667C13 2.33325 14 3.66659 14 5.66659V8.66658"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M7.99764 9.13338H8.00363"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M5.52889 9.13338H5.53488"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M5.52889 11.1334H5.53488"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          /></svg></i
+                    ></span>
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+              </div>
+            </div>
+            <button class="btn btn-blue w-auto" type="submit">Создать</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="tireCenters" class="popup">
+      <div class="popup__wrapper popup__wrapper-max">
+        <div class="popup__close">Закрыть</div>
+        <div class="title title-h1 popup__title">
+          Список шинных центров, доступных Вам для прохождения шиномонтажа
+        </div>
+        <div class="popup__content">
+          <form class="modal-driver__form">
+            <div class="form-box form-col-2">
+              <div class="input-group">
+                <label class="label-text">Данные автомобиля</label>
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Марка автомобиля"
+                      autocomplete="off"
+                      required
+                      value="Volkswagen Polo"
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Автомобильный номер"
+                      autocomplete="off"
+                      required
+                      value="T386XY777"
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Дата возврата"
+                      autocomplete="off"
+                      required
+                      value="Дата возврата: 23. 09. 2022"
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Город"
+                      autocomplete="off"
+                      required
+                      value="Москва"
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+              </div>
+              <div class="input-group">
+                <label class="label-text">Данные водителя</label>
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="ФИО"
+                      autocomplete="off"
+                      required
+                      value="Хабибулин Рамиль Рафикович"
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Моб. телефон"
+                      autocomplete="off"
+                      required
+                      value="+7 919 800 54 84"
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+
+                <div class="input-wrapper">
+                  <div class="input-box">
+                    <input
+                      class="input"
+                      type="email"
+                      placeholder="E-mail"
+                      autocomplete="off"
+                      required
+                      value="ramil.khabibulin@mail.ru"
+                    />
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+              </div>
+            </div>
+            <div class="form-box form-col-2">
+              <div class="form-request__text color-red">
+                Плановое начало шиномонтажа в вашем регионе: 15.10.2022
+              </div>
+            </div>
+            <div class="form-box form-col-2">
+              <a class="form-request__link" href="javascript:void(0);">
+                <span class="form-request__link-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.6194 4.50684L12.3728 13.5269C12.2128 14.2002 11.6128 14.6668 10.9194 14.6668H2.15944C1.15277 14.6668 0.432779 13.6801 0.732779 12.7135L3.53944 3.7002C3.73277 3.07353 4.31278 2.64014 4.96612 2.64014H13.1661C13.7994 2.64014 14.3261 3.02681 14.5461 3.56014C14.6728 3.84681 14.6994 4.1735 14.6194 4.50684Z"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M10.666 14.6667H13.8527C14.7127 14.6667 15.386 13.94 15.326 13.08L14.666 4"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.45312 4.25326L7.14646 1.37329"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10.9199 4.26001L11.5466 1.3667"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5.13281 8H10.4661"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4.4668 10.6667H9.80013"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span class="form-request__link-text"
+                  >Инструкция по сезонной замене шин<br />
+                  АЛД Автомотив</span
+                >
+              </a>
+            </div>
+
+            <label class="label-text">Список центров</label>
+
+            <div class="centers">
+              <div class="centers__topic">
+                <div class="centers__topic-col col-name">Наименование</div>
+                <div class="centers__topic-col col-address">Адрес</div>
+                <div class="centers__topic-col col-phone">Телефон</div>
+                <div class="centers__topic-col col-site">Сайт</div>
+              </div>
+              <div class="centers__list">
+                <div class="centers__item">
+                  <div class="centers__item-col col-name">
+                    <span class="centers__item-value">OOO Сервисэксперт</span>
+                  </div>
+                  <div class="centers__item-extra">
+                    <div class="centers__item-col col-address">
+                      <span class="centers__item-text">Адрес</span>
+                      <span class="centers__item-value"
+                        >Москва, Севастопольский проспект, дом 15, корпус 3
+                        (ЮЗАО, м. Нагатинская)</span
+                      >
+                    </div>
+                    <div class="centers__item-col col-phone">
+                      <span class="centers__item-text">Телефон</span>
+                      <span class="centers__item-value">8 (499) 5179016</span>
+                    </div>
+                    <div class="centers__item-col col-site">
+                      <span class="centers__item-text">Сайт</span>
+                      <span class="centers__item-value">
+                        <a href="javascript:void(0);" target="_blank"
+                          >Перейти</a
+                        >
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="centers__item">
+                  <div class="centers__item-col col-name">
+                    <span class="centers__item-value">OOO Сервисэксперт</span>
+                  </div>
+                  <div class="centers__item-extra">
+                    <div class="centers__item-col col-address">
+                      <span class="centers__item-text">Адрес</span>
+                      <span class="centers__item-value"
+                        >Москва, Севастопольский проспект, дом 15, корпус 3
+                        (ЮЗАО, м. Нагатинская)</span
+                      >
+                    </div>
+                    <div class="centers__item-col col-phone">
+                      <span class="centers__item-text">Телефон</span>
+                      <span class="centers__item-value">8 (499) 5179016</span>
+                    </div>
+                    <div class="centers__item-col col-site">
+                      <span class="centers__item-text">Сайт</span>
+                      <span class="centers__item-value">
+                        <a href="javascript:void(0);" target="_blank"
+                          >Перейти</a
+                        >
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="centers__item">
+                  <div class="centers__item-col col-name">
+                    <span class="centers__item-value">OOO Сервисэксперт</span>
+                  </div>
+                  <div class="centers__item-extra">
+                    <div class="centers__item-col col-address">
+                      <span class="centers__item-text">Адрес</span>
+                      <span class="centers__item-value"
+                        >Москва, Севастопольский проспект, дом 15, корпус 3
+                        (ЮЗАО, м. Нагатинская)</span
+                      >
+                    </div>
+                    <div class="centers__item-col col-phone">
+                      <span class="centers__item-text">Телефон</span>
+                      <span class="centers__item-value">8 (499) 5179016</span>
+                    </div>
+                    <div class="centers__item-col col-site">
+                      <span class="centers__item-text">Сайт</span>
+                      <span class="centers__item-value">
+                        <a href="javascript:void(0);" target="_blank"
+                          >Перейти</a
+                        >
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="centers__list-extra">
+                  <div class="centers__item">
+                    <div class="centers__item-col col-name">
+                      <span class="centers__item-value">OOO Сервисэксперт</span>
+                    </div>
+                    <div class="centers__item-extra">
+                      <div class="centers__item-col col-address">
+                        <span class="centers__item-text">Адрес</span>
+                        <span class="centers__item-value"
+                          >Москва, Севастопольский проспект, дом 15, корпус 3
+                          (ЮЗАО, м. Нагатинская)</span
+                        >
+                      </div>
+                      <div class="centers__item-col col-phone">
+                        <span class="centers__item-text">Телефон</span>
+                        <span class="centers__item-value">8 (499) 5179016</span>
+                      </div>
+                      <div class="centers__item-col col-site">
+                        <span class="centers__item-text">Сайт</span>
+                        <span class="centers__item-value">
+                          <a href="javascript:void(0);" target="_blank"
+                            >Перейти</a
+                          >
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="centers__item">
+                    <div class="centers__item-col col-name">
+                      <span class="centers__item-value">OOO Сервисэксперт</span>
+                    </div>
+                    <div class="centers__item-extra">
+                      <div class="centers__item-col col-address">
+                        <span class="centers__item-text">Адрес</span>
+                        <span class="centers__item-value"
+                          >Москва, Севастопольский проспект, дом 15, корпус 3
+                          (ЮЗАО, м. Нагатинская)</span
+                        >
+                      </div>
+                      <div class="centers__item-col col-phone">
+                        <span class="centers__item-text">Телефон</span>
+                        <span class="centers__item-value">8 (499) 5179016</span>
+                      </div>
+                      <div class="centers__item-col col-site">
+                        <span class="centers__item-text">Сайт</span>
+                        <span class="centers__item-value">
+                          <a href="javascript:void(0);" target="_blank"
+                            >Перейти</a
+                          >
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="centers__item">
+                    <div class="centers__item-col col-name">
+                      <span class="centers__item-value">OOO Сервисэксперт</span>
+                    </div>
+                    <div class="centers__item-extra">
+                      <div class="centers__item-col col-address">
+                        <span class="centers__item-text">Адрес</span>
+                        <span class="centers__item-value"
+                          >Москва, Севастопольский проспект, дом 15, корпус 3
+                          (ЮЗАО, м. Нагатинская)</span
+                        >
+                      </div>
+                      <div class="centers__item-col col-phone">
+                        <span class="centers__item-text">Телефон</span>
+                        <span class="centers__item-value">8 (499) 5179016</span>
+                      </div>
+                      <div class="centers__item-col col-site">
+                        <span class="centers__item-text">Сайт</span>
+                        <span class="centers__item-value">
+                          <a href="javascript:void(0);" target="_blank"
+                            >Перейти</a
+                          >
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="centers__item">
+                    <div class="centers__item-col col-name">
+                      <span class="centers__item-value">OOO Сервисэксперт</span>
+                    </div>
+                    <div class="centers__item-extra">
+                      <div class="centers__item-col col-address">
+                        <span class="centers__item-text">Адрес</span>
+                        <span class="centers__item-value"
+                          >Москва, Севастопольский проспект, дом 15, корпус 3
+                          (ЮЗАО, м. Нагатинская)</span
+                        >
+                      </div>
+                      <div class="centers__item-col col-phone">
+                        <span class="centers__item-text">Телефон</span>
+                        <span class="centers__item-value">8 (499) 5179016</span>
+                      </div>
+                      <div class="centers__item-col col-site">
+                        <span class="centers__item-text">Сайт</span>
+                        <span class="centers__item-value">
+                          <a href="javascript:void(0);" target="_blank"
+                            >Перейти</a
+                          >
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="centers__item">
+                    <div class="centers__item-col col-name">
+                      <span class="centers__item-value">OOO Сервисэксперт</span>
+                    </div>
+                    <div class="centers__item-extra">
+                      <div class="centers__item-col col-address">
+                        <span class="centers__item-text">Адрес</span>
+                        <span class="centers__item-value"
+                          >Москва, Севастопольский проспект, дом 15, корпус 3
+                          (ЮЗАО, м. Нагатинская)</span
+                        >
+                      </div>
+                      <div class="centers__item-col col-phone">
+                        <span class="centers__item-text">Телефон</span>
+                        <span class="centers__item-value">8 (499) 5179016</span>
+                      </div>
+                      <div class="centers__item-col col-site">
+                        <span class="centers__item-text">Сайт</span>
+                        <span class="centers__item-value">
+                          <a href="javascript:void(0);" target="_blank"
+                            >Перейти</a
+                          >
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="centers__item">
+                    <div class="centers__item-col col-name">
+                      <span class="centers__item-value">OOO Сервисэксперт</span>
+                    </div>
+                    <div class="centers__item-extra">
+                      <div class="centers__item-col col-address">
+                        <span class="centers__item-text">Адрес</span>
+                        <span class="centers__item-value"
+                          >Москва, Севастопольский проспект, дом 15, корпус 3
+                          (ЮЗАО, м. Нагатинская)</span
+                        >
+                      </div>
+                      <div class="centers__item-col col-phone">
+                        <span class="centers__item-text">Телефон</span>
+                        <span class="centers__item-value">8 (499) 5179016</span>
+                      </div>
+                      <div class="centers__item-col col-site">
+                        <span class="centers__item-text">Сайт</span>
+                        <span class="centers__item-value">
+                          <a href="javascript:void(0);" target="_blank"
+                            >Перейти</a
+                          >
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="centers__more" type="button">Показать еще</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

@@ -1,0 +1,272 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.centers {
+  position: relative;
+  width: 100%;
+  padding: 0 5px;
+  margin-top: 14px;
+  @media screen and ($tablet1) {
+    padding: 0;
+  }
+
+  &.active {
+    & .centers {
+      &__list {
+        &-extra {
+          max-height: 500vh;
+          overflow: visible;
+          transition: max-height $transition-time ease-in, padding $transition-time ease-in;
+        }
+      }
+    }
+  }
+
+  &__topic {
+    display: none;
+    @media screen and ($tablet1) {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 120%;
+      color: $black;
+      margin-bottom: 10px;
+    }
+
+    &-col {
+      &.col-name {
+        width: 26.79%;
+        min-width: 26.79%;
+        max-width: 26.79%;
+        padding-right: 24px;
+      }
+      &.col-address {
+        width: 36.60%;
+        min-width: 36.60%;
+        max-width: 36.60%;
+        padding-right: 24px;
+      }
+      &.col-phone {
+        width: 20.26%;
+        min-width: 20.26%;
+        max-width: 20.26%;
+        padding-right: 24px;
+      }
+      &.col-site {
+        width: 16.35%;
+        min-width: 16.35%;
+        max-width: 16.35%;
+      }
+    }
+  }
+
+  &__list {
+    position: relative;
+    margin-bottom: 14px;
+
+    &-extra {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height $transition-time ease-out;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 8px;
+    @media screen and ($tablet1) {
+      display: flex;
+      width: 100%;
+      border-bottom: 1px solid #E6E7EB;
+      padding: 14px 0;
+    }
+
+    &.active {
+      & .centers {
+        &__item {
+          &-col {
+            &.col-name {
+              &:after {
+                transform: rotate(270deg);
+              }
+            }
+          }
+          &-extra {
+            max-height: 100vh;
+            overflow: visible;
+            padding: 14px;
+            transition: max-height $transition-time ease-in, padding $transition-time ease-in;
+            @media screen and ($tablet1) {
+              padding: 0;
+              max-height: initial;
+            }
+          }
+        }
+      }
+    }
+
+    &-col {
+      &.col-name {
+        position: relative;
+        background-color: $white;
+        box-shadow: 0px 0px 16px rgba(27, 27, 27, 0.1);
+        border-radius: 4px;
+        padding: 14px 30px 14px 14px;
+        cursor: pointer;
+        @media screen and ($tablet1) {
+          display: flex;
+          border-radius: initial;
+          background-color: transparent;
+          box-shadow: none;
+          padding: 0;
+          cursor: default;
+          width: 26.79%;
+          min-width: 26.79%;
+          max-width: 26.79%;
+          padding-right: 24px;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 17px;
+          right: 14px;
+          width: 16px;
+          height: 16px;
+          background: url("../img/icon-chevron.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          transform: rotate(90deg);
+          transition: transform $transition-time;
+          @media screen and ($tablet1) {
+            display: none;
+          }
+        }
+
+        & .centers {
+          &__item {
+            &-value {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 18px;
+              @media screen and ($tablet1) {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 120%;
+              }
+            }
+          }
+        }
+      }
+      &.col-address {
+        display: grid;
+        grid-template-columns: 127fr 200fr;
+        grid-column-gap: 14px;
+        margin-bottom: 14px;
+        @media screen and ($tablet1) {
+          display: flex;
+          margin-bottom: 0;
+          width: 36.60%;
+          min-width: 36.60%;
+          max-width: 36.60%;
+          padding-right: 24px;
+        }
+      }
+      &.col-phone {
+        display: grid;
+        grid-template-columns: 127fr 200fr;
+        grid-column-gap: 14px;
+        margin-bottom: 14px;
+        @media screen and ($tablet1) {
+          display: flex;
+          margin-bottom: 0;
+          width: 20.26%;
+          min-width: 20.26%;
+          max-width: 20.26%;
+          padding-right: 24px;
+        }
+      }
+      &.col-site {
+        display: grid;
+        grid-template-columns: 127fr 200fr;
+        grid-column-gap: 14px;
+        @media screen and ($tablet1) {
+          display: flex;
+          width: 16.35%;
+          min-width: 16.35%;
+          max-width: 16.35%;
+        }
+      }
+    }
+
+    &-extra {
+      padding: 0 14px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height $transition-time ease-out, padding $transition-time ease-out;
+      @media screen and ($tablet1) {
+        display: flex;
+        padding: 0;
+        max-height: initial;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &-text {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 120%;
+      color: $black;
+      @media screen and ($tablet1) {
+        display: none;
+      }
+    }
+
+    &-value {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 120%;
+      color: $black;
+
+      & a {
+        color: $blue-3;
+      }
+    }
+  }
+
+  &__more {
+    position: relative;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: $blue-3;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 1px 24px 1px 0;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 16px;
+      height: 16px;
+      background: url("../img/icon-chevron-blue.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: translateY(-50%) rotate(90deg);
+      transition: transform $transition-time;
+    }
+
+    &.active {
+      &:after {
+        transform: translateY(-50%) rotate(270deg);
+      }
+    }
+  }
+}

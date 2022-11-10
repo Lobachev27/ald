@@ -59,8 +59,8 @@
       title: 'Шинный сервис',
       content: '',
       marker: '',
-      buttons: '<a class="btn btn-tr-bk btn-small btn-more" href="javascript:void(0);">Подробнее</a>',
-      link: 'javascript:void(0);',
+      buttons: '<a class="btn btn-tr-bk btn-small btn-more js-popup" href="#tireCenters">Подробнее</a>',
+      link: '#tireCenters',
     }
   })
 
@@ -83,7 +83,7 @@
       title: 'Заявки на сервис',
       content: '<div class="dashboard__item-text"><span class="dashboard__item-text-name">Выполнено:</span><span class="dashboard__item-text-value gray">5</span></div><div class="dashboard__item-text"><span class="dashboard__item-text-name">В работе:</span><span class="dashboard__item-text-value blue">1</span></div>',
       marker: '',
-      buttons: '<a class="btn btn-tr-bl btn-small btn-request js-popup" href="javascript:void(0);">Заявка</a><a class="btn btn-tr-bk btn-small btn-more" href="./driver-service.html">Подробнее</a>',
+      buttons: '<a class="btn btn-tr-bl btn-small btn-request" href="./driver-service.html">Заявка</a><a class="btn btn-tr-bk btn-small btn-more" href="./driver-service.html">Подробнее</a>',
       link: './driver-service.html',
     }
   })
@@ -121,8 +121,8 @@
         title: 'Выкуп ТС',
         content: '',
         marker: '',
-        buttons: '<a class="btn btn-tr-bl btn-small btn-request js-popup" href="javascript:void(0);">Заявка</a>',
-        link: '',
+        buttons: '<a class="btn btn-tr-bl btn-small btn-request js-popup" href="#requestRansom">Заявка</a>',
+        link: '#requestRansom',
       }
     })
 
@@ -134,9 +134,22 @@
       icon: '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.99609 14.6766V12.1396" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M16.19 3.33008C17.88 3.33008 19.24 4.70008 19.24 6.39008V9.83008C16.78 11.2701 13.53 12.1401 9.99 12.1401C6.45 12.1401 3.21 11.2701 0.75 9.83008V6.38008C0.75 4.69008 2.12 3.33008 3.81 3.33008H16.19Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.4961 3.326V2.96C13.4961 1.74 12.5061 0.75 11.2861 0.75H8.70609C7.48609 0.75 6.49609 1.74 6.49609 2.96V3.326" stroke-linecap="round" stroke-linejoin="round"/><path d="M0.775391 13.4834L0.964391 15.9924C1.09239 17.6834 2.50139 18.9904 4.19639 18.9904H15.7954C17.4904 18.9904 18.8994 17.6834 19.0274 15.9924L19.2164 13.4834" stroke-linecap="round" stroke-linejoin="round"/></svg>',
       title: 'Контракт',
       content: '<div class="dashboard__item-text"><span class="dashboard__item-text-name">Дата окончания:</span><span class="dashboard__item-text-value gray">12.10.2022</span></div>',
+      content: '<div class="dashboard__item-text"><span class="dashboard__item-text-name">Дата окончания:</span><span class="dashboard__item-text-value gray">12.10.2022</span></div>',
       marker: '',
       buttons: '<a class="btn btn-tr-bk btn-small btn-download" href="javascript:void(0);" download>Скачать</a><a class="i-action i-download" href="javascript:void(0);" download><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 7.3335V11.3335L7.33333 10.0002" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.99935 11.3333L4.66602 10" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.6673 6.66683V10.0002C14.6673 13.3335 13.334 14.6668 10.0007 14.6668H6.00065C2.66732 14.6668 1.33398 13.3335 1.33398 10.0002V6.00016C1.33398 2.66683 2.66732 1.3335 6.00065 1.3335H9.33398" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.6673 6.66683H12.0007C10.0007 6.66683 9.33398 6.00016 9.33398 4.00016V1.3335L14.6673 6.66683Z" stroke-linecap="round" stroke-linejoin="round"/></svg></a>',
       link: '',
+    }
+  })
+
+  @@include("./dashboard-item.html", {
+    context: {
+      class: 'dashboard__item-big',
+      icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.33 7.51025C10.83 7.36025 11.38 7.26025 12 7.26025C14.76 7.26025 17 9.50025 17 12.2603C17 15.0203 14.76 17.2603 12 17.2603C9.24 17.2603 7 15.0203 7 12.2603C7 11.2303 7.31 10.2803 7.84 9.48026" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.61914 7.65024L11.2791 5.74023" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.61914 7.65039L11.5591 9.07039" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      title: 'Заявка на возврат ТС',
+      content: '',
+      marker: '',
+      buttons: '<a class="btn btn-tr-bl btn-small btn-request js-popup" href="#requestReturn">Заявка</a>',
+      link: '#requestReturn',
     }
   })
 
