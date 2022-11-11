@@ -206,6 +206,30 @@
     }
   }
 
+  &__link {
+    position: relative;
+    padding-right: 24px;
+
+    &-text {
+      color: $blue-3;
+    }
+
+    &-icon {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+
+      & svg {
+        width: 100%;
+        height: 100%;
+        stroke: $blue-3;
+      }
+    }
+  }
+
   &__extra {
     padding: 0 14px;
     max-height: 0;
@@ -223,6 +247,12 @@
     @media screen and ($tablet2) {
       grid-template-columns: 1fr 1fr;
       grid-gap: 14px;
+    }
+
+    &.data-col-1 {
+      @media screen and ($tablet2) {
+        grid-template-columns: 1fr;
+      }
     }
 
     & .box-request{

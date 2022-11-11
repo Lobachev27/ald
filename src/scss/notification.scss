@@ -1,0 +1,78 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.popup {
+  & .notification {
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.warning-notification {
+  position: fixed;
+  top: 63px;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity $transition-time;
+  @media screen and ($tablet1) {
+    position: absolute;
+    right: initial;
+    top: 37px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.notification__list {
+  position: fixed;
+  top: 63px;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity $transition-time;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  & .notification {
+    margin-bottom: 5px;
+  }
+}
+
+.notification {
+  background-color: $white;
+  width: 190px;
+  padding: 8px 14px;
+  box-shadow: 0px 0px 16px rgba(27, 27, 27, 0.1);
+  border-radius: 6px;
+
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: $black;
+  }
+
+  &__link {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: $blue-3;
+    margin-top: 10px;
+  }
+}

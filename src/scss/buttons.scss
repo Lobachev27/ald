@@ -24,6 +24,12 @@
     border: 1px solid $blue-3;
     color: $white;
 
+    &[disabled] {
+      background-color: $gray-4 !important;
+      border: 1px solid $gray-4 !important;
+      cursor: default;
+    }
+
     &:hover {
       background-color: $blue-3;
       border: 1px solid $blue-3;
@@ -36,6 +42,13 @@
     border: 1px solid $blue-3;
     color: $blue-3;
 
+    &[disabled] {
+      background-color: transparent !important;
+      border: 1px solid $gray-4 !important;
+      color: $gray-4 !important;
+      cursor: default;
+    }
+
     &:hover {
       background-color: $blue-3;
       border: 1px solid $blue-3;
@@ -47,6 +60,13 @@
     background-color: transparent;
     border: 1px solid $black;
     color: $black;
+
+    &[disabled] {
+      background-color: transparent !important;
+      border: 1px solid $gray-4 !important;
+      color: $gray-4 !important;
+      cursor: default;
+    }
 
     &:hover {
       background-color: $blue-3;

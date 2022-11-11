@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Мой ALD</title>
+    <title>Штрафы ПДД</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -20,7 +20,24 @@
         <a class="header__logo" href="./">
           <img src="./img/logo-black.svg" alt="" />
         </a>
-        <div class="header__box"><h1 class="title title-h1">Мой ALD</h1></div>
+        <div class="header__box">
+          <a class="header-back" href="./driver-main.html"
+            ><svg
+              width="7"
+              height="12"
+              viewBox="0 0 7 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.99925 11.28L1.65258 6.9333C1.13924 6.41997 1.13924 5.57997 1.65258 5.06664L5.99925 0.719971"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span>Назад</span></a
+          >
+        </div>
         <div class="header__action">
           <div class="header__warning">
             <svg
@@ -145,11 +162,7 @@
     </header>
 
     <main class="main main-driver">
-      <section class="driver-image">
-        <img src="./img/bg.jpg" alt="" />
-      </section>
-
-      <section class="section-default">
+      <section class="section-default hidden-car">
         <div class="container">
           <div class="layout-1">
             <div class="car">
@@ -163,708 +176,323 @@
               </div>
             </div>
 
-            <div class="dashboard dashboard-driver">
-              <div class="dashboard__double">
-                <div class="dashboard__item dashboard__item-small">
-                  <div class="dashboard__item-info">
-                    <div class="dashboard__item-title">
-                      <span class="dashboard__item-title-icon">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+            <div class="driver-default">
+              <h1 class="title title-h1">Штрафы ПДД</h1>
+              <div class="wrapper-default wrapper-50">
+                <div class="default__tabs"></div>
+                <div class="default__container">
+                  <div class="box-request">
+                    <div class="box-request__main">
+                      <div class="box-request__text">
+                        <span class="box-request__text-name"
+                          >№ Постановления:</span
                         >
-                          <path
-                            d="M21.9292 6.76001L18.5592 20.29C18.3192 21.3 17.4192 22 16.3792 22H3.23915C1.72915 22 0.649169 20.5199 1.09917 19.0699L5.30916 5.55005C5.59916 4.61005 6.46917 3.95996 7.44917 3.95996H19.7492C20.6992 3.95996 21.4892 4.53997 21.8192 5.33997C22.0092 5.76997 22.0492 6.26001 21.9292 6.76001Z"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M16 22H20.78C22.07 22 23.08 20.91 22.99 19.62L22 6"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M9.67969 6.38L10.7197 2.06006"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M16.3809 6.38977L17.3209 2.0498"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M7.69922 12H15.6992"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M6.69922 16H14.6992"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </span>
-                      <span class="dashboard__item-title-text"
-                        >Руководство</span
-                      >
-                    </div>
-                  </div>
-                  <div class="dashboard__item-buttons">
-                    <a
-                      class="btn btn-tr-bk btn-small btn-download"
-                      href="javascript:void(0);"
-                      download
-                      >Скачать</a
-                    ><a
-                      class="i-action i-download"
-                      href="javascript:void(0);"
-                      download
-                      ><svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6 7.3335V11.3335L7.33333 10.0002"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M5.99935 11.3333L4.66602 10"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M14.6673 6.66683V10.0002C14.6673 13.3335 13.334 14.6668 10.0007 14.6668H6.00065C2.66732 14.6668 1.33398 13.3335 1.33398 10.0002V6.00016C1.33398 2.66683 2.66732 1.3335 6.00065 1.3335H9.33398"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M14.6673 6.66683H12.0007C10.0007 6.66683 9.33398 6.00016 9.33398 4.00016V1.3335L14.6673 6.66683Z"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        /></svg
-                    ></a>
-                  </div>
-                </div>
-
-                <div class="dashboard__item dashboard__item-small">
-                  <div class="dashboard__item-info">
-                    <div class="dashboard__item-title">
-                      <span class="dashboard__item-title-icon">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <span class="box-request__text-value"
+                          >18810577220823367361</span
                         >
-                          <path
-                            d="M21.97 18.33C21.97 18.69 21.89 19.06 21.72 19.42C21.55 19.78 21.33 20.12 21.04 20.44C20.55 20.98 20.01 21.37 19.4 21.62C18.8 21.87 18.15 22 17.45 22C16.43 22 15.34 21.76 14.19 21.27C13.04 20.78 11.89 20.12 10.75 19.29C9.6 18.45 8.51 17.52 7.47 16.49C6.44 15.45 5.51 14.36 4.68 13.22C3.86 12.08 3.2 10.94 2.72 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C11.27 13.75 11.79 14.24 12.32 14.69C12.84 15.13 13.27 15.43 13.61 15.61C13.66 15.63 13.72 15.66 13.79 15.69C13.87 15.72 13.95 15.73 14.04 15.73C14.21 15.73 14.34 15.67 14.45 15.56L15.21 14.81C15.46 14.56 15.7 14.37 15.93 14.25C16.16 14.11 16.39 14.04 16.64 14.04C16.83 14.04 17.03 14.08 17.25 14.17C17.47 14.26 17.7 14.39 17.95 14.56L21.26 16.91C21.52 17.09 21.7 17.3 21.81 17.55C21.91 17.8 21.97 18.05 21.97 18.33Z"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M18.5 9C18.5 8.4 18.03 7.48 17.33 6.73C16.69 6.04 15.84 5.5 15 5.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M22 9C22 5.13 18.87 2 15 2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </span>
-                      <span class="dashboard__item-title-text">Call-центр</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Статус:</span>
+                        <span class="box-request__text-value">
+                          <a
+                            class="status status-not-paid"
+                            href="javascript:void(0);"
+                            >Оплатить</a
+                          >
+                          <span class="status-desc">Действительно: 18 дн.</span>
+                        </span>
+                      </div>
                     </div>
-                    <div class="dashboard__item-text">
-                      <span class="dashboard__item-text-name"
-                        >8 800 505 04 03</span
-                      >
+                    <div class="box-request__extra">
+                      <div class="box-request__data data-col-1">
+                        <div class="box-request__col">
+                          <div class="box-request__text">
+                            <span class="box-request__text-name">От:</span>
+                            <span class="box-request__text-value"
+                              >23.12.2021</span
+                            >
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name">Статья:</span>
+                            <span class="box-request__text-value">12.9ч.2</span>
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name">Сумма:</span>
+                            <span class="box-request__text-value">500</span>
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name"
+                              >Сумма по счету:</span
+                            >
+                            <span class="box-request__text-value">250</span>
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name"
+                              >Компания:</span
+                            >
+                            <span class="box-request__text-value">
+                              <a
+                                class="box-request__link"
+                                href="javascript:void(0);"
+                              >
+                                <span class="box-request__link-text"
+                                  >ООО «Нутриция»</span
+                                >
+                              </a>
+                            </span>
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name">PDF:</span>
+                            <span class="box-request__text-value">
+                              <a
+                                class="box-request__link"
+                                href="javascript:void(0);"
+                                download
+                              >
+                                <span class="box-request__link-text"
+                                  >Скачать</span
+                                >
+                                <span class="box-request__link-icon"
+                                  ><svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M6 7.3335V11.3335L7.33333 10.0002"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                    <path
+                                      d="M5.99935 11.3333L4.66602 10"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                    <path
+                                      d="M14.6673 6.66683V10.0002C14.6673 13.3335 13.334 14.6668 10.0007 14.6668H6.00065C2.66732 14.6668 1.33398 13.3335 1.33398 10.0002V6.00016C1.33398 2.66683 2.66732 1.3335 6.00065 1.3335H9.33398"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                    <path
+                                      d="M14.6673 6.66683H12.0007C10.0007 6.66683 9.33398 6.00016 9.33398 4.00016V1.3335L14.6673 6.66683Z"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    /></svg
+                                ></span>
+                              </a>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="dashboard__item-buttons">
-                    <a
-                      class="btn btn-tr-bl btn-small btn-call"
-                      href="tel:+78005050403"
-                      >Звонок</a
-                    ><a class="i-action i-call" href="tel:+78005050403"
-                      ><svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M14.6473 12.2202C14.6473 12.4602 14.594 12.7068 14.4806 12.9468C14.3673 13.1868 14.2207 13.4135 14.0273 13.6268C13.7007 13.9868 13.3407 14.2468 12.934 14.4135C12.534 14.5802 12.1007 14.6668 11.634 14.6668C10.954 14.6668 10.2273 14.5068 9.46065 14.1802C8.69398 13.8535 7.92732 13.4135 7.16732 12.8602C6.40065 12.3002 5.67398 11.6802 4.98065 10.9935C4.29398 10.3002 3.67398 9.5735 3.12065 8.8135C2.57398 8.0535 2.13398 7.2935 1.81398 6.54016C1.49398 5.78016 1.33398 5.0535 1.33398 4.36016C1.33398 3.90683 1.41398 3.4735 1.57398 3.0735C1.73398 2.66683 1.98732 2.2935 2.34065 1.96016C2.76732 1.54016 3.23398 1.3335 3.72732 1.3335C3.91398 1.3335 4.10065 1.3735 4.26732 1.4535C4.44065 1.5335 4.59398 1.6535 4.71398 1.82683L6.26065 4.00683C6.38065 4.1735 6.46732 4.32683 6.52732 4.4735C6.58732 4.6135 6.62065 4.7535 6.62065 4.88016C6.62065 5.04016 6.57398 5.20016 6.48065 5.3535C6.39398 5.50683 6.26732 5.66683 6.10732 5.82683L5.60065 6.3535C5.52732 6.42683 5.49398 6.5135 5.49398 6.62016C5.49398 6.6735 5.50065 6.72016 5.51398 6.7735C5.53398 6.82683 5.55398 6.86683 5.56732 6.90683C5.68732 7.12683 5.89398 7.4135 6.18732 7.76016C6.48732 8.10683 6.80732 8.46016 7.15398 8.8135C7.51398 9.16683 7.86065 9.4935 8.21398 9.7935C8.56065 10.0868 8.84732 10.2868 9.07398 10.4068C9.10732 10.4202 9.14732 10.4402 9.19398 10.4602C9.24732 10.4802 9.30065 10.4868 9.36065 10.4868C9.47398 10.4868 9.56065 10.4468 9.63398 10.3735L10.1407 9.8735C10.3073 9.70683 10.4673 9.58016 10.6207 9.50016C10.774 9.40683 10.9273 9.36016 11.094 9.36016C11.2207 9.36016 11.354 9.38683 11.5007 9.44683C11.6473 9.50683 11.8007 9.5935 11.9673 9.70683L14.174 11.2735C14.3473 11.3935 14.4673 11.5335 14.5406 11.7002C14.6073 11.8668 14.6473 12.0335 14.6473 12.2202Z"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M12.3333 6.00033C12.3333 5.60033 12.02 4.98699 11.5533 4.48699C11.1267 4.02699 10.56 3.66699 10 3.66699"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M14.6667 6.00016C14.6667 3.42016 12.58 1.3335 10 1.3335"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        /></svg
-                    ></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="dashboard__item dashboard__item-big mobile-r">
-                <div class="dashboard__item-info">
-                  <div class="dashboard__item-title">
-                    <span class="dashboard__item-title-icon">
-                      <svg
-                        width="26"
-                        height="24"
-                        viewBox="0 0 26 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M18.5352 13.4V16.4C18.5352 20.4 16.8285 22 12.5618 22H8.50849C4.24182 22 2.53516 20.4 2.53516 16.4V12.6C2.53516 8.6 4.24182 7 8.50849 7H11.7085"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M18.5337 13.4H15.1204C12.5604 13.4 11.707 12.6 11.707 10.2V7L18.5337 13.4Z"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.7715 2H17.0382"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M7.86523 5C7.86523 3.34 9.29457 2 11.0652 2H13.8599"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M23.8665 8V14.19C23.8665 15.74 22.5225 17 20.8691 17"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M23.8668 8H20.6668C18.2668 8 17.4668 7.25 17.4668 5V2L23.8668 8Z"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                    <span class="dashboard__item-title-text">Штрафы ПДД</span>
-                  </div>
-                  <div class="dashboard__item-text">
-                    <span class="dashboard__item-text-name">К возмещению:</span
-                    ><span class="dashboard__item-text-value blue">1</span>
-                  </div>
-                </div>
-                <div class="dashboard__item-buttons">
-                  <a
-                    class="btn btn-tr-bk btn-small btn-more"
-                    href="./driver-fines.html"
-                    >Подробнее</a
-                  >
-                </div>
-
-                <a
-                  class="dashboard__item-link js-popup"
-                  href="./driver-fines.html"
-                ></a>
-              </div>
-
-              <div class="dashboard__item dashboard__item-big mobile-r">
-                <div class="dashboard__item-info">
-                  <div class="dashboard__item-title">
-                    <span class="dashboard__item-title-icon">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M10.4902 2.23006L5.50016 4.11006C4.35016 4.54006 3.41016 5.90006 3.41016 7.12006V14.5501C3.41016 15.7301 4.19016 17.2801 5.14016 17.9901L9.44016 21.2001C10.8502 22.2601 13.1702 22.2601 14.5802 21.2001L18.8802 17.9901C19.8302 17.2801 20.6102 15.7301 20.6102 14.5501V7.12006C20.6102 5.89006 19.6702 4.53006 18.5202 4.10006L13.5302 2.23006C12.6802 1.92006 11.3202 1.92006 10.4902 2.23006Z"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M9.05078 11.8702L10.6608 13.4802L14.9608 9.18018"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                    <span class="dashboard__item-title-text">Статус ОСАГО</span>
-                  </div>
-                  <div class="dashboard__item-text">
-                    <span class="dashboard__item-text-name"
-                      >Действителен до:</span
-                    ><span class="dashboard__item-text-value gray"
-                      >02.12.2022</span
-                    >
-                  </div>
-                </div>
-                <div class="dashboard__item-buttons">
-                  <a
-                    class="btn btn-tr-bk btn-small btn-download"
-                    href="javascript:void(0);"
-                    download
-                    >Скачать</a
-                  ><a
-                    class="i-action i-download"
-                    href="javascript:void(0);"
-                    download
-                    ><svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6 7.3335V11.3335L7.33333 10.0002"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M5.99935 11.3333L4.66602 10"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M14.6673 6.66683V10.0002C14.6673 13.3335 13.334 14.6668 10.0007 14.6668H6.00065C2.66732 14.6668 1.33398 13.3335 1.33398 10.0002V6.00016C1.33398 2.66683 2.66732 1.3335 6.00065 1.3335H9.33398"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M14.6673 6.66683H12.0007C10.0007 6.66683 9.33398 6.00016 9.33398 4.00016V1.3335L14.6673 6.66683Z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      /></svg
-                  ></a>
-                </div>
-              </div>
-
-              <div class="dashboard__item dashboard__item-big mobile-r">
-                <div class="dashboard__item-info">
-                  <div class="dashboard__item-title">
-                    <span class="dashboard__item-title-icon">
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M10 13C11.6569 13 13 11.6569 13 10C13 8.34315 11.6569 7 10 7C8.34315 7 7 8.34315 7 10C7 11.6569 8.34315 13 10 13Z"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                    <span class="dashboard__item-title-text"
-                      >Шинный сервис</span
-                    >
-                  </div>
-                </div>
-                <div class="dashboard__item-buttons">
-                  <a
-                    class="btn btn-tr-bk btn-small btn-more js-popup"
-                    href="#tireCenters"
-                    >Подробнее</a
-                  >
-                </div>
-
-                <a
-                  class="dashboard__item-link js-popup"
-                  href="#tireCenters"
-                ></a>
-              </div>
-
-              <div class="dashboard__item dashboard__item-big mobile-r">
-                <div class="dashboard__item-info">
-                  <div class="dashboard__item-title">
-                    <span class="dashboard__item-title-icon">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M10.4902 2.23006L5.50016 4.11006C4.35016 4.54006 3.41016 5.90006 3.41016 7.12006V14.5501C3.41016 15.7301 4.19016 17.2801 5.14016 17.9901L9.44016 21.2001C10.8502 22.2601 13.1702 22.2601 14.5802 21.2001L18.8802 17.9901C19.8302 17.2801 20.6102 15.7301 20.6102 14.5501V7.12006C20.6102 5.89006 19.6702 4.53006 18.5202 4.10006L13.5302 2.23006C12.6802 1.92006 11.3202 1.92006 10.4902 2.23006Z"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12 8V13"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M11.9941 16H12.0031"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                    <span class="dashboard__item-title-text"
-                      >Страховые случаи</span
-                    >
-                  </div>
-                  <div class="dashboard__item-text">
-                    <span class="dashboard__item-text-name">Выполнено:</span
-                    ><span class="dashboard__item-text-value gray">2</span>
-                  </div>
-                </div>
-                <div class="dashboard__item-buttons">
-                  <a
-                    class="btn btn-tr-bk btn-small btn-more"
-                    href="./driver-insured-events.html"
-                    >Подробнее</a
-                  >
-                </div>
-
-                <a
-                  class="dashboard__item-link js-popup"
-                  href="./driver-insured-events.html"
-                ></a>
-              </div>
-
-              <div class="dashboard__item dashboard__item-big">
-                <div class="dashboard__item-info">
-                  <div class="dashboard__item-title">
-                    <span class="dashboard__item-title-icon">
-                      <svg
-                        width="21"
-                        height="22"
-                        viewBox="0 0 21 22"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M1.58474 4.41317L1.9383 4.05962C1.82357 3.94489 1.66031 3.89296 1.50038 3.92034C1.34046 3.94771 1.20376 4.05098 1.13373 4.19733L1.58474 4.41317ZM5.94975 8.77817L5.59619 9.13173C5.79146 9.32699 6.10804 9.32699 6.3033 9.13173L5.94975 8.77817ZM8.77817 5.94975L9.13173 6.3033C9.2255 6.20953 9.27817 6.08236 9.27817 5.94975C9.27817 5.81714 9.2255 5.68996 9.13173 5.59619L8.77817 5.94975ZM4.41317 1.58474L4.19733 1.13373C4.05098 1.20376 3.94771 1.34046 3.92034 1.50038C3.89296 1.66031 3.94489 1.82357 4.05962 1.9383L4.41317 1.58474ZM12.47 9.46911L12.0144 9.26313C11.9287 9.45271 11.9694 9.67555 12.1165 9.82267L12.47 9.46911ZM16.0867 20.0858L16.4402 19.7322L16.0867 20.0858ZM8.74363 12.7427L9.09719 12.3892C8.96674 12.2587 8.77508 12.2107 8.59854 12.2642L8.74363 12.7427ZM1.13373 4.19733C0.727331 5.04655 0.5 5.99743 0.5 7H1.5C1.5 6.14999 1.69248 5.34633 2.03576 4.629L1.13373 4.19733ZM6.3033 8.42462L1.9383 4.05962L1.23119 4.76672L5.59619 9.13173L6.3033 8.42462ZM8.42462 5.59619L5.59619 8.42462L6.3033 9.13173L9.13173 6.3033L8.42462 5.59619ZM4.05962 1.9383L8.42462 6.3033L9.13173 5.59619L4.76672 1.23119L4.05962 1.9383ZM7 0.5C5.99743 0.5 5.04655 0.727331 4.19733 1.13373L4.629 2.03576C5.34633 1.69248 6.14999 1.5 7 1.5V0.5ZM13.5 7C13.5 3.41015 10.5899 0.5 7 0.5V1.5C10.0376 1.5 12.5 3.96243 12.5 7H13.5ZM12.9256 9.67509C13.2948 8.85859 13.5 7.95259 13.5 7H12.5C12.5 7.80773 12.3262 8.57353 12.0144 9.26313L12.9256 9.67509ZM12.1165 9.82267L19.2331 16.9393L19.9402 16.2322L12.8236 9.11556L12.1165 9.82267ZM19.2331 16.9393C19.8189 17.5251 19.8189 18.4749 19.2331 19.0606L19.9402 19.7678C20.9166 18.7914 20.9165 17.2085 19.9402 16.2322L19.2331 16.9393ZM19.2331 19.0606L18.5616 19.7322L19.2687 20.4393L19.9402 19.7678L19.2331 19.0606ZM18.5616 19.7322C17.9758 20.318 17.026 20.318 16.4402 19.7322L15.7331 20.4393C16.7094 21.4156 18.2924 21.4156 19.2687 20.4393L18.5616 19.7322ZM16.4402 19.7322L9.09719 12.3892L8.39008 13.0963L15.7331 20.4393L16.4402 19.7322ZM7 13.5C7.65613 13.5 8.29041 13.4026 8.88872 13.2212L8.59854 12.2642C8.09328 12.4174 7.55674 12.5 7 12.5V13.5ZM0.5 7C0.5 10.5899 3.41015 13.5 7 13.5V12.5C3.96243 12.5 1.5 10.0376 1.5 7H0.5Z"
-                        />
-                      </svg>
-                    </span>
-                    <span class="dashboard__item-title-text"
-                      >Заявки на сервис</span
-                    >
-                  </div>
-                  <div class="dashboard__item-text">
-                    <span class="dashboard__item-text-name">Выполнено:</span
-                    ><span class="dashboard__item-text-value gray">5</span>
-                  </div>
-                  <div class="dashboard__item-text">
-                    <span class="dashboard__item-text-name">В работе:</span
-                    ><span class="dashboard__item-text-value blue">1</span>
-                  </div>
-                </div>
-                <div class="dashboard__item-buttons">
-                  <a
-                    class="btn btn-tr-bl btn-small btn-request"
-                    href="./driver-service.html"
-                    >Заявка</a
-                  ><a
-                    class="btn btn-tr-bk btn-small btn-more"
-                    href="./driver-service.html"
-                    >Подробнее</a
-                  >
-                </div>
-
-                <a
-                  class="dashboard__item-link js-popup"
-                  href="./driver-service.html"
-                ></a>
-              </div>
-
-              <div class="dashboard__double">
-                <div class="dashboard__item dashboard__item-small">
-                  <div class="dashboard__item-info">
-                    <div class="dashboard__item-title">
-                      <span class="dashboard__item-title-icon">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+                  <div class="box-request">
+                    <div class="box-request__main">
+                      <div class="box-request__text">
+                        <span class="box-request__text-name"
+                          >№ Постановления:</span
                         >
-                          <path
-                            d="M10 6H14C16 6 16 5 16 4C16 2 15 2 14 2H10C9 2 8 2 8 4C8 6 9 6 10 6Z"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M16 4.02002C19.33 4.20002 21 5.43002 21 10V16C21 20 20 22 15 22H9C4 22 3 20 3 16V10C3 5.44002 4.67 4.20002 8 4.02002"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </span>
-                      <span class="dashboard__item-title-text">ДАТСБЭ</span>
-                    </div>
-                  </div>
-                  <div class="dashboard__item-buttons">
-                    <a
-                      class="btn btn-tr-bk btn-small btn-download"
-                      href="javascript:void(0);"
-                      download
-                      >Скачать</a
-                    ><a
-                      class="i-action i-download"
-                      href="javascript:void(0);"
-                      download
-                      ><svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6 7.3335V11.3335L7.33333 10.0002"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M5.99935 11.3333L4.66602 10"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M14.6673 6.66683V10.0002C14.6673 13.3335 13.334 14.6668 10.0007 14.6668H6.00065C2.66732 14.6668 1.33398 13.3335 1.33398 10.0002V6.00016C1.33398 2.66683 2.66732 1.3335 6.00065 1.3335H9.33398"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M14.6673 6.66683H12.0007C10.0007 6.66683 9.33398 6.00016 9.33398 4.00016V1.3335L14.6673 6.66683Z"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        /></svg
-                    ></a>
-                  </div>
-                </div>
-
-                <div class="dashboard__item dashboard__item-small">
-                  <div class="dashboard__item-info">
-                    <div class="dashboard__item-title">
-                      <span class="dashboard__item-title-icon">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <span class="box-request__text-value"
+                          >18810577220823367361</span
                         >
-                          <path
-                            d="M8 11.4002C8 12.1702 8.6 12.8002 9.33 12.8002H10.83C11.47 12.8002 11.99 12.2502 11.99 11.5802C11.99 10.8502 11.67 10.5902 11.2 10.4202L8.8 9.5802C8.32 9.4102 8 9.1502 8 8.4202C8 7.7502 8.52 7.2002 9.16 7.2002H10.66C11.4 7.2102 12 7.8302 12 8.6002"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M10 12.8501V13.5901"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M10 6.41016V7.19016"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M9.99 17.98C14.4028 17.98 17.98 14.4028 17.98 9.99C17.98 5.57724 14.4028 2 9.99 2C5.57724 2 2 5.57724 2 9.99C2 14.4028 5.57724 17.98 9.99 17.98Z"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M12.9805 19.88C13.8805 21.15 15.3505 21.98 17.0305 21.98C19.7605 21.98 21.9805 19.76 21.9805 17.03C21.9805 15.37 21.1605 13.9 19.9105 13"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </span>
-                      <span class="dashboard__item-title-text">Выкуп ТС</span>
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Статус:</span>
+                        <span class="box-request__text-value">
+                          <span class="status status-finish">Оплачен</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="box-request__extra">
+                      <div class="box-request__data data-col-1">
+                        <div class="box-request__col">
+                          <div class="box-request__text">
+                            <span class="box-request__text-name">От:</span>
+                            <span class="box-request__text-value"
+                              >23.12.2021</span
+                            >
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name">Статья:</span>
+                            <span class="box-request__text-value">12.9ч.2</span>
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name">Сумма:</span>
+                            <span class="box-request__text-value">500</span>
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name"
+                              >Сумма по счету:</span
+                            >
+                            <span class="box-request__text-value">250</span>
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name"
+                              >Компания:</span
+                            >
+                            <span class="box-request__text-value">
+                              <a
+                                class="box-request__link"
+                                href="javascript:void(0);"
+                              >
+                                <span class="box-request__link-text"
+                                  >ООО «Нутриция»</span
+                                >
+                              </a>
+                            </span>
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name">PDF:</span>
+                            <span class="box-request__text-value">
+                              <a
+                                class="box-request__link"
+                                href="javascript:void(0);"
+                                download
+                              >
+                                <span class="box-request__link-text"
+                                  >Скачать</span
+                                >
+                                <span class="box-request__link-icon"
+                                  ><svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M6 7.3335V11.3335L7.33333 10.0002"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                    <path
+                                      d="M5.99935 11.3333L4.66602 10"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                    <path
+                                      d="M14.6673 6.66683V10.0002C14.6673 13.3335 13.334 14.6668 10.0007 14.6668H6.00065C2.66732 14.6668 1.33398 13.3335 1.33398 10.0002V6.00016C1.33398 2.66683 2.66732 1.3335 6.00065 1.3335H9.33398"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                    <path
+                                      d="M14.6673 6.66683H12.0007C10.0007 6.66683 9.33398 6.00016 9.33398 4.00016V1.3335L14.6673 6.66683Z"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    /></svg
+                                ></span>
+                              </a>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="dashboard__item-buttons">
-                    <a
-                      class="btn btn-tr-bl btn-small btn-request js-popup"
-                      href="#requestRansom"
-                      >Заявка</a
-                    >
-                  </div>
-
-                  <a
-                    class="dashboard__item-link js-popup"
-                    href="#requestRansom"
-                  ></a>
-                </div>
-              </div>
-
-              <div class="dashboard__item dashboard__item-big mobile-r">
-                <div class="dashboard__item-info">
-                  <div class="dashboard__item-title">
-                    <span class="dashboard__item-title-icon">
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.99609 14.6766V12.1396"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M16.19 3.33008C17.88 3.33008 19.24 4.70008 19.24 6.39008V9.83008C16.78 11.2701 13.53 12.1401 9.99 12.1401C6.45 12.1401 3.21 11.2701 0.75 9.83008V6.38008C0.75 4.69008 2.12 3.33008 3.81 3.33008H16.19Z"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M13.4961 3.326V2.96C13.4961 1.74 12.5061 0.75 11.2861 0.75H8.70609C7.48609 0.75 6.49609 1.74 6.49609 2.96V3.326"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M0.775391 13.4834L0.964391 15.9924C1.09239 17.6834 2.50139 18.9904 4.19639 18.9904H15.7954C17.4904 18.9904 18.8994 17.6834 19.0274 15.9924L19.2164 13.4834"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                    <span class="dashboard__item-title-text">Контракт</span>
-                  </div>
-                  <div class="dashboard__item-text">
-                    <span class="dashboard__item-text-name"
-                      >Дата окончания:</span
-                    ><span class="dashboard__item-text-value gray"
-                      >12.10.2022</span
-                    >
-                  </div>
-                </div>
-                <div class="dashboard__item-buttons">
-                  <a
-                    class="btn btn-tr-bk btn-small btn-download"
-                    href="javascript:void(0);"
-                    download
-                    >Скачать</a
-                  ><a
-                    class="i-action i-download"
-                    href="javascript:void(0);"
-                    download
-                    ><svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6 7.3335V11.3335L7.33333 10.0002"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M5.99935 11.3333L4.66602 10"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M14.6673 6.66683V10.0002C14.6673 13.3335 13.334 14.6668 10.0007 14.6668H6.00065C2.66732 14.6668 1.33398 13.3335 1.33398 10.0002V6.00016C1.33398 2.66683 2.66732 1.3335 6.00065 1.3335H9.33398"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M14.6673 6.66683H12.0007C10.0007 6.66683 9.33398 6.00016 9.33398 4.00016V1.3335L14.6673 6.66683Z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      /></svg
-                  ></a>
-                </div>
-              </div>
-
-              <div class="dashboard__item dashboard__item-big">
-                <div class="dashboard__item-info">
-                  <div class="dashboard__item-title">
-                    <span class="dashboard__item-title-icon">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M10.33 7.51025C10.83 7.36025 11.38 7.26025 12 7.26025C14.76 7.26025 17 9.50025 17 12.2603C17 15.0203 14.76 17.2603 12 17.2603C9.24 17.2603 7 15.0203 7 12.2603C7 11.2303 7.31 10.2803 7.84 9.48026"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M9.61914 7.65024L11.2791 5.74023"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M9.61914 7.65039L11.5591 9.07039"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                    <span class="dashboard__item-title-text"
-                      >Заявка на возврат ТС</span
-                    >
+                  <div class="box-request">
+                    <div class="box-request__main">
+                      <div class="box-request__text">
+                        <span class="box-request__text-name"
+                          >№ Постановления:</span
+                        >
+                        <span class="box-request__text-value"
+                          >18810577220823367361</span
+                        >
+                      </div>
+                      <div class="box-request__text">
+                        <span class="box-request__text-name">Статус:</span>
+                        <span class="box-request__text-value">
+                          <span class="status status-finish">Оплачен</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="box-request__extra">
+                      <div class="box-request__data data-col-1">
+                        <div class="box-request__col">
+                          <div class="box-request__text">
+                            <span class="box-request__text-name">От:</span>
+                            <span class="box-request__text-value"
+                              >23.12.2021</span
+                            >
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name">Статья:</span>
+                            <span class="box-request__text-value">12.9ч.2</span>
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name">Сумма:</span>
+                            <span class="box-request__text-value">500</span>
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name"
+                              >Сумма по счету:</span
+                            >
+                            <span class="box-request__text-value">250</span>
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name"
+                              >Компания:</span
+                            >
+                            <span class="box-request__text-value">
+                              <a
+                                class="box-request__link"
+                                href="javascript:void(0);"
+                              >
+                                <span class="box-request__link-text"
+                                  >ООО «Нутриция»</span
+                                >
+                              </a>
+                            </span>
+                          </div>
+                          <div class="box-request__text">
+                            <span class="box-request__text-name">PDF:</span>
+                            <span class="box-request__text-value">
+                              <a
+                                class="box-request__link"
+                                href="javascript:void(0);"
+                                download
+                              >
+                                <span class="box-request__link-text"
+                                  >Скачать</span
+                                >
+                                <span class="box-request__link-icon"
+                                  ><svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M6 7.3335V11.3335L7.33333 10.0002"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                    <path
+                                      d="M5.99935 11.3333L4.66602 10"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                    <path
+                                      d="M14.6673 6.66683V10.0002C14.6673 13.3335 13.334 14.6668 10.0007 14.6668H6.00065C2.66732 14.6668 1.33398 13.3335 1.33398 10.0002V6.00016C1.33398 2.66683 2.66732 1.3335 6.00065 1.3335H9.33398"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                    <path
+                                      d="M14.6673 6.66683H12.0007C10.0007 6.66683 9.33398 6.00016 9.33398 4.00016V1.3335L14.6673 6.66683Z"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    /></svg
+                                ></span>
+                              </a>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="dashboard__item-buttons">
-                  <a
-                    class="btn btn-tr-bl btn-small btn-request js-popup"
-                    href="#requestReturn"
-                    >Заявка</a
-                  >
-                </div>
-
-                <a
-                  class="dashboard__item-link js-popup"
-                  href="#requestReturn"
-                ></a>
               </div>
             </div>
 

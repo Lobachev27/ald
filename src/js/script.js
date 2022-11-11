@@ -67,12 +67,12 @@ $(document).ready(function() {
   $(function () {
     var tabContainers = $('.modal-driver__container');
     tabContainers.hide();
-    $('.modal-driver__tab').click(function () {
+    $('.modal-driver__tab, .user__dd-link').click(function () {
       tabContainers.hide();
       tabContainers.filter(this.hash).show();
-      $('.modal-driver__tab').removeClass('active');
+      $('.modal-driver__tab, .user__dd-link').removeClass('active');
       $(this).addClass('active');
-      $('.modal-driver__tabs').addClass('hide');
+      $('.modal-driver__tabs, .user__dd-link').addClass('hide');
       return false;
     });
 
@@ -87,7 +87,7 @@ $(document).ready(function() {
 /*Модалка водителя*/
 
 $(document).ready(function () {
-  $(".user").click(function () {
+  $(".user, .user__dd-link").click(function () {
     $(".modal-driver").addClass("active");
     $("body").addClass("ov-hid");
   });
@@ -95,6 +95,14 @@ $(document).ready(function () {
   $(".modal-driver__close").click(function () {
     $(".modal-driver").removeClass("active");
     $("body").removeClass("ov-hid");
+  });
+
+  $(".user").mouseover(function () {
+    var menu = $(this).find(".user__dd");
+    menu.addClass('active');
+    setTimeout(function(){
+      menu.removeClass('active');
+    }, 2000 );
   });
 });
 
@@ -217,5 +225,25 @@ $(document).ready(function() {
       $(this).addClass("active");
       $(this).closest('.centers').addClass("active");
     }
+  });
+});
+
+/*Уведомления*/
+
+$(document).ready(function() {
+  $('.header__warning').click(function(){
+    var notification = $(this).find('.warning-notification');
+    notification.addClass('active');
+    setTimeout(function(){
+      notification.removeClass('active');
+    }, 5000 );
+  });
+
+  $('.header__notification').click(function(){
+    var notification = $(this).find('.notification__list');
+    notification.addClass('active');
+    setTimeout(function(){
+      notification.removeClass('active');
+    }, 5000 );
   });
 });
