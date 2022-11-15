@@ -147,8 +147,17 @@
       transition: margin $transition-time, width $transition-time;
     }
 
+    & .container {
+      @media screen and ($desktop3) {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-column-gap: 14px;
+      }
+    }
+
     & .header {
       &__box {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -156,8 +165,16 @@
         order: 2;
         @media screen and ($tablet1) {
           margin-left: 0;
+          margin-right: 14px;
+          flex-grow: 1;
           width: auto;
           order: 0;
+        }
+        @media screen and ($desktop3) {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          grid-column-gap: 14px;
+          margin-right: 0;
         }
 
         & .header__menu {

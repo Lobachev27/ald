@@ -135,6 +135,17 @@
       }
     }
 
+    &.is-search {
+      & .icon {
+        background-color: $white;
+        cursor: pointer;
+
+        & svg {
+          stroke: $black;
+        }
+      }
+    }
+
     &.is-datepicker {
       & .icon {
         background-color: $white;

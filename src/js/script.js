@@ -273,3 +273,11 @@ $(document).ready(function () {
     }
   });
 });
+
+/*Header search*/
+
+$(document).ready(function() {
+  $(".search .icon").on("click", function() {
+    $(this).closest(".search").toggleClass("active");
+  });
+});

@@ -1,0 +1,92 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.search {
+  position: relative;
+  margin: 0 8px 0 auto;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  @media screen and ($tablet1) {
+    position: static;
+  }
+  @media screen and ($desktop1) {
+    flex-grow: 1;
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 730px;
+  }
+  @media screen and ($desktop2) {
+    margin: 0 42px 0 42px;
+  }
+  @media screen and ($desktop3) {
+    position: relative;
+    width: 100%;
+    max-width: initial;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  &.active {
+    & .input-wrapper {
+      width: calc(100vw - 58px);
+      transition: width $transition-time;
+      @media screen and ($tablet1) {
+        width: 100%;
+      }
+
+      & .input {
+        background-color: $gray-1;
+        color: $black;
+        padding: 0 40px 0 14px;
+
+        &::placeholder {
+          color: $gray-4;
+        }
+      }
+    }
+  }
+
+  & .input-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 38px;
+    transition: width $transition-time;
+    @media screen and ($desktop1) {
+      position: relative;
+      top: initial;
+      right: initial;
+      transform: initial;
+      width: 100%;
+    }
+
+    & .input {
+      background-color: transparent;
+      padding: 0;
+      width: 100%;
+      color: transparent;
+      transition: border $transition-time, background-color $transition-time, color $transition-time;
+      @media screen and ($desktop1) {
+        background-color: $gray-1;
+        color: $black;
+        padding: 0 40px 0 14px;
+      }
+
+      &::placeholder {
+        color: transparent;
+        transition: color $transition-time;
+        @media screen and ($desktop1) {
+          color: $gray-4;
+        }
+      }
+
+      &-box {
+        position: relative;
+        width: 100%;
+        height: 38px;
+      }
+    }
+  }
+}
