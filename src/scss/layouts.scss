@@ -36,14 +36,42 @@
   width: 100%;
 }
 
+.administrator-default {
+  & .row {
+    &.row-title {
+      justify-content: flex-start;
+      flex-direction: column;
+      @media screen and ($tablet1) {
+        flex-direction: row;
+      }
+
+      & .default__tab-request {
+        order: 1;
+        margin-top: 14px;
+        @media screen and ($tablet1) {
+          margin-top: 0;
+          margin-left: 14px;
+        }
+      }
+    }
+  }
+}
+
 .wrapper-default {
   position: relative;
   width: 100%;
 
   &.wrapper-50 {
     @media screen and ($tablet2) {
-      width: 50%;
+      width: calc(50% - 7px);;
       min-width: 670px;
+    }
+  }
+
+  &.wrapper-75 {
+    @media screen and ($desktop2) {
+      width: calc(75% - 7px);
+      min-width: 1000px;
     }
   }
 }
@@ -260,6 +288,15 @@
       }
     }
 
+    &.data-col-3 {
+      @media screen and ($tablet2) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media screen and ($desktop2) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
     & .box-request{
       &__text {
         display: block;
@@ -388,4 +425,10 @@
       color: $blue-3;
     }
   }
+}
+
+.contract__box {
+  position: relative;
+  width: 100%;
+  margin: 24px 0;
 }

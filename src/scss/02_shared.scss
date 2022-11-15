@@ -54,9 +54,11 @@ main {
     }
 
     &.active-sidebar {
-      width: calc(100% - 198px);
-      max-width: calc(100% - 198px);
-      margin-left: 198px;
+      @media screen and ($tablet1) {
+        width: calc(100% - 198px);
+        max-width: calc(100% - 198px);
+        margin-left: 198px;
+      }
     }
   }
 }

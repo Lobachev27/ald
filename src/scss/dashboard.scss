@@ -23,6 +23,33 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
+    &.dashboard-contract {
+      @media screen and ($desktop3) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      & .dashboard {
+        &__item {
+          &-buttons {
+            & .btn {
+              &.btn-download {
+                margin-right: 8px;
+              }
+
+              &.btn-more,
+              &.btn-call {
+                display: none;
+                @media screen and ($tablet2) {
+                  display: flex;
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
     & .dashboard {
       &__double {
         display: grid;
@@ -177,6 +204,7 @@
             display: block;
             width: 16px;
             height: 16px;
+            margin-right: 0;
             @media screen and ($tablet2) {
               display: none;
             }

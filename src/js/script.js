@@ -253,11 +253,15 @@ $(document).ready(function() {
 $(document).ready(function () {
   $(".header__menu").click(function () {
     $(".sidebar").addClass("active");
+    $(this).closest('body').find('.header-administrator').addClass("active-sidebar");
+    $(this).closest('body').find('.main-administrator').addClass("active-sidebar");
     $("body").addClass("ov-hid");
   });
 
   $(".sidebar__close").click(function () {
     $(".sidebar").removeClass("active");
+    $(this).closest('body').find('.header-administrator').removeClass("active-sidebar");
+    $(this).closest('body').find('.main-administrator').removeClass("active-sidebar");
     $("body").removeClass("ov-hid");
   });
 

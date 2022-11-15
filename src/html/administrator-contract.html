@@ -2,7 +2,7 @@
 <html lang="ru">
 
 @@include("./shared/head.html", {
-  "title": "Мой ALD"
+"title": "Мой ALD"
 })
 
 <body>
@@ -10,7 +10,7 @@
 @@include("./components/header-administrator.html", {
   context: {
     "classList": "header-administrator",
-    "content": '<h1 class="title title-h1">Мой ALD</h1>',
+    "content": '<a class="header-back" href="./administrator-main.html"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.99925 11.28L1.65258 6.9333C1.13924 6.41997 1.13924 5.57997 1.65258 5.06664L5.99925 0.719971" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Назад</span></a>',
     "userImage": "",
     "userName": "ООО «Данон»",
     "link": "javascript:void(0);",
@@ -98,25 +98,91 @@
 
 <main class="main main-administrator">
 
-  <section class="driver-image">
-    <img src="./img/bg-2.jpg" alt="">
-    <div class="container">
-      <div class="driver-image__title">Автопарк</div>
-    </div>
-  </section>
-
   <section class="section-default">
     <div class="container">
       <div class="layout-2">
 
-        @@include("./components/dashboard-administrator.html")
+        <div class="administrator-default">
+          <div class="row row-title">
+            <h1 class="title title-h1">Контракт-машина</h1>
+            <a class="default__tab default__tab-request" href="javascript:void(0);">Возврат</a>
+          </div>
+          <div class="wrapper-default wrapper-75">
+            <div class="contract__box">
+              <div class="box-request__data data-col-3">
+                <div class="box-request__col">
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Контракт №:</div>
+                    <div class="box-request__text-value">0000001</div>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Гос. №:</div>
+                    <div class="box-request__text-value">A750AA</div>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">E-mail:</div>
+                    <div class="box-request__text-value">company@gmail.com</div>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Модель:</div>
+                    <div class="box-request__text-value">Volkswagen Polo</div>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">VIN:</div>
+                    <div class="box-request__text-value">XW8ZZZ61ZHG016262</div>
+                  </div>
+                </div>
+                <div class="box-request__col">
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Начало контракта:</div>
+                    <div class="box-request__text-value">01.05.2021</div>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Конец контракта:</div>
+                    <div class="box-request__text-value">02.05.2021</div>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Всего месяцев:</div>
+                    <div class="box-request__text-value">22</div>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Пробег:</div>
+                    <div class="box-request__text-value">20 000</div>
+                  </div>
+                </div>
+                <div class="box-request__col">
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Компания:</div>
+                    <div class="box-request__text-value">ООО «Юнимилк»</div>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Конец контр.:</div>
+                    <div class="box-request__text-value">02.05.2021</div>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Город эксплуатации:</div>
+                    <div class="box-request__text-value">Москва</div>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Регион АЛД:</div>
+                    <div class="box-request__text-value">MOW</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper-default wrapper-75">
+
+            @@include("./components/dashboard-contract.html")
+
+          </div>
+        </div>
 
       </div>
     </div>
   </section>
 
 </main>
-
 
 @@include("./components/administrator-popups.html")
 
