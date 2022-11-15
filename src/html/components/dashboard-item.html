@@ -8,9 +8,11 @@
     </div>
     @@if(context.content){@@context.content}
   </div>
+  @@if(context.buttons){
   <div class="dashboard__item-buttons">
     @@context.buttons
   </div>
+  }
   @@if(context.marker){
   <span class="dashboard__item-marker">
     @@context.marker

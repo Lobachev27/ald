@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Страховые случаи</title>
+    <title>Мой ALD</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -15,120 +15,32 @@
   </head>
 
   <body>
-    <header class="header header-driver">
+    <header class="header header-administrator">
       <div class="container">
         <a class="header__logo" href="./">
           <img src="./img/logo-black.svg" alt="" />
         </a>
         <div class="header__box">
-          <a class="header-back" href="./driver-main.html"
-            ><svg
-              width="7"
-              height="12"
-              viewBox="0 0 7 12"
+          <h1 class="title title-h1">Мой ALD</h1>
+          <span class="header__menu">
+            <svg
+              width="16"
+              height="6"
+              viewBox="0 0 16 6"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M5.99925 11.28L1.65258 6.9333C1.13924 6.41997 1.13924 5.57997 1.65258 5.06664L5.99925 0.719971"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              /></svg
-            ><span>Назад</span></a
-          >
+              <rect width="16" height="1" />
+              <rect y="5" width="16" height="1" />
+            </svg>
+          </span>
         </div>
         <div class="header__action">
-          <div class="header__warning">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8.00065 14.6667C11.6673 14.6667 14.6673 11.6667 14.6673 8.00004C14.6673 4.33337 11.6673 1.33337 8.00065 1.33337C4.33398 1.33337 1.33398 4.33337 1.33398 8.00004C1.33398 11.6667 4.33398 14.6667 8.00065 14.6667Z"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M8 5.33331V8.66665"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M7.99609 10.6667H8.00208"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <div class="warning-notification">
-              <div class="notification">
-                <div class="notification__text">
-                  Подтвердите номер моб. телефона и адрес эл. почты, чтобы
-                  получить доступ к полной версии личного кабинета.
-                </div>
-                <a class="notification__link" href="javascript:void(0);"
-                  >Подтвердить</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="header__notification active">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8.01242 1.94C5.80575 1.94 4.01242 3.73334 4.01242 5.94V7.86667C4.01242 8.27334 3.83908 8.89334 3.63242 9.24L2.86575 10.5133C2.39242 11.3 2.71908 12.1733 3.58575 12.4667C6.45908 13.4267 9.55908 13.4267 12.4324 12.4667C13.2391 12.2 13.5924 11.2467 13.1524 10.5133L12.3857 9.24C12.1857 8.89334 12.0124 8.27334 12.0124 7.86667V5.94C12.0124 3.74 10.2124 1.94 8.01242 1.94Z"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-              />
-              <path
-                d="M9.24596 2.13333C9.0393 2.07333 8.82596 2.02667 8.60596 2C7.96596 1.92 7.35263 1.96667 6.7793 2.13333C6.97263 1.64 7.45263 1.29333 8.01263 1.29333C8.57263 1.29333 9.05263 1.64 9.24596 2.13333Z"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10.0137 12.7067C10.0137 13.8067 9.11367 14.7067 8.01367 14.7067C7.46701 14.7067 6.96034 14.48 6.60034 14.12C6.24034 13.76 6.01367 13.2533 6.01367 12.7067"
-                stroke-miterlimit="10"
-              />
-            </svg>
-            <div class="notification__list">
-              <div class="notification">
-                <div class="notification__text">Новый штраф от 21.08.2022</div>
-                <a class="notification__link" href="./driver-fines.html"
-                  >Все штрафы</a
-                >
-              </div>
-              <div class="notification">
-                <div class="notification__text">
-                  Диагностическая карта просрочена. Пройдите ГТО.
-                </div>
-              </div>
-              <div class="notification">
-                <div class="notification__text">Новый штраф от 22.08.2022</div>
-                <a class="notification__link" href="./driver-fines.html"
-                  >Все штрафы</a
-                >
-              </div>
-            </div>
-          </div>
           <div class="user">
             <div class="user__box">
               <div class="user__box-image"></div>
-              <span class="user__box-name">Vladimir K.</span>
-              <a class="user__box-link js-popup" href="javascript:void(0);"></a>
-            </div>
-            <div class="user__dd">
-              <a class="user__dd-link" href="#profile">Данные профиля</a>
-              <a class="user__dd-link" href="#cars">Мои автомобили</a>
-              <a class="user__dd-link" href="#notification">Уведомления</a>
+              <span class="user__box-name">ООО «Данон»</span>
+              <a class="user__box-link" href="javascript:void(0);"></a>
             </div>
           </div>
           <div class="header__logout">
@@ -161,368 +73,933 @@
       </div>
     </header>
 
-    <main class="main main-driver">
-      <section class="section-default hidden-car">
-        <div class="container">
-          <div class="layout-1">
-            <div class="car">
-              <div class="car__info">
-                <div class="car__name">Volkswagen Polo</div>
-                <div class="car__model">A752BИ</div>
+    <div class="sidebar">
+      <div class="sidebar__wrapper">
+        <a class="sidebar__logo" href="../../..">
+          <img class="sidebar__logo-icon" src="./img/logo-min.svg" alt="" />
+          <img class="sidebar__logo-text" src="./img/logo-text.svg" alt="" />
+        </a>
+
+        <div class="sidebar__header">
+          <div class="header__box">
+            <div class="title title-h1">Мой ALD</div>
+          </div>
+          <div class="sidebar__close">Закрыть</div>
+        </div>
+
+        <div class="sidebar__content">
+          <div class="sidebar__box">
+            <div class="sidebar__box-title">Автомобили</div>
+            <div class="sidebar__list">
+              <div class="sidebar__item">
+                <span class="sidebar__item-icon"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.0933 5.07996H4.57997C3.33997 5.07996 3.05997 5.69997 2.90664 6.46663L2.33997 9.16663H10.34L9.77331 6.46663C9.60664 5.69997 9.3333 5.07996 8.0933 5.07996Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.3267 13.5732C11.38 14.1599 10.9133 14.6666 10.3133 14.6666H9.37333C8.83333 14.6666 8.76 14.4332 8.66 14.1532L8.56 13.8533C8.42 13.4466 8.32667 13.1666 7.60667 13.1666H5.04667C4.32667 13.1666 4.22 13.4799 4.09333 13.8533L3.99334 14.1532C3.9 14.4399 3.82667 14.6666 3.28 14.6666H2.34C1.74 14.6666 1.26667 14.1599 1.32667 13.5732L1.60667 10.5266C1.68 9.77324 1.82 9.15991 3.13333 9.15991H9.51334C10.8267 9.15991 10.9667 9.77324 11.04 10.5266L11.3267 13.5732Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2.33337 7.66663H1.83337"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10.8334 7.66663H10.3334"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.33337 11.1666H4.83337"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7.83337 11.1666H9.33337"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12.4733 5.82665C12.66 5.39332 12.5933 4.80666 12.2467 4.29333C11.9067 3.77999 11.3867 3.49332 10.9133 3.49999"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M14.5467 6.48669C14.8267 5.48003 14.6267 4.24672 13.9134 3.18005C13.2 2.11339 12.1334 1.46004 11.0934 1.33337"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+                <span class="sidebar__item-text">В заказе</span>
+                <span class="sidebar__item-count">0</span>
+                <a class="sidebar__item-link" href="javascript:void(0);"></a>
               </div>
-              <div class="car__status">
-                <span class="car__status-text">Статус:</span>
-                <span class="car__status-value green">На хранении</span>
+
+              <div class="sidebar__item">
+                <span class="sidebar__item-icon"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.69997 1.33337H6.29997C5.09997 1.33337 4.83331 1.93338 4.67997 2.67338L4.1333 5.2867H11.8666L11.32 2.67338C11.1666 1.93338 10.9 1.33337 9.69997 1.33337Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12.8266 9.54671C12.88 10.1134 12.4266 10.6001 11.8466 10.6001H10.94C10.42 10.6001 10.3466 10.3801 10.2533 10.1001L10.1533 9.81335C10.02 9.42002 9.93329 9.15336 9.23329 9.15336H6.75995C6.06662 9.15336 5.95995 9.45335 5.83995 9.81335L5.73996 10.1001C5.64662 10.3734 5.57329 10.6001 5.05329 10.6001H4.14662C3.56662 10.6001 3.11329 10.1134 3.16662 9.54671L3.43996 6.60006C3.50662 5.87339 3.64662 5.28003 4.91328 5.28003H11.08C12.3466 5.28003 12.4866 5.87339 12.5533 6.60006L12.8266 9.54671Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4.13327 3.83337H3.64661"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12.3532 3.83337H11.8666"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5.09998 7.22009H6.54665"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9.45325 7.22009H10.8999"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 11.3334V12"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 14V14.6667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2.00004 12L1.33337 14.6667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M14 12L14.6667 14.6667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+                <span class="sidebar__item-text">На дороге</span>
+                <span class="sidebar__item-count">865</span>
+                <a class="sidebar__item-link" href="javascript:void(0);"></a>
+              </div>
+
+              <div class="sidebar__item">
+                <span class="sidebar__item-icon"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.88663 5.00663C7.21996 4.90663 7.58663 4.83997 7.99996 4.83997C9.83996 4.83997 11.3333 6.3333 11.3333 8.1733C11.3333 10.0133 9.83996 11.5066 7.99996 11.5066C6.15996 11.5066 4.66663 10.0133 4.66663 8.1733C4.66663 7.48663 4.87329 6.8533 5.22662 6.31997"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.41333 5.1L7.52 3.82666"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.41333 5.09998L7.70667 6.04664"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.00004 14.6667H10C13.3334 14.6667 14.6667 13.3334 14.6667 10V6.00004C14.6667 2.66671 13.3334 1.33337 10 1.33337H6.00004C2.66671 1.33337 1.33337 2.66671 1.33337 6.00004V10C1.33337 13.3334 2.66671 14.6667 6.00004 14.6667Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+                <span class="sidebar__item-text">К возврату</span>
+                <span class="sidebar__item-count">94</span>
+                <a class="sidebar__item-link" href="javascript:void(0);"></a>
               </div>
             </div>
+          </div>
+          <div class="sidebar__box">
+            <div class="sidebar__box-title">Сервисы</div>
+            <div class="sidebar__list">
+              <div class="sidebar__item">
+                <span class="sidebar__item-icon"
+                  ><svg
+                    width="17"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.0223 8.93329V10.9333C12.0223 13.6 10.8845 14.6666 8.04004 14.6666H5.33781C2.49337 14.6666 1.35559 13.6 1.35559 10.9333V8.39996C1.35559 5.73329 2.49337 4.66663 5.33781 4.66663H7.47115"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12.0222 8.93329H9.74662C8.03996 8.93329 7.47107 8.39996 7.47107 6.79996V4.66663L12.0222 8.93329Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.18225 1.33337H11.0267"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4.91113 3.33337C4.91113 2.22671 5.86402 1.33337 7.04447 1.33337H8.90758"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15.5778 5.33337V9.46004C15.5778 10.4934 14.6818 11.3334 13.5796 11.3334"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15.5778 5.33337H13.4445C11.8445 5.33337 11.3112 4.83337 11.3112 3.33337V1.33337L15.5778 5.33337Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+                <span class="sidebar__item-text">Штрафы</span>
+                <a class="sidebar__item-link" href="javascript:void(0);"></a>
+              </div>
 
-            <div class="driver-default">
-              <h1 class="title title-h1">Страховые случаи</h1>
-              <div class="wrapper-default wrapper-50">
-                <div class="default__tabs"></div>
-                <div class="default__container">
-                  <div class="box-request">
-                    <div class="box-request__main">
-                      <div class="box-request__text">
-                        <span class="box-request__text-name"
-                          >№ Направления:</span
-                        >
-                        <span class="box-request__text-value"
-                          >001AS22-030564</span
-                        >
-                      </div>
-                      <div class="box-request__text">
-                        <span class="box-request__text-name">Статус:</span>
-                        <span class="box-request__text-value">
-                          <span class="status status-work">В работе</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="box-request__extra">
-                      <div class="box-request__data data-col-1">
-                        <div class="box-request__col">
-                          <div class="box-request__text">
-                            <span class="box-request__text-name"
-                              >Дата начала ремонта:</span
-                            >
-                            <span class="box-request__text-value"
-                              >23.12.2021</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name"
-                              >Дата окончания ремонта:</span
-                            >
-                            <span class="box-request__text-value"
-                              >23.12.2021</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name"
-                              >Имя заявителя:</span
-                            >
-                            <span class="box-request__text-value"
-                              >Фирсова Анна Алексеевна</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name">Дилер:</span>
-                            <span class="box-request__text-value"
-                              >ООО«Сигма Моторс»</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name"
-                              >Адрес станции:</span
-                            >
-                            <span class="box-request__text-value"
-                              >г. Санкт-Петербург, Петроградская наб. д. 30 лит.
-                              А</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name">Тел.:</span>
-                            <span class="box-request__text-value"
-                              >89789494100</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name">PDF:</span>
-                            <span class="box-request__text-value">
-                              <a
-                                class="box-request__link"
-                                href="javascript:void(0);"
-                                download
-                              >
-                                <span class="box-request__link-text"
-                                  >Скачать</span
-                                >
-                                <span class="box-request__link-icon"
-                                  ><svg
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 16 16"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M6 7.3335V11.3335L7.33333 10.0002"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                    <path
-                                      d="M5.99935 11.3333L4.66602 10"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                    <path
-                                      d="M14.6673 6.66683V10.0002C14.6673 13.3335 13.334 14.6668 10.0007 14.6668H6.00065C2.66732 14.6668 1.33398 13.3335 1.33398 10.0002V6.00016C1.33398 2.66683 2.66732 1.3335 6.00065 1.3335H9.33398"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                    <path
-                                      d="M14.6673 6.66683H12.0007C10.0007 6.66683 9.33398 6.00016 9.33398 4.00016V1.3335L14.6673 6.66683Z"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    /></svg
-                                ></span>
-                              </a>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+              <div class="sidebar__item">
+                <span class="sidebar__item-icon"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.99332 1.48667L3.66665 2.74C2.89998 3.02667 2.27332 3.93333 2.27332 4.74667V9.7C2.27332 10.4867 2.79332 11.52 3.42665 11.9933L6.29332 14.1333C7.23332 14.84 8.77998 14.84 9.71998 14.1333L12.5866 11.9933C13.22 11.52 13.74 10.4867 13.74 9.7V4.74667C13.74 3.92667 13.1133 3.02 12.3466 2.73333L9.01998 1.48667C8.45332 1.28 7.54665 1.28 6.99332 1.48667Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.03333 7.91333L7.10666 8.98666L9.97332 6.12"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+                <span class="sidebar__item-text">ОСАГО</span>
+                <a class="sidebar__item-link" href="javascript:void(0);"></a>
+              </div>
+
+              <div class="sidebar__item">
+                <span class="sidebar__item-icon"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.2467 5.92004H11.7467"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4.2533 5.92004L4.7533 6.42004L6.2533 4.92004"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.2467 10.5867H11.7467"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4.2533 10.5867L4.7533 11.0867L6.2533 9.58667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.00004 14.6667H10C13.3334 14.6667 14.6667 13.3334 14.6667 10V6.00004C14.6667 2.66671 13.3334 1.33337 10 1.33337H6.00004C2.66671 1.33337 1.33337 2.66671 1.33337 6.00004V10C1.33337 13.3334 2.66671 14.6667 6.00004 14.6667Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+                <span class="sidebar__item-text">ГТО</span>
+                <a class="sidebar__item-link" href="javascript:void(0);"></a>
+              </div>
+
+              <div class="sidebar__item">
+                <span class="sidebar__item-icon"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.00004 14.6667H10C13.3334 14.6667 14.6667 13.3334 14.6667 10V6.00004C14.6667 2.66671 13.3334 1.33337 10 1.33337H6.00004C2.66671 1.33337 1.33337 2.66671 1.33337 6.00004V10C1.33337 13.3334 2.66671 14.6667 6.00004 14.6667Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4.46667 6.17334L8 8.22001L11.5067 6.18667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 11.8467V8.21338"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7.17338 4.19328L5.04004 5.37994C4.56004 5.64661 4.16003 6.31994 4.16003 6.87328V9.13328C4.16003 9.68661 4.55337 10.3599 5.04004 10.6266L7.17338 11.8133C7.62671 12.0666 8.37337 12.0666 8.83337 11.8133L10.9667 10.6266C11.4467 10.3599 11.8467 9.68661 11.8467 9.13328V6.86661C11.8467 6.31328 11.4534 5.63994 10.9667 5.37328L8.83337 4.18661C8.37337 3.93328 7.62671 3.93328 7.17338 4.19328Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+                <span class="sidebar__item-text">Хранение</span>
+                <a class="sidebar__item-link" href="javascript:void(0);"></a>
+              </div>
+
+              <div class="sidebar__item">
+                <span class="sidebar__item-icon"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.99332 1.48667L3.66665 2.74C2.89998 3.02667 2.27332 3.93333 2.27332 4.74667V9.7C2.27332 10.4867 2.79332 11.52 3.42665 11.9933L6.29332 14.1333C7.23332 14.84 8.77998 14.84 9.71998 14.1333L12.5866 11.9933C13.22 11.52 13.74 10.4867 13.74 9.7V4.74667C13.74 3.92667 13.1133 3.02 12.3466 2.73333L9.01998 1.48667C8.45332 1.28 7.54665 1.28 6.99332 1.48667Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 5.33325V8.66659"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7.99634 10.6667H8.00233"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+                <span class="sidebar__item-text">Страховые случаи</span>
+                <a class="sidebar__item-link" href="javascript:void(0);"></a>
+              </div>
+
+              <div class="sidebar__item">
+                <span class="sidebar__item-icon"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.48671 13.1333C5.03337 12.5466 5.86671 12.5933 6.34671 13.2333L7.02004 14.1333C7.56004 14.8466 8.43337 14.8466 8.97337 14.1333L9.64671 13.2333C10.1267 12.5933 10.96 12.5466 11.5067 13.1333C12.6934 14.3999 13.66 13.9799 13.66 12.2066V4.69325C13.6667 2.00659 13.04 1.33325 10.52 1.33325H5.48004C2.96004 1.33325 2.33337 2.00659 2.33337 4.69325V12.1999C2.33337 13.9799 3.30671 14.3933 4.48671 13.1333Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5.39742 7.33333H5.40341"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7.26562 7.33325H10.9323"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5.39742 4.66659H5.40341"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7.26562 4.66675H10.9323"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+                <span class="sidebar__item-text">Счета</span>
+                <a class="sidebar__item-link" href="javascript:void(0);"></a>
+              </div>
+
+              <div class="sidebar__item">
+                <span class="sidebar__item-icon"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.00004 14.6666H10C13.3334 14.6666 14.6667 13.3333 14.6667 9.99992V5.99992C14.6667 2.66659 13.3334 1.33325 10 1.33325H6.00004C2.66671 1.33325 1.33337 2.66659 1.33337 5.99992V9.99992C1.33337 13.3333 2.66671 14.6666 6.00004 14.6666Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 5.16659V9.66659C12 8.93325 11.4 8.33325 10.6667 8.33325H5.33333C4.6 8.33325 4 8.93325 4 9.66659V5.16659C4 4.43325 4.6 3.83325 5.33333 3.83325H10.6667C11.4 3.83325 12 4.43325 12 5.16659Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12.6667 10.5H12"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4.00004 10.5H3.33337"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 9.33333V7.33333C12 6.6 11.4 6 10.6667 6H5.33333C4.6 6 4 6.6 4 7.33333V9.33333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 9.66659V10.4999H9.66667C9.66667 11.4199 8.92 12.1666 8 12.1666C7.08 12.1666 6.33333 11.4199 6.33333 10.4999H4V9.66659C4 8.93325 4.6 8.33325 5.33333 8.33325H10.6667C11.4 8.33325 12 8.93325 12 9.66659Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+                <span class="sidebar__item-text">IFRS/ФСБУ</span>
+                <a class="sidebar__item-link" href="javascript:void(0);"></a>
+              </div>
+
+              <div class="sidebar__item">
+                <span class="sidebar__item-icon"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.0933 14.4132C11.5066 14.5866 10.8133 14.6666 9.99995 14.6666H5.99995C5.18662 14.6666 4.49328 14.5866 3.90662 14.4132C4.05328 12.6799 5.83328 11.3132 7.99995 11.3132C10.1666 11.3132 11.9466 12.6799 12.0933 14.4132Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10 1.33325H6.00004C2.66671 1.33325 1.33337 2.66659 1.33337 5.99992V9.99992C1.33337 12.5199 2.09337 13.8999 3.90671 14.4132C4.05337 12.6799 5.83337 11.3132 8.00004 11.3132C10.1667 11.3132 11.9467 12.6799 12.0934 14.4132C13.9067 13.8999 14.6667 12.5199 14.6667 9.99992V5.99992C14.6667 2.66659 13.3334 1.33325 10 1.33325ZM8.00004 9.44657C6.68004 9.44657 5.61337 8.37326 5.61337 7.05326C5.61337 5.73326 6.68004 4.66659 8.00004 4.66659C9.32004 4.66659 10.3867 5.73326 10.3867 7.05326C10.3867 8.37326 9.32004 9.44657 8.00004 9.44657Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10.3866 7.05343C10.3866 8.37343 9.31995 9.44674 7.99995 9.44674C6.67995 9.44674 5.61328 8.37343 5.61328 7.05343C5.61328 5.73343 6.67995 4.66675 7.99995 4.66675C9.31995 4.66675 10.3866 5.73343 10.3866 7.05343Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+                <span class="sidebar__item-text">Контакты </span>
+                <a class="sidebar__item-link" href="javascript:void(0);"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <span class="sidebar__toggle">
+          <svg
+            width="7"
+            height="12"
+            viewBox="0 0 7 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.939453 11.28L5.28612 6.9333C5.79945 6.41997 5.79945 5.57997 5.28612 5.06664L0.939453 0.719971"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+
+    <main class="main main-administrator">
+      <section class="driver-image">
+        <img src="./img/bg-2.jpg" alt="" />
+        <div class="container">
+          <div class="driver-image__title">Автопарк</div>
+        </div>
+      </section>
+
+      <section class="section-default">
+        <div class="container">
+          <div class="layout-2">
+            <div class="dashboard dashboard-administrator">
+              <div class="dashboard__item">
+                <div class="dashboard__item-info">
+                  <div class="dashboard__item-title">
+                    <span class="dashboard__item-title-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.55 2H9.45001C7.65001 2 7.25002 2.90001 7.02002 4.01001L6.20001 7.92999H17.8L16.98 4.01001C16.75 2.90001 16.35 2 14.55 2Z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M19.24 14.32C19.32 15.17 18.64 15.9 17.77 15.9H16.41C15.63 15.9 15.52 15.57 15.38 15.15L15.23 14.72C15.03 14.13 14.9 13.73 13.85 13.73H10.14C9.09999 13.73 8.93999 14.18 8.75999 14.72L8.60999 15.15C8.46999 15.56 8.35999 15.9 7.57999 15.9H6.21999C5.34999 15.9 4.66999 15.17 4.74999 14.32L5.16 9.90002C5.26 8.81002 5.46999 7.91998 7.36999 7.91998H16.62C18.52 7.91998 18.73 8.81002 18.83 9.90002L19.24 14.32Z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6.19997 5.75H5.46997"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M18.53 5.75H17.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7.65002 10.83H9.82004"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M14.18 10.83H16.35"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12 17V18"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12 21V22"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M3 18L2 22"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M21 18L22 22"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span class="dashboard__item-title-text">На дороге</span>
                   </div>
-                  <div class="box-request">
-                    <div class="box-request__main">
-                      <div class="box-request__text">
-                        <span class="box-request__text-name"
-                          >№ Направления:</span
-                        >
-                        <span class="box-request__text-value"
-                          >001AS22-030564</span
-                        >
-                      </div>
-                      <div class="box-request__text">
-                        <span class="box-request__text-name">Статус:</span>
-                        <span class="box-request__text-value">
-                          <span class="status status-finish">Завершен</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="box-request__extra">
-                      <div class="box-request__data data-col-1">
-                        <div class="box-request__col">
-                          <div class="box-request__text">
-                            <span class="box-request__text-name"
-                              >Дата начала ремонта:</span
-                            >
-                            <span class="box-request__text-value"
-                              >23.12.2021</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name"
-                              >Дата окончания ремонта:</span
-                            >
-                            <span class="box-request__text-value"
-                              >23.12.2021</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name"
-                              >Имя заявителя:</span
-                            >
-                            <span class="box-request__text-value"
-                              >Фирсова Анна Алексеевна</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name">Дилер:</span>
-                            <span class="box-request__text-value"
-                              >ООО«Сигма Моторс»</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name"
-                              >Адрес станции:</span
-                            >
-                            <span class="box-request__text-value"
-                              >г. Санкт-Петербург, Петроградская наб. д. 30 лит.
-                              А</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name">Тел.:</span>
-                            <span class="box-request__text-value"
-                              >89789494100</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name">PDF:</span>
-                            <span class="box-request__text-value">
-                              <a
-                                class="box-request__link"
-                                href="javascript:void(0);"
-                                download
-                              >
-                                <span class="box-request__link-text"
-                                  >Скачать</span
-                                >
-                                <span class="box-request__link-icon"
-                                  ><svg
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 16 16"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M6 7.3335V11.3335L7.33333 10.0002"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                    <path
-                                      d="M5.99935 11.3333L4.66602 10"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                    <path
-                                      d="M14.6673 6.66683V10.0002C14.6673 13.3335 13.334 14.6668 10.0007 14.6668H6.00065C2.66732 14.6668 1.33398 13.3335 1.33398 10.0002V6.00016C1.33398 2.66683 2.66732 1.3335 6.00065 1.3335H9.33398"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                    <path
-                                      d="M14.6673 6.66683H12.0007C10.0007 6.66683 9.33398 6.00016 9.33398 4.00016V1.3335L14.6673 6.66683Z"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    /></svg
-                                ></span>
-                              </a>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="box-request">
-                    <div class="box-request__main">
-                      <div class="box-request__text">
-                        <span class="box-request__text-name"
-                          >№ Направления:</span
-                        >
-                        <span class="box-request__text-value"
-                          >001AS22-030564</span
-                        >
-                      </div>
-                      <div class="box-request__text">
-                        <span class="box-request__text-name">Статус:</span>
-                        <span class="box-request__text-value">
-                          <span class="status status-finish">Завершен</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="box-request__extra">
-                      <div class="box-request__data data-col-1">
-                        <div class="box-request__col">
-                          <div class="box-request__text">
-                            <span class="box-request__text-name"
-                              >Дата начала ремонта:</span
-                            >
-                            <span class="box-request__text-value"
-                              >23.12.2021</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name"
-                              >Дата окончания ремонта:</span
-                            >
-                            <span class="box-request__text-value"
-                              >23.12.2021</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name"
-                              >Имя заявителя:</span
-                            >
-                            <span class="box-request__text-value"
-                              >Фирсова Анна Алексеевна</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name">Дилер:</span>
-                            <span class="box-request__text-value"
-                              >ООО«Сигма Моторс»</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name"
-                              >Адрес станции:</span
-                            >
-                            <span class="box-request__text-value"
-                              >г. Санкт-Петербург, Петроградская наб. д. 30 лит.
-                              А</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name">Тел.:</span>
-                            <span class="box-request__text-value"
-                              >89789494100</span
-                            >
-                          </div>
-                          <div class="box-request__text">
-                            <span class="box-request__text-name">PDF:</span>
-                            <span class="box-request__text-value">
-                              <a
-                                class="box-request__link"
-                                href="javascript:void(0);"
-                                download
-                              >
-                                <span class="box-request__link-text"
-                                  >Скачать</span
-                                >
-                                <span class="box-request__link-icon"
-                                  ><svg
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 16 16"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M6 7.3335V11.3335L7.33333 10.0002"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                    <path
-                                      d="M5.99935 11.3333L4.66602 10"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                    <path
-                                      d="M14.6673 6.66683V10.0002C14.6673 13.3335 13.334 14.6668 10.0007 14.6668H6.00065C2.66732 14.6668 1.33398 13.3335 1.33398 10.0002V6.00016C1.33398 2.66683 2.66732 1.3335 6.00065 1.3335H9.33398"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                    <path
-                                      d="M14.6673 6.66683H12.0007C10.0007 6.66683 9.33398 6.00016 9.33398 4.00016V1.3335L14.6673 6.66683Z"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    /></svg
-                                ></span>
-                              </a>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="dashboard__item-text">
+                    <span class="dashboard__item-text-name"
+                      >Кол-во автомобилей:</span
+                    ><span class="dashboard__item-text-value">865</span>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            <div class="car__img">
-              <img src="./img/car-img.png" alt="" />
+                <a
+                  class="dashboard__item-link js-popup"
+                  href="javascript:void(0);"
+                ></a>
+              </div>
+
+              <div class="dashboard__item">
+                <div class="dashboard__item-info">
+                  <div class="dashboard__item-title">
+                    <span class="dashboard__item-title-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.33 7.51025C10.83 7.36025 11.38 7.26025 12 7.26025C14.76 7.26025 17 9.50025 17 12.2603C17 15.0203 14.76 17.2603 12 17.2603C9.24 17.2603 7 15.0203 7 12.2603C7 11.2303 7.31 10.2803 7.84 9.48026"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M9.61914 7.65024L11.2791 5.74023"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M9.61914 7.65039L11.5591 9.07039"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span class="dashboard__item-title-text">К возврату</span>
+                  </div>
+                  <div class="dashboard__item-text">
+                    <span class="dashboard__item-text-name"
+                      >Кол-во автомобилей:</span
+                    ><span class="dashboard__item-text-value">94</span>
+                  </div>
+                </div>
+
+                <a
+                  class="dashboard__item-link js-popup"
+                  href="javascript:void(0);"
+                ></a>
+              </div>
+
+              <div class="dashboard__item">
+                <div class="dashboard__item-info">
+                  <div class="dashboard__item-title">
+                    <span class="dashboard__item-title-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6.69995 9.26L11.9999 12.33L17.2599 9.28"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12 17.77V12.32"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M10.76 6.29L7.56 8.07C6.84 8.47 6.23999 9.48 6.23999 10.31V13.7C6.23999 14.53 6.83 15.54 7.56 15.94L10.76 17.72C11.44 18.1 12.56 18.1 13.25 17.72L16.45 15.94C17.17 15.54 17.77 14.53 17.77 13.7V10.3C17.77 9.47 17.18 8.46 16.45 8.06L13.25 6.28C12.56 5.9 11.44 5.9 10.76 6.29Z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span class="dashboard__item-title-text">На хранении</span>
+                  </div>
+                  <div class="dashboard__item-text">
+                    <span class="dashboard__item-text-name"
+                      >Кол-во автомобилей:</span
+                    ><span class="dashboard__item-text-value">5</span>
+                  </div>
+                </div>
+
+                <a
+                  class="dashboard__item-link js-popup"
+                  href="javascript:void(0);"
+                ></a>
+              </div>
+
+              <div class="dashboard__item">
+                <div class="dashboard__item-info">
+                  <div class="dashboard__item-title">
+                    <span class="dashboard__item-title-icon">
+                      <svg
+                        width="26"
+                        height="24"
+                        viewBox="0 0 26 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18.5352 13.4V16.4C18.5352 20.4 16.8285 22 12.5618 22H8.50849C4.24182 22 2.53516 20.4 2.53516 16.4V12.6C2.53516 8.6 4.24182 7 8.50849 7H11.7085"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M18.5337 13.4H15.1204C12.5604 13.4 11.707 12.6 11.707 10.2V7L18.5337 13.4Z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.7715 2H17.0382"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7.86523 5C7.86523 3.34 9.29457 2 11.0652 2H13.8599"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M23.8665 8V14.19C23.8665 15.74 22.5225 17 20.8691 17"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M23.8668 8H20.6668C18.2668 8 17.4668 7.25 17.4668 5V2L23.8668 8Z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span class="dashboard__item-title-text">Штрафы</span>
+                  </div>
+                  <div class="dashboard__item-text">
+                    <span class="dashboard__item-text-name"
+                      >Штрафов за 3 месяца:</span
+                    ><span class="dashboard__item-text-value">86</span>
+                  </div>
+                </div>
+
+                <a
+                  class="dashboard__item-link js-popup"
+                  href="javascript:void(0);"
+                ></a>
+              </div>
+
+              <div class="dashboard__item icon-red">
+                <div class="dashboard__item-info">
+                  <div class="dashboard__item-title">
+                    <span class="dashboard__item-title-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.4902 2.23006L5.50016 4.11006C4.35016 4.54006 3.41016 5.90006 3.41016 7.12006V14.5501C3.41016 15.7301 4.19016 17.2801 5.14016 17.9901L9.44016 21.2001C10.8502 22.2601 13.1702 22.2601 14.5802 21.2001L18.8802 17.9901C19.8302 17.2801 20.6102 15.7301 20.6102 14.5501V7.12006C20.6102 5.89006 19.6702 4.53006 18.5202 4.10006L13.5302 2.23006C12.6802 1.92006 11.3202 1.92006 10.4902 2.23006Z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12 8V13"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.9941 16H12.0031"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span class="dashboard__item-title-text"
+                      >Страховые случаи</span
+                    >
+                  </div>
+                  <div class="dashboard__item-text">
+                    <span class="dashboard__item-text-name"
+                      >Кол-во активных заявок:</span
+                    ><span class="dashboard__item-text-value">25</span>
+                  </div>
+                </div>
+
+                <a
+                  class="dashboard__item-link js-popup"
+                  href="javascript:void(0);"
+                ></a>
+              </div>
+
+              <div class="dashboard__item">
+                <div class="dashboard__item-info">
+                  <div class="dashboard__item-title">
+                    <span class="dashboard__item-title-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M22 10H18C15 10 14 9 14 6V2L22 10Z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7 13H13"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7 17H11"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span class="dashboard__item-title-text"
+                      >Отчеты к проверке</span
+                    >
+                  </div>
+                  <div class="dashboard__item-text">
+                    <span class="dashboard__item-text-name"
+                      >Кол-во отчетов:</span
+                    ><span class="dashboard__item-text-value">25</span>
+                  </div>
+                </div>
+
+                <a
+                  class="dashboard__item-link js-popup"
+                  href="javascript:void(0);"
+                ></a>
+              </div>
+
+              <div class="dashboard__item icon-red">
+                <div class="dashboard__item-info">
+                  <div class="dashboard__item-title">
+                    <span class="dashboard__item-title-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3691 8.87988H17.6191"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6.38086 8.87988L7.13086 9.62988L9.38086 7.37988"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.3691 15.8799H17.6191"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6.38086 15.8799L7.13086 16.6299L9.38086 14.3799"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span class="dashboard__item-title-text">ГТО истек </span>
+                  </div>
+                  <div class="dashboard__item-text">
+                    <span class="dashboard__item-text-name"
+                      >Кол-во автомобилей:</span
+                    ><span class="dashboard__item-text-value">36</span>
+                  </div>
+                </div>
+
+                <a
+                  class="dashboard__item-link js-popup"
+                  href="javascript:void(0);"
+                ></a>
+              </div>
+
+              <div class="dashboard__item icon-yellow">
+                <div class="dashboard__item-info">
+                  <div class="dashboard__item-title">
+                    <span class="dashboard__item-title-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3691 8.87988H17.6191"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6.38086 8.87988L7.13086 9.62988L9.38086 7.37988"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.3691 15.8799H17.6191"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6.38086 15.8799L7.13086 16.6299L9.38086 14.3799"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span class="dashboard__item-title-text"
+                      >ГТО истекает
+                    </span>
+                  </div>
+                  <div class="dashboard__item-text">
+                    <span class="dashboard__item-text-name"
+                      >Кол-во автомобилей:</span
+                    ><span class="dashboard__item-text-value">68</span>
+                  </div>
+                </div>
+
+                <a
+                  class="dashboard__item-link js-popup"
+                  href="javascript:void(0);"
+                ></a>
+              </div>
             </div>
           </div>
         </div>

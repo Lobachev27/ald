@@ -1,0 +1,446 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.sidebar {
+  position: fixed;
+  top: 58px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 58px);
+  background-color: $white;
+  z-index: 100;
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition: transform $transition-time, background-color $transition-time, width $transition-time;
+  @media screen and ($tablet1) {
+    top: 0;
+    width: 44px;
+    height: 100vh;
+    background-color: $blue-3;
+    transform: translateX(0);
+    box-shadow: 0 4px 22px rgba(0,0,0, 0.07);
+  }
+
+  &.active {
+    transform: translateX(0%);
+    overflow: visible;
+    @media screen and ($tablet1) {
+      background-color: $white;
+      width: 198px;
+    }
+
+    & .sidebar {
+      &__toggle {
+        @media screen and ($tablet1) {
+          background-color: $white;
+        }
+
+        & svg {
+          @media screen and ($tablet1) {
+            stroke: $black;
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      &__wrapper {
+        @media screen and ($tablet1) {
+          padding: 14px 14px 64px;
+        }
+      }
+
+      &__logo {
+        @media screen and ($tablet1) {
+          padding: 0 10px;
+        }
+
+        &-icon {
+          height: 31px;
+        }
+
+        &-text {
+          height: 27px;
+          margin-left: 7px;
+          width: auto;
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+      }
+
+      &__box {
+        @media screen and ($tablet1) {
+          border-bottom: 1px solid rgba(255, 255, 255, 0);
+        }
+
+        &-title {
+          opacity: 0.4;
+          @media screen and ($tablet1) {
+            font-size: 10px;
+            margin: 16px 0;
+            visibility: visible;
+            pointer-events: auto;
+          }
+        }
+      }
+
+      &__item {
+        @media screen and ($tablet1) {
+          width: 170px;
+          padding: 0 14px;
+        }
+
+        &:hover,
+        &.active {
+          background-color: $blue-3;
+          @media screen and ($tablet1) {
+            background-color: $blue-3;
+          }
+
+          & .sidebar {
+            &__item {
+              &-icon {
+                & svg {
+                  stroke:$white;
+                }
+              }
+
+              &-text {
+                color: $white;
+              }
+
+              &-count {
+                color: $white;
+              }
+            }
+          }
+        }
+
+        &-icon {
+          & svg {
+            stroke: $black;
+            @media screen and ($tablet1) {
+              stroke: $black;
+            }
+          }
+        }
+
+        &-text {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 120%;
+          color: $black;
+          margin-left: 8px;
+          margin-right: auto;
+          transition: color $transition-time;
+          @media screen and ($tablet1) {
+            min-width: auto;
+            opacity: 1;
+            font-size: 14px;
+            margin-left: 8px;
+            visibility: visible;
+            pointer-events: auto;
+          }
+        }
+
+        &-count {
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 15px;
+          color: $black;
+          min-width: 22px;
+          text-align: left;
+          transition: color $transition-time;
+          @media screen and ($tablet1) {
+            min-width: 22px;
+            opacity: 1;
+            font-size: 12px;
+            visibility: visible;
+            pointer-events: auto;
+          }
+        }
+      }
+    }
+  }
+
+  &__close {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: $black;
+    margin-left: auto;
+    cursor: pointer;
+    @media screen and ($tablet1) {
+      display: none;
+    }
+  }
+
+  &__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    height: 58px;
+    background-color: $white;
+    z-index: 100;
+    @media screen and ($tablet1) {
+      display: none;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    @media screen and ($tablet1) {
+      position: fixed;
+      right: 0;
+      bottom: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 48px;
+      background-color: $blue-1;
+      border-radius: 6px 0 0 6px;
+      cursor: pointer;
+      box-shadow: 0px 0px 10px rgba(72, 72, 72, 0.05);
+      transition: background-color $transition-time;
+    }
+
+    & svg {
+      @media screen and ($tablet1) {
+        width: 7px;
+        height: 12px;
+        stroke: $white;
+        transform: rotate(0);
+        transition: transform $transition-time, stroke $transition-time;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 58px 10px 14px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: padding $transition-time;
+    @media screen and ($tablet1) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 14px 6px 64px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      height: 3px;
+      width: 3px;
+      cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 3px $gray-2;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray-3;
+      border-radius: 3px;
+      outline: none;
+      background-clip: border-box;
+      cursor: pointer;
+    }
+  }
+
+  &__logo {
+    display: none;
+    @media screen and ($tablet1) {
+      display: flex;
+      align-items: flex-end;
+      height: 31px;
+      margin-bottom: 13px;
+      padding: 0;
+      transition: padding $transition-time;
+    }
+
+    &-icon {
+      height: 31px;
+    }
+
+    &-text {
+      height: 27px;
+      margin-left: 0;
+      margin-bottom: 1px;
+      width: 0;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: margin $transition-time, width $transition-time, opacity $transition-time;
+    }
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__box {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    @media screen and ($tablet1) {
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      transition: border $transition-time;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      @media screen and ($tablet1) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+      }
+    }
+
+    &-title {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 120%;
+      color: #151515;
+      margin: 16px 0;
+      transition: margin $transition-time, opacity $transition-time, font-size $transition-time, line-height $transition-time;
+      @media screen and ($tablet1) {
+        font-size: 0;
+        opacity: 0.4;
+        margin: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 32px;
+    padding: 0 14px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    transition: background-color $transition-time, padding $transition-time, width $transition-time;
+    @media screen and ($tablet1) {
+      width: auto;
+      padding: 0 8px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover,
+    &.active {
+      background-color: $blue-3;
+      @media screen and ($tablet1) {
+        background-color: $white;
+      }
+
+      & .sidebar {
+        &__item {
+          &-icon {
+            & svg {
+              stroke:$white;
+              @media screen and ($tablet1) {
+                stroke: $blue-3;
+              }
+            }
+          }
+
+          &-text {
+            color: $white;
+          }
+
+          &-count {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &-icon {
+      position: relative;
+      width: 16px;
+      min-width: 16px;
+      height: 16px;
+
+      & svg {
+        width: 100%;
+        height: 100%;
+        stroke: $black;
+        transition: stroke $transition-time;
+        @media screen and ($tablet1) {
+          stroke: $white;
+        }
+      }
+    }
+
+    &-text {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 120%;
+      color: $black;
+      margin-left: 8px;
+      margin-right: auto;
+      transition: color $transition-time, min-width $transition-time, opacity $transition-time, font-size $transition-time, margin $transition-time;
+      @media screen and ($tablet1) {
+        min-width: 0;
+        opacity: 0;
+        font-size: 0;
+        margin-left: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+
+    &-count {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      color: $black;
+      min-width: 22px;
+      text-align: left;
+      transition: color $transition-time, min-width $transition-time, opacity $transition-time, font-size $transition-time;
+      @media screen and ($tablet1) {
+        min-width: 0;
+        opacity: 0;
+        font-size: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+
+    &-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+    }
+  }
+}

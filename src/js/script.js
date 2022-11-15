@@ -87,7 +87,7 @@ $(document).ready(function() {
 /*Модалка водителя*/
 
 $(document).ready(function () {
-  $(".user, .user__dd-link").click(function () {
+  $(".header-driver .user, .user__dd-link").click(function () {
     $(".modal-driver").addClass("active");
     $("body").addClass("ov-hid");
   });
@@ -245,5 +245,31 @@ $(document).ready(function() {
     setTimeout(function(){
       notification.removeClass('active');
     }, 5000 );
+  });
+});
+
+/*Sidebar*/
+
+$(document).ready(function () {
+  $(".header__menu").click(function () {
+    $(".sidebar").addClass("active");
+    $("body").addClass("ov-hid");
+  });
+
+  $(".sidebar__close").click(function () {
+    $(".sidebar").removeClass("active");
+    $("body").removeClass("ov-hid");
+  });
+
+  $(".sidebar__toggle").click(function () {
+    if ($(this).closest('.sidebar').hasClass("active")) {
+      $(this).closest('.sidebar').removeClass("active");
+      $(this).closest('body').find('.header-administrator').removeClass("active-sidebar");
+      $(this).closest('body').find('.main-administrator').removeClass("active-sidebar");
+    } else {
+      $(this).closest('.sidebar').addClass("active");
+      $(this).closest('body').find('.header-administrator').addClass("active-sidebar");
+      $(this).closest('body').find('.main-administrator').addClass("active-sidebar");
+    }
   });
 });

@@ -42,6 +42,23 @@ main {
       padding-top: 58px;
     }
   }
+
+  &.main-administrator {
+    padding-top: 116px;
+    transition: width $transition-time, margin $transition-time, max-width $transition-time;
+    @media screen and ($tablet1) {
+      padding-top: 58px;
+      width: calc(100% - 44px);
+      max-width: calc(100% - 44px);
+      margin-left: 44px;
+    }
+
+    &.active-sidebar {
+      width: calc(100% - 198px);
+      max-width: calc(100% - 198px);
+      margin-left: 198px;
+    }
+  }
 }
 
 h1,
@@ -75,6 +92,7 @@ a {
   padding: 0 10px;
   margin: 0 auto;
   z-index: 2;
+  transition: width $transition-time;
   @media screen and ($tablet1) {
     padding: 0 24px;
   }
@@ -143,6 +161,7 @@ a {
   width: 100%;
   height: 120px;
   overflow: hidden;
+  transition: width $transition-time;
   @media screen and ($tablet1) {
     height: 180px;
   }
@@ -177,5 +196,32 @@ a {
     height: 100%;
     object-position: center;
     object-fit: cover;
+    transition: width $transition-time;
+  }
+
+  & .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 14px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: $white;
+    @media screen and ($tablet1) {
+      font-size: 36px;
+      line-height: 42px;
+    }
+    @media screen and ($desktop1) {
+      font-size: 56px;
+      line-height: 70px;
+    }
   }
 }

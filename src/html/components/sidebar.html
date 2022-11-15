@@ -1,0 +1,47 @@
+<div class="sidebar">
+  <div class="sidebar__wrapper">
+
+    <a class="sidebar__logo" href="../../..">
+      <img class="sidebar__logo-icon" src="./img/logo-min.svg" alt="">
+      <img class="sidebar__logo-text" src="./img/logo-text.svg" alt="">
+    </a>
+
+    <div class="sidebar__header">
+      <div class="header__box">@@context.content</div>
+      <div class="sidebar__close">Закрыть</div>
+    </div>
+
+    <div class="sidebar__content">
+      <div class="sidebar__box">
+        <div class="sidebar__box-title">Автомобили</div>
+        <div class="sidebar__list">
+          @@for (var i = 0; i < context.arrCar.length; i++) {
+          <div class="sidebar__item `+context.arrCar[i].class+`">
+            <span class="sidebar__item-icon">`+context.arrCar[i].icon+`</span>
+            <span class="sidebar__item-text">`+context.arrCar[i].text+`</span>
+            <span class="sidebar__item-count">`+context.arrCar[i].count+`</span>
+            <a class="sidebar__item-link" href="`+context.arrCar[i].link+`"></a>
+          </div>
+          }
+        </div>
+      </div>
+      <div class="sidebar__box">
+        <div class="sidebar__box-title">Сервисы</div>
+        <div class="sidebar__list">
+          @@for (var j = 0; j < context.arrService.length; j++) {
+          <div class="sidebar__item `+context.arrService[j].class+`">
+            <span class="sidebar__item-icon">`+context.arrService[j].icon+`</span>
+            <span class="sidebar__item-text">`+context.arrService[j].text+`</span>
+            <a class="sidebar__item-link" href="`+context.arrService[j].link+`"></a>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <span class="sidebar__toggle">
+      <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.939453 11.28L5.28612 6.9333C5.79945 6.41997 5.79945 5.57997 5.28612 5.06664L0.939453 0.719971" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+
+  </div>
+</div>
