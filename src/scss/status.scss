@@ -18,7 +18,8 @@
     border: 1px solid #CBF0F9;
   }
 
-  &.status-finish {
+  &.status-finish,
+  &.status-return {
     background-color: #E0F7EC;
     border: 1px solid #E0F7EC;
   }
