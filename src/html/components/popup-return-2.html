@@ -1,0 +1,203 @@
+<div id="requestReturn2" class="popup">
+  <div class="popup__wrapper popup__wrapper-max">
+    <div class="popup__close">Закрыть</div>
+    <div class="title title-h1 popup__title">Создать заявку на возврат</div>
+    <div class="popup__content">
+      <form class="modal-driver__form">
+        <div class="form-box form-col-2">
+          <div class="input-group">
+            <label class="label-text">Филиал/площадка</label>
+
+            @@include("./select.html", {
+              context: {
+                classesList: "",
+                search: true,
+                placeholder: "Выберите город",
+                value: "",
+                message: "",
+                arr: ["Адрес площадки 1", "Адрес площадки 2", "Адрес площадки 3", "Адрес площадки 4", "Адрес площадки 5", "Адрес площадки 6", "Адрес площадки 7", "Адрес площадки 8",],
+              }
+            })
+
+          </div>
+          <div class="input-group">
+            <label class="label-text">Дата возврата</label>
+
+            @@include("./input.html", {
+              context: {
+                classesList: "is-datepicker",
+                required: true,
+                disabled: false,
+                readonly: false,
+                datepicker: true,
+                type: "text",
+                placeholder: "Выберите дату ",
+                icon: '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.33398 1.3335V3.3335" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.666 1.3335V3.3335" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.1333 14.2667C13.3115 14.2667 14.2667 13.3115 14.2667 12.1333C14.2667 10.9551 13.3115 10 12.1333 10C10.9551 10 10 10.9551 10 12.1333C10 13.3115 10.9551 14.2667 12.1333 14.2667Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.6667 14.6667L14 14" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.33398 6.06006H13.6673" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.91333 14.6666H5.33333C3 14.6666 2 13.3333 2 11.3333V5.66659C2 3.66659 3 2.33325 5.33333 2.33325H10.6667C13 2.33325 14 3.66659 14 5.66659V8.66658" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.99764 9.13338H8.00363" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.52889 9.13338H5.53488" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.52889 11.1334H5.53488" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                value: "",
+                status: "",
+                message: "",
+              }
+            })
+
+          </div>
+        </div>
+        <div class="form-box form-col-1">
+          <label class="label-text">Выберите время</label>
+
+          <div class="time">
+            <div class="time__wrapper">
+              <ul class="time__list">
+                <li class="time__item type-no-service">10:00</li>
+                <li class="time__item">11:00</li>
+                <li class="time__item type-busy">12:00</li>
+                <li class="time__item">13:00</li>
+                <li class="time__item">14:00</li>
+                <li class="time__item">15:00</li>
+                <li class="time__item">16:00</li>
+              </ul>
+            </div>
+            <div class="time__type">
+              <div class="time__type-item type-no-service">без обслуживания</div>
+              <div class="time__type-item type-busy">занято </div>
+              <div class="time__type-item type-free">свободно</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="form-box form-col-1">
+          <div class="title title-h2">Контактная информация</div>
+        </div>
+        <div class="form-box form-col-1">
+          <div class="input-group">
+            <label class="label-text">Данные заявителя</label>
+            <div class="form-box form-col-2">
+              <div class="input-group">
+
+                @@include("./input.html", {
+                  context: {
+                    classesList: "",
+                    required: true,
+                    disabled: false,
+                    readonly: false,
+                    datepicker: false,
+                    type: "text",
+                    placeholder: "ФИО",
+                    icon: "",
+                    value: "",
+                    status: "",
+                    message: "",
+                  }
+                })
+
+                @@include("./input.html", {
+                  context: {
+                    classesList: "",
+                    required: true,
+                    disabled: false,
+                    readonly: false,
+                    datepicker: false,
+                    type: "text",
+                    placeholder: "Моб. телефон",
+                    icon: "",
+                    value: "",
+                    status: "",
+                    message: "",
+                  }
+                })
+
+              </div>
+              <div class="input-group">
+
+                @@include("./input.html", {
+                  context: {
+                    classesList: "",
+                    required: true,
+                    disabled: false,
+                    readonly: false,
+                    datepicker: false,
+                    type: "email",
+                    placeholder: "E-mail",
+                    icon: "",
+                    value: "",
+                    status: "",
+                    message: "",
+                  }
+                })
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-box form-col-1">
+
+          @@include("./Checkbox.html", {
+            context: {
+              classesList: "",
+              required: true,
+              disabled: false,
+              readonly: false,
+              message: "",
+              arr: [
+                {"text": "Оповестить пользователя о создании заявки по e-mail", "name": "", "checked": "checked",},
+              ],
+            }
+          })
+
+        </div>
+        <div class="form-box form-col-2">
+          <div class="input-group">
+            <label class="label-text">Адрес возврата</label>
+
+            @@include("./input.html", {
+              context: {
+                classesList: "",
+                required: true,
+                disabled: false,
+                readonly: false,
+                datepicker: false,
+                type: "text",
+                placeholder: "Введите адрес",
+                icon: "",
+                value: "",
+                status: "",
+                message: "",
+              }
+            })
+
+          </div>
+          <div class="input-group">
+            <label class="label-text">Сдать в другом месте</label>
+
+            @@include("./select.html", {
+              context: {
+                classesList: "",
+                search: false,
+                placeholder: "Выберите",
+                value: "",
+                message: "",
+                arr: ["Вариант 1", "Вариант 2", "Вариант 3", "Вариант 4", "Вариант 5", "Вариант 6", "Вариант 7", "Вариант 8",],
+              }
+            })
+
+          </div>
+        </div>
+        <div class="form-box form-col-1">
+
+          @@include("./textarea.html", {
+            context: {
+              classesList: "",
+              required: false,
+              disabled: false,
+              readonly: false,
+              placeholder: "Комментарий",
+              value: "",
+              message: "",
+            }
+          })
+
+        </div>
+        <button class="btn btn-blue w-auto" type="submit">Создать</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -12,4 +12,13 @@
       color: $blue-3;
     }
   }
+
+  &.title-h2 {
+    font-size: 18px;
+    line-height: 23px;
+
+    & span {
+      color: $blue-3;
+    }
+  }
 }
