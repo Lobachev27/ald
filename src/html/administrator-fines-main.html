@@ -2,7 +2,7 @@
 <html lang="ru">
 
 @@include("./shared/head.html", {
-  "title": "Мой ALD"
+  "title": "Штрафы"
 })
 
 <body>
@@ -10,7 +10,7 @@
 @@include("./components/header-administrator.html", {
   context: {
     "classList": "header-administrator",
-    "content": '<h1 class="title title-h1">Мой ALD</h1>',
+    "content": '<h1 class="title title-h1">Штрафы</h1>',
     "userImage": "",
     "userName": "ООО «Данон»",
     "link": "javascript:void(0);",
@@ -45,7 +45,7 @@
     ],
     arrService: [
       {
-        'class': '',
+        'class': 'active',
         'icon': '<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0223 8.93329V10.9333C12.0223 13.6 10.8845 14.6666 8.04004 14.6666H5.33781C2.49337 14.6666 1.35559 13.6 1.35559 10.9333V8.39996C1.35559 5.73329 2.49337 4.66663 5.33781 4.66663H7.47115" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.0222 8.93329H9.74662C8.03996 8.93329 7.47107 8.39996 7.47107 6.79996V4.66663L12.0222 8.93329Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.18225 1.33337H11.0267" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.91113 3.33337C4.91113 2.22671 5.86402 1.33337 7.04447 1.33337H8.90758" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5778 5.33337V9.46004C15.5778 10.4934 14.6818 11.3334 13.5796 11.3334" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5778 5.33337H13.4445C11.8445 5.33337 11.3112 4.83337 11.3112 3.33337V1.33337L15.5778 5.33337Z" stroke-linecap="round" stroke-linejoin="round"/></svg>',
         'text': 'Штрафы',
         'link': './administrator-fines-main.html',
@@ -98,25 +98,168 @@
 
 <main class="main main-administrator">
 
-  <section class="driver-image">
-    <img src="./img/bg-2.jpg" alt="">
-    <div class="container">
-      <div class="driver-image__title">Автопарк</div>
-    </div>
-  </section>
-
   <section class="section-default">
     <div class="container">
       <div class="layout-2">
 
-        @@include("./components/dashboard-administrator.html")
+        <div class="administrator-default">
+          <div class="wrapper-default">
+            <div class="default__tabs">
+              <a class="default__tab js-tab" href="#data">Сводные данные</a>
+              <a class="default__tab js-tab" href="#trafficFines">Штрафы ПДД</a>
+              <a class="default__tab js-tab" href="#crr">ЦКАД / МУГАДН</a>
+              <a class="default__tab default__tab-excel" href="javascript:void(0);">
+                <span>Экспорт в Excel</span>
+                <span class="icon">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_835_26941)">
+                      <path d="M15.3333 6.33336V9.6667C15.3333 13 14 14.3334 10.6667 14.3334H6.66667C3.33333 14.3334 2 13 2 9.6667V5.6667C2 2.33336 3.33333 1.00003 6.66667 1.00003H10" stroke="#343538" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M15.3333 6.33336H12.6667C10.6667 6.33336 10 5.6667 10 3.6667V1.00003L15.3333 6.33336Z" stroke="#343538" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10 8.359C10 8.16075 10.1607 8.00003 10.359 8.00003H12.7179C12.9162 8.00003 13.0769 8.16075 13.0769 8.359C13.0769 8.55726 12.9162 8.71798 12.7179 8.71798H10.359C10.1607 8.71798 10 8.55726 10 8.359Z" fill="#45AE79"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10 9.99997C10 9.80171 10.1607 9.64099 10.359 9.64099H12.7179C12.9162 9.64099 13.0769 9.80171 13.0769 9.99997C13.0769 10.1982 12.9162 10.3589 12.7179 10.3589H10.359C10.1607 10.3589 10 10.1982 10 9.99997Z" fill="#45AE79"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10 11.6411C10 11.4428 10.1607 11.2821 10.359 11.2821H12.7179C12.9162 11.2821 13.0769 11.4428 13.0769 11.6411C13.0769 11.8393 12.9162 12.0001 12.7179 12.0001H10.359C10.1607 12.0001 10 11.8393 10 11.6411Z" fill="#45AE79"/>
+                      <g clip-path="url(#clip1_835_26941)">
+                        <path d="M0 4.6667C0 4.29851 0.298477 4.00003 0.666667 4.00003H7.33333C7.70152 4.00003 8 4.29851 8 4.6667V11.3334C8 11.7016 7.70152 12 7.33333 12H0.666667C0.298477 12 0 11.7016 0 11.3334V4.6667Z" fill="#45AE79"/>
+                        <path d="M2.22217 10.2318L3.47087 7.90758L2.33762 5.7778H3.20047L3.93267 7.20879L4.64969 5.7778H5.50342L4.37017 7.941L5.61887 10.2318H4.72868L3.91748 8.69143L3.10628 10.2318H2.22217Z" fill="white"/>
+                      </g>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_835_26941">
+                        <rect width="16" height="16" fill="white"/>
+                      </clipPath>
+                      <clipPath id="clip1_835_26941">
+                        <rect y="4.00003" width="8" height="8" rx="2" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div id="data" class="default__container">
+              <div class="data-fines">
+                <div class="data-fines-col col-long">
+                  <div class="data-fines__topic col-2">
+                    <div class="data-fines__topic-text">Количество штрафов за период</div>
+
+                    @@include("./components/input.html", {
+                      context: {
+                        classesList: "is-datepicker",
+                        required: false,
+                        disabled: false,
+                        readonly: false,
+                        datepicker: true,
+                        type: "text",
+                        placeholder: "Выберите дату",
+                        icon: '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.33398 1.3335V3.3335" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.666 1.3335V3.3335" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.1333 14.2667C13.3115 14.2667 14.2667 13.3115 14.2667 12.1333C14.2667 10.9551 13.3115 10 12.1333 10C10.9551 10 10 10.9551 10 12.1333C10 13.3115 10.9551 14.2667 12.1333 14.2667Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.6667 14.6667L14 14" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.33398 6.06006H13.6673" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.91333 14.6666H5.33333C3 14.6666 2 13.3333 2 11.3333V5.66659C2 3.66659 3 2.33325 5.33333 2.33325H10.6667C13 2.33325 14 3.66659 14 5.66659V8.66658" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.99764 9.13338H8.00363" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.52889 9.13338H5.53488" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.52889 11.1334H5.53488" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                        value: "28.08.2021-28.08.2022",
+                        status: "",
+                        message: "",
+                      }
+                    })
+
+                   </div>
+                  <div class="data-fines__box">
+                    <div class="data-fines__chart">
+                      Место для графика
+                    </div>
+                  </div>
+                </div>
+                <div class="data-fines-col">
+                  <div class="data-fines__topic">
+                    <div class="data-fines__topic-text">Топ по кол-ву нарушений</div>
+                  </div>
+                  <div class="data-fines__box">
+                    <div class="row">
+                      <a class="data-fines__box-car" href="javascript:void(0);">Volkswagen Polo</a>
+                      <div class="data-fines__box-value">13</div>
+                    </div>
+                    <div class="data-fines__box-number">A726BO797</div>
+                  </div>
+                  <div class="data-fines__box">
+                    <div class="row">
+                      <a class="data-fines__box-car" href="javascript:void(0);">Volkswagen Polo</a>
+                      <div class="data-fines__box-value">7</div>
+                    </div>
+                    <div class="data-fines__box-number">A726BO797</div>
+                  </div>
+                  <div class="data-fines__box">
+                    <div class="row">
+                      <a class="data-fines__box-car" href="javascript:void(0);">Nissan Qashqai</a>
+                      <div class="data-fines__box-value">7</div>
+                    </div>
+                    <div class="data-fines__box-number">A726BO797</div>
+                  </div>
+                  <div class="data-fines__box">
+                    <div class="row">
+                      <a class="data-fines__box-car" href="javascript:void(0);">Nissan Qashqai</a>
+                      <div class="data-fines__box-value">7</div>
+                    </div>
+                    <div class="data-fines__box-number">A726BO797</div>
+                  </div>
+                  <div class="data-fines__box">
+                    <div class="row">
+                      <a class="data-fines__box-car" href="javascript:void(0);">Skoda Oktavia</a>
+                      <div class="data-fines__box-value">6</div>
+                    </div>
+                    <div class="data-fines__box-number">A726BO797</div>
+                  </div>
+                </div>
+                <div class="data-fines-col">
+                  <div class="data-fines__topic">
+                    <div class="data-fines__topic-text">Топ по сумме штрафов </div>
+                  </div>
+                  <div class="data-fines__box">
+                    <div class="row">
+                      <a class="data-fines__box-car" href="javascript:void(0);">Skoda Rapid</a>
+                      <div class="data-fines__box-value">11 000</div>
+                    </div>
+                    <div class="data-fines__box-number">A726BO797</div>
+                  </div>
+                  <div class="data-fines__box">
+                    <div class="row">
+                      <a class="data-fines__box-car" href="javascript:void(0);">Nissan Qashqai</a>
+                      <div class="data-fines__box-value">10 000</div>
+                    </div>
+                    <div class="data-fines__box-number">A726BO797</div>
+                  </div>
+                  <div class="data-fines__box">
+                    <div class="row">
+                      <a class="data-fines__box-car" href="javascript:void(0);">Skoda Oktavia</a>
+                      <div class="data-fines__box-value">5 750</div>
+                    </div>
+                    <div class="data-fines__box-number">A726BO797</div>
+                  </div>
+                  <div class="data-fines__box">
+                    <div class="row">
+                      <a class="data-fines__box-car" href="javascript:void(0);">Skoda Oktavia</a>
+                      <div class="data-fines__box-value">5 250</div>
+                    </div>
+                    <div class="data-fines__box-number">A726BO797</div>
+                  </div>
+                  <div class="data-fines__box">
+                    <div class="row">
+                      <a class="data-fines__box-car" href="javascript:void(0);">Volkswagen Polo</a>
+                      <div class="data-fines__box-value">5 000</div>
+                    </div>
+                    <div class="data-fines__box-number">A726BO797</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="trafficFines" class="default__container">
+              Место для таблицы
+            </div>
+            <div id="crr" class="default__container">
+              Место для таблицы
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
   </section>
 
 </main>
-
 
 @@include("./components/administrator-popups.html")
 
