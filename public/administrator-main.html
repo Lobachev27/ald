@@ -1940,7 +1940,6 @@ is-error
                         type="checkbox"
                         name=""
                         required
-                        checked
                       />
                       <div class="checkbox-text">
                         Хочу вернуть/получить а/м не на площадке ALD<br />Услуга
@@ -2006,6 +2005,319 @@ is-error
                 </div>
                 <div class="form-request__price-value">115 руб. без НДС</div>
               </div>
+              <div class="form-request__price">
+                <div class="form-request__price-name">Услуги</div>
+                <div class="form-request__price-value">460 руб. без НДС</div>
+              </div>
+            </div>
+            <button class="btn btn-blue w-auto" type="submit">Создать</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="requestExtradition" class="popup">
+      <div class="popup__wrapper popup__wrapper-max">
+        <div class="popup__close">Закрыть</div>
+        <div class="title title-h1 popup__title">
+          Создать заявку на выдачу с хранения
+        </div>
+        <div class="popup__content">
+          <form class="modal-driver__form">
+            <div class="form-box form-col-1">
+              <div class="box-request__data">
+                <div class="box-request__col">
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Контракт №:</div>
+                    <div class="box-request__text-value">
+                      <a class="box-request__link" href="javascript:void(0);">
+                        <span class="box-request__link-text">0000001</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Дата по договору:</div>
+                    <div class="box-request__text-value">23. 09. 2022</div>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Гос. №:</div>
+                    <div class="box-request__text-value">A750AA</div>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Город эксп.:</div>
+                    <div class="box-request__text-value">Москва</div>
+                  </div>
+                </div>
+                <div class="box-request__col">
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Компания:</div>
+                    <a class="box-request__link" href="javascript:void(0);">
+                      <span class="box-request__link-text">ООО «Юнимилк»</span>
+                    </a>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Модель:</div>
+                    <div class="box-request__text-value">Volkswagen Polo</div>
+                  </div>
+                  <div class="box-request__text">
+                    <div class="box-request__text-name">Регион:</div>
+                    <div class="box-request__text-value">Москва</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-box form-col-1">
+              <div class="title title-h2">Контактная информация</div>
+            </div>
+            <div class="form-box form-col-1">
+              <div class="input-group">
+                <label class="label-text">Данные заявителя</label>
+                <div class="form-box form-col-2">
+                  <div class="input-group">
+                    <div class="input-wrapper">
+                      <div class="input-box">
+                        <input
+                          class="input"
+                          type="text"
+                          placeholder="ФИО"
+                          autocomplete="off"
+                          required
+                          value=""
+                        />
+                      </div>
+                    </div>
+
+                    <!--
+Доп классы для input-wrapper:
+is-password
+is-search
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+
+                    <div class="input-wrapper">
+                      <div class="input-box">
+                        <input
+                          class="input"
+                          type="text"
+                          placeholder="Моб. телефон"
+                          autocomplete="off"
+                          required
+                          value=""
+                        />
+                      </div>
+                    </div>
+
+                    <!--
+Доп классы для input-wrapper:
+is-password
+is-search
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+                  </div>
+                  <div class="input-group">
+                    <div class="input-wrapper">
+                      <div class="input-box">
+                        <input
+                          class="input"
+                          type="email"
+                          placeholder="E-mail"
+                          autocomplete="off"
+                          required
+                          value=""
+                        />
+                      </div>
+                    </div>
+
+                    <!--
+Доп классы для input-wrapper:
+is-password
+is-search
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-box form-col-2">
+              <div class="input-group">
+                <label class="label-text">Желаемая дата выдачи</label>
+
+                <div class="input-wrapper is-datepicker">
+                  <div class="input-box">
+                    <input
+                      class="input input-datepicker"
+                      type="text"
+                      placeholder="Выберите дату"
+                      autocomplete="off"
+                      value=""
+                    />
+
+                    <span class="icon"
+                      ><i
+                        ><svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.33398 1.3335V3.3335"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M10.666 1.3335V3.3335"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M12.1333 14.2667C13.3115 14.2667 14.2667 13.3115 14.2667 12.1333C14.2667 10.9551 13.3115 10 12.1333 10C10.9551 10 10 10.9551 10 12.1333C10 13.3115 10.9551 14.2667 12.1333 14.2667Z"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M14.6667 14.6667L14 14"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M2.33398 6.06006H13.6673"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M8.91333 14.6666H5.33333C3 14.6666 2 13.3333 2 11.3333V5.66659C2 3.66659 3 2.33325 5.33333 2.33325H10.6667C13 2.33325 14 3.66659 14 5.66659V8.66658"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M7.99764 9.13338H8.00363"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M5.52889 9.13338H5.53488"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M5.52889 11.1334H5.53488"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          /></svg></i
+                    ></span>
+                  </div>
+                </div>
+
+                <!--
+Доп классы для input-wrapper:
+is-password
+is-search
+is-datepicker
+is-codeSMS
+is-disabled
+is-readonly
+is-success
+is-not-success
+is-error
+-->
+              </div>
+            </div>
+            <div class="form-box form-col-1">
+              <div class="title title-h2">Транспортные услуги</div>
+            </div>
+            <div class="form-box form-col-1">
+              <div class="input-wrapper">
+                <ul class="checkbox-list">
+                  <li class="checkbox-item">
+                    <label class="checkbox">
+                      <input
+                        class="checkbox-input"
+                        type="checkbox"
+                        name=""
+                        required
+                      />
+                      <div class="checkbox-text">
+                        Хочу вернуть/получить а/м не на площадке ALD<br />Услуга
+                        оказывается в пределах города присутствия филиала АЛД
+                        Автомотив
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="form-box form-col-1">
+              <div class="title title-h2">Адрес</div>
+            </div>
+            <div class="form-box form-col-1">
+              <div class="form-request__text">
+                г. Москва, Каширское шоссе, д14 ТРЦ Гудзон
+              </div>
+            </div>
+            <div class="form-box form-col-1">
+              <div class="input-wrapper">
+                <div class="textarea-box">
+                  <textarea
+                    class="textarea"
+                    placeholder="Комментарий"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-box form-col-1">
+              <div class="title title-h2">Услуги:</div>
+            </div>
+            <div class="form-box form-col-1">
+              <div class="form-request__price">
+                <div class="input-wrapper is-disabled">
+                  <ul class="checkbox-list">
+                    <li class="checkbox-item">
+                      <label class="checkbox">
+                        <input
+                          class="checkbox-input"
+                          type="checkbox"
+                          name=""
+                          required
+                          disabled
+                          checked
+                        />
+                        <div class="checkbox-text">Выдача с хранения</div>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="form-request__price-value">460 руб. без НДС</div>
+              </div>
+            </div>
+            <div class="form-box form-col-1">
+              <div class="title title-h2">Итого:</div>
+            </div>
+            <div class="form-box form-col-1">
               <div class="form-request__price">
                 <div class="form-request__price-name">Услуги</div>
                 <div class="form-request__price-value">460 руб. без НДС</div>

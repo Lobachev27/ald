@@ -1,7 +1,7 @@
-<div id="requestStorage" class="popup">
+<div id="requestExtradition" class="popup">
   <div class="popup__wrapper popup__wrapper-max">
     <div class="popup__close">Закрыть</div>
-    <div class="title title-h1 popup__title">Создать заявку на ответственное хранение</div>
+    <div class="title title-h1 popup__title">Создать заявку на выдачу с хранения</div>
     <div class="popup__content">
       <form class="modal-driver__form">
         <div class="form-box form-col-1">
@@ -110,57 +110,9 @@
             </div>
           </div>
         </div>
-        <div class="form-box form-col-1">
-
-          @@include("./Checkbox.html", {
-            context: {
-              classesList: "",
-              required: true,
-              disabled: false,
-              readonly: false,
-              message: "",
-              arr: [
-                {"text": "Город эксплуатации отличается от фактического", "name": "", "checked": "checked",},
-              ],
-            }
-          })
-
-        </div>
         <div class="form-box form-col-2">
           <div class="input-group">
-            <label class="label-text">Город экплуатации</label>
-
-            @@include("./select.html", {
-              context: {
-                classesList: "",
-                search: true,
-                placeholder: "Выберите город",
-                value: "",
-                message: "",
-                arr: ["Москва", "Санкт-Петербург", "Новосибирск", "Самара", "Краснодар", "Нижний Новгород", "Екатеринбург", "Волгоград",],
-              }
-            })
-
-          </div>
-        </div>
-        <div class="form-box form-col-2">
-          <div class="input-group">
-            <label class="label-text">Поставщик</label>
-
-            @@include("./select.html", {
-              context: {
-                classesList: "",
-                search: false,
-                placeholder: "Выберите поставщика",
-                value: "",
-                message: "",
-                arr: ["Поставщик 1", "Поставщик 2", "Поставщик 3", "Поставщик 4", "Поставщик 5", "Поставщик 6", "Поставщик 7", "Поставщик 8",],
-              }
-            })
-
-          </div>
-          <div class="input-group">
-            <label class="label-text">Желаемая дата начала хранения</label>
+            <label class="label-text">Желаемая дата выдачи</label>
 
             @@include("./input.html", {
               context: {
@@ -234,7 +186,7 @@
                 readonly: false,
                 message: "",
                 arr: [
-                  {"text": "Прием на хранение", "name": "", "checked": "checked",},
+                  {"text": "Выдача с хранения", "name": "", "checked": "checked",},
                 ],
               }
             })
@@ -246,10 +198,6 @@
           <div class="title title-h2">Итого:</div>
         </div>
         <div class="form-box form-col-1">
-          <div class="form-request__price">
-            <div class="form-request__price-name">Ответственное хранение, в день</div>
-            <div class="form-request__price-value">115 руб. без НДС</div>
-          </div>
           <div class="form-request__price">
             <div class="form-request__price-name">Услуги</div>
             <div class="form-request__price-value">460 руб. без НДС</div>
