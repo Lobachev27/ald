@@ -401,6 +401,39 @@
     }
   }
 
+  &__price {
+    display: grid;
+    align-items: center;
+    grid-column-gap: 14px;
+    grid-row-gap: 8px;
+    margin-bottom: 8px;
+    grid-template-columns: 1fr;
+    @media screen and ($tablet1) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-name {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 120%;
+      color: $black;
+    }
+
+    &-value {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 23px;
+      color: $black;
+      @media screen and ($tablet1) {
+        justify-self: end;
+      }
+    }
+  }
+
   &__link {
     position: relative;
     padding-left: 30px;
