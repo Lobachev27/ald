@@ -33,6 +33,7 @@ main {
   flex-grow: 1;
   width: 100%;
   max-width: 100%;
+  min-height: 100vh;
   overflow: hidden;
   z-index: 2;
 
@@ -224,6 +225,47 @@ a {
     @media screen and ($desktop1) {
       font-size: 56px;
       line-height: 70px;
+    }
+  }
+}
+
+.table-simple {
+  position: relative;
+  width: 100%;
+
+  & table {
+    width: 100%;
+
+    & span {
+      position: relative;
+      font-size: 14px;
+      line-height: 120%;
+
+      & .checkbox-text {
+        padding-left: 13px;
+      }
+    }
+  }
+
+  & th {
+    font-weight: 700;
+    text-align: left;
+    padding: 6px 8px;
+    border-bottom: 1px solid $gray-3;
+
+    &:last-child {
+      width: 30px;
+    }
+  }
+
+  & td {
+    font-weight: 400;
+    text-align: left;
+    padding: 6px 8px;
+    border-bottom: 1px solid $gray-3;
+
+    &:last-child {
+      width: 30px;
     }
   }
 }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Контакты"
+})
+
+<body>
+
+@@include("./components/header-administrator.html", {
+  context: {
+    "classList": "header-administrator",
+    "content": '<h1 class="title title-h1">Контакты</h1>',
+    "userImage": "",
+    "userName": "ООО «Данон»",
+    "link": "javascript:void(0);",
+  }
+})
+
+@@include("./components/sidebar.html", {
+  context: {
+    'linkActive': 11,
+    'content': '<div class="title title-h1">Мой ALD</div>',
+  }
+})
+
+<main class="main main-administrator">
+
+  <section class="section-default">
+    <div class="container">
+      <div class="layout-2">
+
+        <div class="administrator-default">
+          <div class="wrapper-default">
+            <div class="default__container">
+              <div class="data-contacts">
+
+                <div class="data-contacts-col">
+                  <div class="data-contacts__box">
+                    <div class="data-contacts__chart">
+                      Место для графика
+                    </div>
+                  </div>
+                </div>
+
+                <div class="data-contacts-col">
+                  <div class="data-contacts__box">
+                    <div class="data-contacts__chart">
+                      Место для графика
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              Место для таблицы
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/administrator-popups.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

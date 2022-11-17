@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Ответственное хранение"
+})
+
+<body>
+
+@@include("./components/header-administrator.html", {
+  context: {
+    "classList": "header-administrator",
+    "content": '<h1 class="title title-h1">Ответственное хранение</h1>',
+    "userImage": "",
+    "userName": "ООО «Данон»",
+    "link": "javascript:void(0);",
+  }
+})
+
+@@include("./components/sidebar.html", {
+  context: {
+    'linkActive': 7,
+    'content': '<div class="title title-h1">Мой ALD</div>',
+  }
+})
+
+<main class="main main-administrator">
+
+  <section class="section-default">
+    <div class="container">
+      <div class="layout-2">
+
+        <div class="administrator-default">
+          <div class="wrapper-default">
+            <div class="default__tabs">
+              <a class="default__tab js-tab" href="#all">Все заявки <span class="count">106</span></a>
+              <a class="default__tab js-tab" href="#storage">На хранении <span class="count">43</span></a>
+              <a class="default__tab js-tab" href="#reception">Заявки на прием <span class="count">9</span></a>
+              <a class="default__tab js-tab" href="#extradition">Заявки на выдачу <span class="count">30</span></a>
+            </div>
+            <div id="all" class="default__container">
+              Место для таблицы
+            </div>
+            <div id="storage" class="default__container">
+              Место для таблицы
+            </div>
+            <div id="reception" class="default__container">
+              Место для таблицы
+            </div>
+            <div id="extradition" class="default__container">
+              Место для таблицы
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/administrator-popups.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

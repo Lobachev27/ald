@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "IFRS/ФСБУ"
+})
+
+<body>
+
+@@include("./components/header-administrator.html", {
+  context: {
+    "classList": "header-administrator",
+    "content": '<h1 class="title title-h1">IFRS/ФСБУ</h1>',
+    "userImage": "",
+    "userName": "ООО «Данон»",
+    "link": "javascript:void(0);",
+  }
+})
+
+@@include("./components/sidebar.html", {
+  context: {
+    'linkActive': 10,
+    'content': '<div class="title title-h1">Мой ALD</div>',
+  }
+})
+
+<main class="main main-administrator">
+
+  <section class="section-default">
+    <div class="container">
+      <div class="layout-2">
+
+        <div class="administrator-default">
+          <div class="wrapper-default wrapper-50">
+            <div class="default__container">
+              <div class="form-request">
+                <div class="title title-h1 form-request__title">Постороить отчет по:</div>
+                <form class="form-request__form">
+                  <div class="form-box form-col-1">
+
+                    @@include("./components/radio.html", {
+                      context: {
+                        classesList: "",
+                        required: true,
+                        disabled: false,
+                        readonly: false,
+                        message: "",
+                        arr: [
+                          {"text": "Интервал", "name": "radio-1", "checked": "checked",},
+                          {"text": "Последний день месяца", "name": "radio-1", "checked": "",},
+                        ],
+                      }
+                    })
+
+                  </div>
+                  <div class="form-box form-col-2">
+                    <div class="input-group">
+                      <label class="label-text">Интервал дат</label>
+
+                      @@include("./components/input.html", {
+                        context: {
+                          classesList: "is-datepicker",
+                          required: false,
+                          disabled: false,
+                          readonly: false,
+                          datepicker: true,
+                          type: "text",
+                          placeholder: "Выберите дату",
+                          icon: '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.33398 1.3335V3.3335" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.666 1.3335V3.3335" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.1333 14.2667C13.3115 14.2667 14.2667 13.3115 14.2667 12.1333C14.2667 10.9551 13.3115 10 12.1333 10C10.9551 10 10 10.9551 10 12.1333C10 13.3115 10.9551 14.2667 12.1333 14.2667Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.6667 14.6667L14 14" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.33398 6.06006H13.6673" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.91333 14.6666H5.33333C3 14.6666 2 13.3333 2 11.3333V5.66659C2 3.66659 3 2.33325 5.33333 2.33325H10.6667C13 2.33325 14 3.66659 14 5.66659V8.66658" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.99764 9.13338H8.00363" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.52889 9.13338H5.53488" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.52889 11.1334H5.53488" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                          value: "28.08.2021-28.08.2022",
+                          status: "",
+                          message: "",
+                        }
+                      })
+
+                    </div>
+                  </div>
+                  <div class="form-box form-col-1">
+
+                    <div class="table-simple">
+                      <table>
+                        <thead>
+                        <tr>
+                          <th><span>Номер компании</span></th>
+                          <th><span>Компания</span></th>
+                          <th><span>Отчет</span></th>
+                          <th><span>
+
+                            @@include("./components/checkbox.html", {
+                              context: {
+                                classesList: "",
+                                required: false,
+                                disabled: false,
+                                readonly: false,
+                                message: "",
+                                arr: [
+                                  {"text": "", "name": "", "checked": "",},
+                                ],
+                              }
+                            })
+
+                          </span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td><span>578</span></td>
+                          <td><span>АО Л'Ореаль</span></td>
+                          <td><span>31.07.2022</span></td>
+                          <td><span>
+
+                            @@include("./components/checkbox.html", {
+                              context: {
+                                classesList: "",
+                                required: false,
+                                disabled: false,
+                                readonly: false,
+                                message: "",
+                                arr: [
+                                  {"text": "", "name": "", "checked": "",},
+                                ],
+                              }
+                            })
+
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td><span>578</span></td>
+                          <td><span>АО Л'Ореаль</span></td>
+                          <td><span>31.07.2022</span></td>
+                          <td><span>
+
+                            @@include("./components/checkbox.html", {
+                              context: {
+                                classesList: "",
+                                required: false,
+                                disabled: false,
+                                readonly: false,
+                                message: "",
+                                arr: [
+                                  {"text": "", "name": "", "checked": "",},
+                                ],
+                              }
+                            })
+
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td><span>578</span></td>
+                          <td><span>АО Л'Ореаль</span></td>
+                          <td><span>31.07.2022</span></td>
+                          <td><span>
+
+                            @@include("./components/checkbox.html", {
+                              context: {
+                                classesList: "",
+                                required: false,
+                                disabled: false,
+                                readonly: false,
+                                message: "",
+                                arr: [
+                                  {"text": "", "name": "", "checked": "",},
+                                ],
+                              }
+                            })
+
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td><span>578</span></td>
+                          <td><span>АО Л'Ореаль</span></td>
+                          <td><span>31.07.2022</span></td>
+                          <td><span>
+
+                            @@include("./components/checkbox.html", {
+                              context: {
+                                classesList: "",
+                                required: false,
+                                disabled: false,
+                                readonly: false,
+                                message: "",
+                                arr: [
+                                  {"text": "", "name": "", "checked": "",},
+                                ],
+                              }
+                            })
+
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td><span>578</span></td>
+                          <td><span>АО Л'Ореаль</span></td>
+                          <td><span>31.07.2022</span></td>
+                          <td><span>
+
+                            @@include("./components/checkbox.html", {
+                              context: {
+                                classesList: "",
+                                required: false,
+                                disabled: false,
+                                readonly: false,
+                                message: "",
+                                arr: [
+                                  {"text": "", "name": "", "checked": "",},
+                                ],
+                              }
+                            })
+
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td><span>578</span></td>
+                          <td><span>АО Л'Ореаль</span></td>
+                          <td><span>31.07.2022</span></td>
+                          <td><span>
+
+                            @@include("./components/checkbox.html", {
+                              context: {
+                                classesList: "",
+                                required: false,
+                                disabled: false,
+                                readonly: false,
+                                message: "",
+                                arr: [
+                                  {"text": "", "name": "", "checked": "",},
+                                ],
+                              }
+                            })
+
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td><span>578</span></td>
+                          <td><span>АО Л'Ореаль</span></td>
+                          <td><span>31.07.2022</span></td>
+                          <td><span>
+
+                            @@include("./components/checkbox.html", {
+                              context: {
+                                classesList: "",
+                                required: false,
+                                disabled: false,
+                                readonly: false,
+                                message: "",
+                                arr: [
+                                  {"text": "", "name": "", "checked": "",},
+                                ],
+                              }
+                            })
+
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td><span>578</span></td>
+                          <td><span>АО Л'Ореаль</span></td>
+                          <td><span>31.07.2022</span></td>
+                          <td><span>
+
+                            @@include("./components/checkbox.html", {
+                              context: {
+                                classesList: "",
+                                required: false,
+                                disabled: false,
+                                readonly: false,
+                                message: "",
+                                arr: [
+                                  {"text": "", "name": "", "checked": "",},
+                                ],
+                              }
+                            })
+
+                          </span></td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                  <div class="form-box form-col-2">
+                    <div class="input-group">
+                      <label class="label-text">Месяц</label>
+
+                      @@include("./components/select.html", {
+                        context: {
+                          classesList: "",
+                          search: false,
+                          placeholder: "Выберите номер",
+                          value: "",
+                          message: "",
+                          arr: ["11-2022", "10-2022", "09-2022", "08-2022", "07-2022", "06-2022", "05-2022", "04-2022",],
+                        }
+                      })
+
+                    </div>
+                  </div>
+                  <div class="form-request__btn">
+                    <button class="btn btn-blue" type="submit">Построить</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/administrator-popups.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

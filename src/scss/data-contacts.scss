@@ -1,0 +1,46 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.data-contacts {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 14px;
+  width: 100%;
+  margin-bottom: 24px;
+  @media screen and ($desktop2) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &-col {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 8px;
+    height: max-content;
+    width: 100%;
+  }
+
+  &__box {
+    position: relative;
+    background-color: $white;
+    box-shadow: 0px 0px 10px rgba(72, 72, 72, 0.05);
+    border-radius: 8px;
+    padding: 14px;
+    @media screen and ($tablet2) {
+      padding: 14px 24px;
+    }
+  }
+
+  &__chart {
+    background-color: $gray-2;
+    width: 100%;
+    height: 46vw;
+    @media screen and ($tablet1) {
+      height: 42vw;
+    }
+    @media screen and ($desktop2) {
+      height: 22vw;
+    }
+  }
+}

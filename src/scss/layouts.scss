@@ -140,6 +140,10 @@
       border: 1px solid $blue-3;
     }
 
+    & .count {
+      margin-left: 12px;
+    }
+
     &.default__tab-request {
       background-color: transparent;
       font-weight: 600;
@@ -496,6 +500,36 @@
       font-size: 12px;
       line-height: 120%;
       color: $blue-3;
+    }
+  }
+
+  & .checkbox {
+    &-text {
+      font-size: 14px;
+      min-height: 16.8px;
+
+      &:before {
+        top: 2px;
+      }
+
+      &:after {
+        top: 5px;
+      }
+    }
+  }
+
+  & .radio {
+    &-text {
+      font-size: 14px;
+      min-height: 16.8px;
+
+      &:before {
+        top: 1px;
+      }
+
+      &:after {
+        top: 5px;
+      }
     }
   }
 }
