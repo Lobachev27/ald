@@ -13,7 +13,8 @@
   width: 120px;
   height: 22px;
 
-  &.status-work {
+  &.status-work,
+  &.status-extradition {
     background-color: #CBF0F9;
     border: 1px solid #CBF0F9;
   }

@@ -19,6 +19,14 @@
   cursor: pointer;
   transition: background-color $transition-time, color $transition-time, border $transition-time;
 
+  &:hover {
+    & .icon {
+      & svg {
+        stroke: $white !important;
+      }
+    }
+  }
+
   &.btn-blue {
     background-color: $blue-3;
     border: 1px solid $blue-3;
@@ -34,6 +42,12 @@
       background-color: $blue-3;
       border: 1px solid $blue-3;
       color: $white;
+    }
+
+    & .icon {
+      & svg {
+        stroke: $white;
+      }
     }
   }
 
@@ -54,6 +68,12 @@
       border: 1px solid $blue-3;
       color: $white;
     }
+
+    & .icon {
+      & svg {
+        stroke: $blue-3;
+      }
+    }
   }
 
   &.btn-tr-bk {
@@ -73,6 +93,12 @@
       border: 1px solid $blue-3;
       color: $white;
     }
+
+    & .icon {
+      & svg {
+        stroke: $black;
+      }
+    }
   }
 
   &.btn-small {
@@ -84,5 +110,18 @@
   &.w-auto {
     width: min-content;
     padding: 0 24px;
+  }
+
+  & .icon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+      transition: stroke $transition-time;
+    }
   }
 }
