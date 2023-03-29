@@ -33,7 +33,124 @@
         <div class="administrator-default">
           <div class="wrapper-default">
             <div class="default__container">
-              Место для таблицы
+
+              @@include("./components/table-road.html", {
+                context: {
+                  arr: [
+                    {
+                      'contract': '<a href="./administrator-contract.html">000001</a>',
+                      'model': 'Volkswagen Polo 1.6 Respect Auto',
+                      'number': 'A750AA',
+                      'region': 'Москва',
+                      'from': '01.05.2021',
+                      'to': '01.05.2021',
+                      'city': 'Москва',
+                      'company': '<a href="javascript:void(0);">ООО «Нутриция»</a>',
+                      'comment': '<a class="table-default__comment" href="javascript:void(0);"><span>Комментарий</span><span class="icon"><svg width="12" height="17" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 7.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5H8.5C8.77614 8.5 9 8.27614 9 8C9 7.72386 8.77614 7.5 8.5 7.5H3.5Z"/><path d="M3 10C3 9.72386 3.22386 9.5 3.5 9.5H8.5C8.77614 9.5 9 9.72386 9 10C9 10.2761 8.77614 10.5 8.5 10.5H3.5C3.22386 10.5 3 10.2761 3 10Z"/><path d="M3 12C3 11.7239 3.22386 11.5 3.5 11.5H5.5C5.77614 11.5 6 11.7239 6 12C6 12.2761 5.77614 12.5 5.5 12.5H3.5C3.22386 12.5 3 12.2761 3 12Z"/><path d="M7.5 0.5H2C0.895431 0.5 0 1.39543 0 2.5V14.5C0 15.6046 0.895431 16.5 2 16.5H10C11.1046 16.5 12 15.6046 12 14.5V5L7.5 0.5ZM7.5 1.5V3.5C7.5 4.32843 8.17157 5 9 5H11V14.5C11 15.0523 10.5523 15.5 10 15.5H2C1.44772 15.5 1 15.0523 1 14.5V2.5C1 1.94772 1.44772 1.5 2 1.5H7.5Z"/></svg></span></a>',
+                    },
+                    {
+                      'contract': '<a href="./administrator-contract.html">000002</a>',
+                      'model': 'Volkswagen Polo 1.6 Respect Auto',
+                      'number': 'A750AA',
+                      'region': 'Самара',
+                      'from': '01.05.2021',
+                      'to': '01.05.2021',
+                      'city': 'Самара',
+                      'company': '<a href="javascript:void(0);">ООО «Нутриция»</a>',
+                      'comment': '<a class="table-default__no-comment" href="javascript:void(0);"><span class="icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.37329 12V8.66667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.00008 10.3333H4.66675" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.33325 1.33333V3.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.6667 1.33333V3.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5399 2.28C12.7666 2.36 13.8932 3.18 13.9599 6.31333L14.0466 10.4267C14.0999 13.1733 13.4666 14.5533 10.1332 14.6267L6.13322 14.7067C2.79989 14.7733 2.10656 13.4133 2.05322 10.6733L1.95989 6.55333C1.89322 3.42 2.99322 2.55333 5.20656 2.38667L10.5399 2.28Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>',
+                    },
+                    {
+                      'contract': '<a href="./administrator-contract.html">000003</a>',
+                      'model': 'Volkswagen Polo 1.6 Respect Auto',
+                      'number': 'A750AA',
+                      'region': 'Ярославль',
+                      'from': '01.05.2021',
+                      'to': '01.05.2021',
+                      'city': 'Ярославль',
+                      'company': '<a href="javascript:void(0);">ООО «Юнимилк»</a>',
+                      'comment': '<a class="table-default__no-comment" href="javascript:void(0);"><span class="icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.37329 12V8.66667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.00008 10.3333H4.66675" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.33325 1.33333V3.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.6667 1.33333V3.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5399 2.28C12.7666 2.36 13.8932 3.18 13.9599 6.31333L14.0466 10.4267C14.0999 13.1733 13.4666 14.5533 10.1332 14.6267L6.13322 14.7067C2.79989 14.7733 2.10656 13.4133 2.05322 10.6733L1.95989 6.55333C1.89322 3.42 2.99322 2.55333 5.20656 2.38667L10.5399 2.28Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>',
+                    },
+                    {
+                      'contract': '<a href="./administrator-contract.html">000004</a>',
+                      'model': 'Volkswagen Polo 1.6 Respect Auto',
+                      'number': 'A750AA',
+                      'region': 'Москва',
+                      'from': '01.05.2021',
+                      'to': '01.05.2021',
+                      'city': 'Москва',
+                      'company': '<a href="javascript:void(0);">ООО «Юнимилк»</a>',
+                      'comment': '<a class="table-default__no-comment" href="javascript:void(0);"><span class="icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.37329 12V8.66667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.00008 10.3333H4.66675" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.33325 1.33333V3.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.6667 1.33333V3.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5399 2.28C12.7666 2.36 13.8932 3.18 13.9599 6.31333L14.0466 10.4267C14.0999 13.1733 13.4666 14.5533 10.1332 14.6267L6.13322 14.7067C2.79989 14.7733 2.10656 13.4133 2.05322 10.6733L1.95989 6.55333C1.89322 3.42 2.99322 2.55333 5.20656 2.38667L10.5399 2.28Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>',
+                    },
+                    {
+                      'contract': '<a href="./administrator-contract.html">000005</a>',
+                      'model': 'Volkswagen Polo 1.6 Respect Auto',
+                      'number': 'A750AA',
+                      'region': 'Калининград',
+                      'from': '01.05.2021',
+                      'to': '01.05.2021',
+                      'city': 'Калининград',
+                      'company': '<a href="javascript:void(0);">ООО «Юнимилк»</a>',
+                      'comment': '<a class="table-default__no-comment" href="javascript:void(0);"><span class="icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.37329 12V8.66667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.00008 10.3333H4.66675" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.33325 1.33333V3.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.6667 1.33333V3.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5399 2.28C12.7666 2.36 13.8932 3.18 13.9599 6.31333L14.0466 10.4267C14.0999 13.1733 13.4666 14.5533 10.1332 14.6267L6.13322 14.7067C2.79989 14.7733 2.10656 13.4133 2.05322 10.6733L1.95989 6.55333C1.89322 3.42 2.99322 2.55333 5.20656 2.38667L10.5399 2.28Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>',
+                    },
+                    {
+                      'contract': '<a href="./administrator-contract.html">000006</a>',
+                      'model': 'Volkswagen Polo 1.6 Respect Auto',
+                      'number': 'A750AA',
+                      'region': 'Москва',
+                      'from': '01.05.2021',
+                      'to': '01.05.2021',
+                      'city': 'Москва',
+                      'company': '<a href="javascript:void(0);">ЗАО «Данон-Трейд»</a>',
+                      'comment': '<a class="table-default__no-comment" href="javascript:void(0);"><span class="icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.37329 12V8.66667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.00008 10.3333H4.66675" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.33325 1.33333V3.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.6667 1.33333V3.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5399 2.28C12.7666 2.36 13.8932 3.18 13.9599 6.31333L14.0466 10.4267C14.0999 13.1733 13.4666 14.5533 10.1332 14.6267L6.13322 14.7067C2.79989 14.7733 2.10656 13.4133 2.05322 10.6733L1.95989 6.55333C1.89322 3.42 2.99322 2.55333 5.20656 2.38667L10.5399 2.28Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>',
+                    },
+                    {
+                      'contract': '<a href="./administrator-contract.html">000007</a>',
+                      'model': 'Volkswagen Polo 1.6 Respect Auto',
+                      'number': 'A750AA',
+                      'region': 'Москва',
+                      'from': '01.05.2021',
+                      'to': '01.05.2021',
+                      'city': 'Москва',
+                      'company': '<a href="javascript:void(0);">ЗАО «Данон-Трейд»</a>',
+                      'comment': '<a class="table-default__comment" href="javascript:void(0);"><span>Комментарий</span><span class="icon"><svg width="12" height="17" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 7.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5H8.5C8.77614 8.5 9 8.27614 9 8C9 7.72386 8.77614 7.5 8.5 7.5H3.5Z"/><path d="M3 10C3 9.72386 3.22386 9.5 3.5 9.5H8.5C8.77614 9.5 9 9.72386 9 10C9 10.2761 8.77614 10.5 8.5 10.5H3.5C3.22386 10.5 3 10.2761 3 10Z"/><path d="M3 12C3 11.7239 3.22386 11.5 3.5 11.5H5.5C5.77614 11.5 6 11.7239 6 12C6 12.2761 5.77614 12.5 5.5 12.5H3.5C3.22386 12.5 3 12.2761 3 12Z"/><path d="M7.5 0.5H2C0.895431 0.5 0 1.39543 0 2.5V14.5C0 15.6046 0.895431 16.5 2 16.5H10C11.1046 16.5 12 15.6046 12 14.5V5L7.5 0.5ZM7.5 1.5V3.5C7.5 4.32843 8.17157 5 9 5H11V14.5C11 15.0523 10.5523 15.5 10 15.5H2C1.44772 15.5 1 15.0523 1 14.5V2.5C1 1.94772 1.44772 1.5 2 1.5H7.5Z"/></svg></span></a>',
+                    },
+                    {
+                      'contract': '<a href="./administrator-contract.html">000008</a>',
+                      'model': 'Volkswagen Polo 1.6 Respect Auto',
+                      'number': 'A750AA',
+                      'region': 'Ростов-на-Дону',
+                      'from': '01.05.2021',
+                      'to': '01.05.2021',
+                      'city': 'Ростов-на-Дону',
+                      'company': '<a href="javascript:void(0);">ЗАО «Данон-Трейд»</a>',
+                      'comment': '<a class="table-default__comment" href="javascript:void(0);"><span>Комментарий</span><span class="icon"><svg width="12" height="17" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 7.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5H8.5C8.77614 8.5 9 8.27614 9 8C9 7.72386 8.77614 7.5 8.5 7.5H3.5Z"/><path d="M3 10C3 9.72386 3.22386 9.5 3.5 9.5H8.5C8.77614 9.5 9 9.72386 9 10C9 10.2761 8.77614 10.5 8.5 10.5H3.5C3.22386 10.5 3 10.2761 3 10Z"/><path d="M3 12C3 11.7239 3.22386 11.5 3.5 11.5H5.5C5.77614 11.5 6 11.7239 6 12C6 12.2761 5.77614 12.5 5.5 12.5H3.5C3.22386 12.5 3 12.2761 3 12Z"/><path d="M7.5 0.5H2C0.895431 0.5 0 1.39543 0 2.5V14.5C0 15.6046 0.895431 16.5 2 16.5H10C11.1046 16.5 12 15.6046 12 14.5V5L7.5 0.5ZM7.5 1.5V3.5C7.5 4.32843 8.17157 5 9 5H11V14.5C11 15.0523 10.5523 15.5 10 15.5H2C1.44772 15.5 1 15.0523 1 14.5V2.5C1 1.94772 1.44772 1.5 2 1.5H7.5Z"/></svg></span></a>',
+                    },
+                    {
+                      'contract': '<a href="./administrator-contract.html">000009</a>',
+                      'model': 'Volkswagen Polo 1.6 Respect Auto',
+                      'number': 'A750AA',
+                      'region': 'Ростов-на-Дону',
+                      'from': '01.05.2021',
+                      'to': '01.05.2021',
+                      'city': 'Ростов-на-Дону',
+                      'company': '<a href="javascript:void(0);">ЗАО «Данон-Трейд»</a>',
+                      'comment': '<a class="table-default__no-comment" href="javascript:void(0);"><span class="icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.37329 12V8.66667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.00008 10.3333H4.66675" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.33325 1.33333V3.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.6667 1.33333V3.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5399 2.28C12.7666 2.36 13.8932 3.18 13.9599 6.31333L14.0466 10.4267C14.0999 13.1733 13.4666 14.5533 10.1332 14.6267L6.13322 14.7067C2.79989 14.7733 2.10656 13.4133 2.05322 10.6733L1.95989 6.55333C1.89322 3.42 2.99322 2.55333 5.20656 2.38667L10.5399 2.28Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>',
+                    },
+                    {
+                      'contract': '<a href="./administrator-contract.html">000010</a>',
+                      'model': 'Volkswagen Polo 1.6 Respect Auto',
+                      'number': 'A750AA',
+                      'region': 'Ростов-на-Дону',
+                      'from': '01.05.2021',
+                      'to': '01.05.2021',
+                      'city': 'Ростов-на-Дону',
+                      'company': '<a href="javascript:void(0);">ЗАО «Данон-Трейд»</a>',
+                      'comment': '<a class="table-default__no-comment" href="javascript:void(0);"><span class="icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.37329 12V8.66667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.00008 10.3333H4.66675" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.33325 1.33333V3.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.6667 1.33333V3.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5399 2.28C12.7666 2.36 13.8932 3.18 13.9599 6.31333L14.0466 10.4267C14.0999 13.1733 13.4666 14.5533 10.1332 14.6267L6.13322 14.7067C2.79989 14.7733 2.10656 13.4133 2.05322 10.6733L1.95989 6.55333C1.89322 3.42 2.99322 2.55333 5.20656 2.38667L10.5399 2.28Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>',
+                    },
+                  ],
+                }
+              })
+
             </div>
           </div>
         </div>

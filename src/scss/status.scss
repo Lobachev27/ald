@@ -20,17 +20,20 @@
   }
 
   &.status-finish,
-  &.status-return {
+  &.status-return,
+  &.status-Valid {
     background-color: #E0F7EC;
     border: 1px solid #E0F7EC;
   }
 
-  &.status-disconnect {
+  &.status-disconnect,
+  &.status-soon-expires {
     background-color: #FDF5E8;
     border: 1px solid #FDF5E8;
   }
 
-  &.status-refusal {
+  &.status-refusal,
+  &.status-expired {
     background-color: #FFE8E8;
     border: 1px solid #FFE8E8;
   }
